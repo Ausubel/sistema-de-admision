@@ -20,8 +20,8 @@ namespace Tarea_Algoritmos
         //VARIABLE PARA SU POSTERIOR USO
         private static string CLAVES;
         private double CORRECTO, INCORRECTO, NULO;
-        private double[] NOTAS = new double[RESPUESTAS.Length];
-        private int LINEASARCHIVO = 0;        
+        private int LINEASARCHIVO = 0;
+
 
         public Main()
         {
@@ -52,14 +52,27 @@ namespace Tarea_Algoritmos
         //array para guardar las respuestas
         private static string[] RESPUESTAS = File.ReadAllLines(filePath).ToArray();
 
-        public void llenarTabla()
+        public void llenarTabla(int a)
         {
-            string consulta = "select codigo_postulante as CODIGO,nombre as NOMBRE, apellido_paterno as APE_PATERNO, apellido_materno as APE_MATERNO,nombre_carrera AS CARRERA,nota AS NOTA from postulante p, carrera c where p.codigo_carrera = c.codigo_carrera;";
-            SqlDataAdapter adapter = new SqlDataAdapter(consulta, conn);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            dataGridView1.DataSource = dt;
-            dataGridView2.DataSource = dt;
+            if (a == 1)
+            {
+                string consulta = "select codigo_postulante as CODIGO,nombre as NOMBRE, apellido_paterno as APE_PATERNO, apellido_materno as APE_MATERNO,nombre_carrera AS CARRERA,nota AS NOTA from postulante p, carrera c where p.codigo_carrera = c.codigo_carrera;";
+                SqlDataAdapter adapter = new SqlDataAdapter(consulta, conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                dataGridView1.DataSource = dt;
+                dataGridView2.DataSource = dt;
+            }
+            else
+            {
+                string consulta = "select codigo_postulante as CODIGO,nombre as NOMBRE, apellido_paterno as APE_PATERNO, apellido_materno as APE_MATERNO,edad as EDAD,nombre_carrera AS CARRERA from postulante p, carrera c where p.codigo_carrera = c.codigo_carrera;";
+                SqlDataAdapter adapter = new SqlDataAdapter(consulta, conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);               
+                dataGridView3.DataSource = dt;
+            }
+            
+            
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -69,22 +82,79 @@ namespace Tarea_Algoritmos
             while (sr.ReadLine() != null) { LINEASARCHIVO++; }
             sr.Close();
             comboBoxInicializa();
-            llenarTabla();
+            llenarTabla(1);
+            for (int i = 0; i < dataGridView2.Columns.Count - 1; i++)
+            {
+                dataGridView2.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+            dataGridView2.Columns[dataGridView2.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            for (int i = 0; i < dataGridView2.Columns.Count; i++)
+            {
+                int colw = dataGridView2.Columns[i].Width;
+                dataGridView2.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                dataGridView2.Columns[i].Width = colw;
+            }
             textBoxNombre.Enabled = false;
             textBoxCarrera.Enabled = false;
             textBoxMaterno.Enabled = false;
             textBoxPaterno.Enabled = false;
             dataGridView2.DefaultCellStyle.Font = new Font("Comic Sans", 14);
+            cargarDiccionario();
         }
+        Dictionary<string, string> dicCodigo = new Dictionary<string, string>();
+        private void cargarDiccionario()
+        {
+            // CODIGO STRING, ALTERNATIVAS STRING 
+            //Creamos diccionario para obtener los codigos de los alumnos. 
+            char[] linea;
+            for (int i=0; i<RESPUESTAS.Length;i++)
+            {
+                linea = RESPUESTAS[i].ToArray();
+                string casmaRespuesta = "";
 
+                for (int j = 9; j < 109; j++) casmaRespuesta += linea[j].ToString();
+                
+                dicCodigo[$"{linea[0]}{linea[1]}{linea[2]}{linea[3]}{linea[4]}{linea[5]}{linea[6]}{linea[7]}"] = casmaRespuesta;    
+            }
+            foreach(KeyValuePair<string,string> item in dicCodigo)
+            {
+                textBoxOutput.Text += $"{item.Key} {item.Value}\r\n";
+            }
+        }
         private void buttonVista_Click(object sender, EventArgs e)
         {
+            llenarTabla(0);
             tabControl1.SelectTab(1);
+            for (int i = 0; i < dataGridView3.Columns.Count - 1; i++)
+            {
+                dataGridView3.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+            dataGridView3.Columns[dataGridView3.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            for (int i = 0; i < dataGridView3.Columns.Count; i++)
+            {
+                int colw = dataGridView3.Columns[i].Width;
+                dataGridView3.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                dataGridView3.Columns[i].Width = colw;
+            }
         }
 
         private void buttonRes_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(2);
+            for (int i = 0; i < dataGridView1.Columns.Count - 1; i++)
+            {
+                dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+            dataGridView1.Columns[dataGridView1.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                int colw = dataGridView1.Columns[i].Width;
+                dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                dataGridView1.Columns[i].Width = colw;
+            }
         }
 
         private void buttonCal_Click(object sender, EventArgs e)
@@ -142,11 +212,17 @@ namespace Tarea_Algoritmos
                 textBoxMaterno.Text = dataGridView2.SelectedCells[3].Value.ToString();
                 textBoxCarrera.Text = dataGridView2.SelectedCells[4].Value.ToString();
                 textBoxNota.Text = dataGridView2.SelectedCells[5].Value.ToString();
+                if (!buttonBuscarCalificar.Enabled)
+                
+                    MessageBox.Show("Rellene datos correspondientes.", "Paso 1");
+                
+                
             }
             catch (Exception)
             {
-                MessageBox.Show("Considere revisar el la caja de texto del codigo");
+                MessageBox.Show("Revise el código introducido.");
             }
+
         }
         //CREO OBJETO 
         private static Calificacion calificacion;
@@ -173,12 +249,15 @@ namespace Tarea_Algoritmos
 
             calificacion.Calificacion91_100(comboBox91.GetItemText(comboBox91.SelectedItem), comboBox92.GetItemText(comboBox92.SelectedItem), comboBox93.GetItemText(comboBox93.SelectedItem), comboBox94.GetItemText(comboBox94.SelectedItem), comboBox95.GetItemText(comboBox95.SelectedItem), comboBox96.GetItemText(comboBox96.SelectedItem), comboBox97.GetItemText(comboBox97.SelectedItem), comboBox98.GetItemText(comboBox98.SelectedItem), comboBox99.GetItemText(comboBox99.SelectedItem), comboBox100.GetItemText(comboBox100.SelectedItem));
         }
+
         private void buttonGuardarCalificar_Click(object sender, EventArgs e)
         {
 
             constructor();
             try
             {
+              
+                 
                 if (double.Parse(textBoxCorrecta.Text) > 0 && double.Parse(textBoxIncorrecta.Text) <= 0)
                 {
                     CORRECTO = double.Parse(textBoxCorrecta.Text);
@@ -189,14 +268,21 @@ namespace Tarea_Algoritmos
                 {
                     MessageBox.Show("Considere poner los puntajes correctos","",MessageBoxButtons.RetryCancel,MessageBoxIcon.Warning);
                 }
-                
+
+               
+
             }
             catch (Exception)
             {
                 MessageBox.Show("Considere poner los puntajes correctos", "", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
             }
 
-
+            textBoxCorrecta.Enabled = false;
+            textBoxIncorrecta.Enabled = false;
+            textBoxBlanco.Enabled = false; 
+            buttonGuardarCalificar.Enabled= false;
+            buttonRandom.Enabled = false;
+            MessageBox.Show("¡Hora de calificar!", "Paso 3");
 
         }
         /*PARA SELECCIONAR DATOS DE LA TABLA Y UBICAR EN CAJAS DE TEXTO*/
@@ -208,43 +294,38 @@ namespace Tarea_Algoritmos
             textBoxMaterno.Text = dataGridView2.SelectedCells[3].Value.ToString();
             textBoxCarrera.Text = dataGridView2.SelectedCells[4].Value.ToString();
         }
-        private int cont = 0;
+
         private void buttonCalificar_Click(object sender, EventArgs e)
         {
-            char[] linea = RESPUESTAS[cont].ToArray();
-            
-            
-            NOTAS[cont] = 0;
-            
-            //Obteniendo codigo de la linea
-            int codigo = int.Parse($"{linea[0]}{linea[1]}{linea[2]}{linea[3]}{linea[4]}{linea[5]}{linea[6]}{linea[7]}");
-
             //Obteniendo 
-            char[] respuesta = new char[linea.Length - 9];//100
-            for (int i = 0; i < linea.Length; i++)
+            string codigoBus = textBoxCodigo.Text ;
+            string value;
+            double notas=0; 
+            if (dicCodigo.TryGetValue(codigoBus, out value))
             {
-                if (i >= 9)
+                char[] chars = dicCodigo[codigoBus].ToCharArray();
+                for (int i = 0; i < 100; i++)
                 {
-                    respuesta[i - 9] = linea[i];//respuesta[0] = linea[9] (alt+255)
-                    if (CLAVES[i - 9] == respuesta[i - 9] && respuesta[i - 9] != ' ')
+                    if (chars[i] == CLAVES[i] && CLAVES[i] != ' ')
                     {
-                        textBoxOutput.Text += "1";
-                        NOTAS[cont] = NOTAS[cont] + CORRECTO;
+                        notas = notas + CORRECTO;
                     }
-                    if (CLAVES[i - 9] != respuesta[i - 9] && respuesta[i - 9] != ' ')
+                    if (chars[i] != CLAVES[i] && CLAVES[i] != ' ')
                     {
-                        textBoxOutput.Text += "0";
-                        NOTAS[cont] = NOTAS[cont] + INCORRECTO;
+                        notas = notas + INCORRECTO;
                     }
-                    if(respuesta[i - 9] == ' ')
+                    if (chars[i] == ' ')
                     {
-                        textBoxOutput.Text += "N";
-                        NOTAS[cont] = NOTAS[cont] + NULO;
+                        notas = notas + NULO;
                     }
                 }
+                textBoxNota.Text = notas.ToString();
             }
-            textBoxNota.Text = NOTAS[cont].ToString(); 
-            cont++;
+                
+            
+
+            
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -269,13 +350,219 @@ namespace Tarea_Algoritmos
             {
                 string estonoesnota = textBoxNota.Text.Replace(",", ".");
                 consultaInput($"UPDATE postulante SET nota = {estonoesnota} where codigo_postulante = {textBoxCodigo.Text};");
-                llenarTabla();
+                llenarTabla(1);
             }
             catch (Exception)
             {
                 MessageBox.Show("TE CREES BOBY?");
             }
             buttonBuscarCalificar_Click(sender, e);
+        }
+
+        private void cmb_cat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_cat.SelectedIndex == 0)
+            {
+
+                cmb_carrera.Enabled = true;
+                cmb_carrera.Items.Add("BIOLOGÍA");
+                cmb_carrera.Items.Add("ENFERMERÍA");
+                cmb_carrera.Items.Add("FARMACIA Y BIOQUÍMICA");
+                cmb_carrera.Items.Add("MEDICINA VETERINARIA Y ZOOTECNIA");
+                cmb_carrera.Items.Add("OBSTETRICIA");
+                cmb_carrera.Items.Add("ODONTOLOGÍA");
+                cmb_carrera.Items.Add("PSICOLOGÍA");
+
+
+
+            }
+            else
+            {
+                cmb_carrera.Items.Remove("BIOLOGÍA");
+                cmb_carrera.Items.Remove("ENFERMERÍA");
+                cmb_carrera.Items.Remove("FARMACIA Y BIOQUÍMICA");
+                cmb_carrera.Items.Remove("MEDICINA VETERINARIA Y ZOOTECNIA");
+                cmb_carrera.Items.Remove("OBSTETRICIA");
+                cmb_carrera.Items.Remove("ODONTOLOGÍA");
+                cmb_carrera.Items.Remove("PSICOLOGÍA");
+            }
+
+            if (cmb_cat.SelectedIndex == 1)
+            {
+                cmb_carrera.Enabled = true;
+                cmb_carrera.Items.Add("ADMINISTRACIÓN");
+                cmb_carrera.Items.Add("ARQUEOLOGÍA");
+                cmb_carrera.Items.Add("CIENCIAS DE LA COMUNICACIÓN");
+                cmb_carrera.Items.Add("CIENCIAS DE LA EDUCACIÓN EN CIENCIAS BIOLÓGICAS Y QUÍMICA");
+                cmb_carrera.Items.Add("CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN ARTÍSTICA");
+                cmb_carrera.Items.Add("CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN FÍSICA");
+                cmb_carrera.Items.Add("CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN INICIAL");
+                cmb_carrera.Items.Add("CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN PRIMARIA");
+                cmb_carrera.Items.Add("CIENCIAS DE LA EDUCACIÓN EN FILOSOFÍA, PSICOLOGÍA Y CIENCIAS SOCIALES");
+                cmb_carrera.Items.Add("CIENCIAS DE LA EDUCACIÓN EN HISTORIA Y GEOGRAFÍA");
+                cmb_carrera.Items.Add("CIENCIAS DE LA EDUCACIÓN EN LENGUA Y LITERATURA");
+                cmb_carrera.Items.Add("CIENCIAS DE LA EDUCACIÓN EN MATEMÁTICA E INFORMÁTICA");
+                cmb_carrera.Items.Add("CONTABILIDAD");
+                cmb_carrera.Items.Add("DERECHO");
+                cmb_carrera.Items.Add("ECONOMÍA");
+                cmb_carrera.Items.Add("NEGOCIOS INTERNACIONALES");
+                cmb_carrera.Items.Add("TURISMO");
+
+            }
+            else
+            {
+                cmb_carrera.Items.Remove("ADMINISTRACIÓN");
+                cmb_carrera.Items.Remove("ARQUEOLOGÍA");
+                cmb_carrera.Items.Remove("CIENCIAS DE LA COMUNICACIÓN");
+                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN CIENCIAS BIOLÓGICAS Y QUÍMICA");
+                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN ARTÍSTICA");
+                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN FÍSICA");
+                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN INICIAL");
+                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN PRIMARIA");
+                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN FILOSOFÍA, PSICOLOGÍA Y CIENCIAS SOCIALES");
+                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN HISTORIA Y GEOGRAFÍA");
+                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN LENGUA Y LITERATURA");
+                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN MATEMÁTICA E INFORMÁTICA");
+                cmb_carrera.Items.Remove("CONTABILIDAD");
+                cmb_carrera.Items.Remove("DERECHO");
+                cmb_carrera.Items.Remove("ECONOMÍA");
+                cmb_carrera.Items.Remove("NEGOCIOS INTERNACIONALES");
+                cmb_carrera.Items.Remove("TURISMO");
+            }
+
+            if (cmb_cat.SelectedIndex == 2)
+            {
+                cmb_carrera.Enabled = true;
+                cmb_carrera.Items.Add("AGRONOMÍA");
+                cmb_carrera.Items.Add("ARQUITECTURA");
+                cmb_carrera.Items.Add("ESTADÍSTICA");
+                cmb_carrera.Items.Add("FÍSICA");
+                cmb_carrera.Items.Add("INGENIERÍA AMBIENTAL Y SANITARIA");
+                cmb_carrera.Items.Add("INGENIERÍA CIVIL");
+                cmb_carrera.Items.Add("INGENIERÍA DE ALIMENTOS");
+                cmb_carrera.Items.Add("INGENIERÍA DE MINAS");
+                cmb_carrera.Items.Add("INGENIERÍA DE SISTEMAS");
+                cmb_carrera.Items.Add("INGENIERÍA ELECTRÓNICA");
+                cmb_carrera.Items.Add("INGENIERÍA METALÚRGICA");
+                cmb_carrera.Items.Add("INGENIERÍA MECÁNICA ELÉCTRICA");
+                cmb_carrera.Items.Add("INGENIERÍA PESQUERA");
+                cmb_carrera.Items.Add("INGENIERÍA QUÍMICA");
+                cmb_carrera.Items.Add("MATEMÁTICA E INFROMÁTICA");
+            }
+            else
+            {
+                cmb_carrera.Items.Remove("AGRONOMÍA");
+                cmb_carrera.Items.Remove("ARQUITECTURA");
+                cmb_carrera.Items.Remove("ESTADÍSTICA");
+                cmb_carrera.Items.Remove("FÍSICA");
+                cmb_carrera.Items.Remove("INGENIERÍA AMBIENTAL Y SANITARIA");
+                cmb_carrera.Items.Remove("INGENIERÍA CIVIL");
+                cmb_carrera.Items.Remove("INGENIERÍA DE ALIMENTOS");
+                cmb_carrera.Items.Remove("INGENIERÍA DE MINAS");
+                cmb_carrera.Items.Remove("INGENIERÍA DE SISTEMAS");
+                cmb_carrera.Items.Remove("INGENIERÍA ELECTRÓNICA");
+                cmb_carrera.Items.Remove("INGENIERÍA METALÚRGICA");
+                cmb_carrera.Items.Remove("INGENIERÍA MECÁNICA ELÉCTRICA");
+                cmb_carrera.Items.Remove("INGENIERÍA PESQUERA");
+                cmb_carrera.Items.Remove("INGENIERÍA QUÍMICA");
+                cmb_carrera.Items.Remove("MATEMÁTICA E INFROMÁTICA");
+            }
+
+
+        }
+
+        private void cmb_carrera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            llenado carrera = new llenado(cmb_carrera.SelectedIndex);
+            //guardo los objetos en cada variable :b 
+            carrera.escogerCarrera(cmb_cat.SelectedIndex);
+            txtperfil.Text = carrera.mostrarMensaje();
+            txtcompetencias.Text = carrera.mostrarMensaje2();
+            txtdatos.Text = carrera.mostrarMensaje3();
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxCarreraM_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxMatM_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPatM_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxNombreM_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxCodigoM_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label132_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label134_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label136_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                consultaInput($"UPDATE postulante SET nombre = {textBoxNombreM.Text}, apellido_paterno = {textBoxPatM.Text}, apellido_materno = {textBoxMatM.Text},edad = , codigo_carrera={textBoxCarreraM.Text}  where codigo_postulante = {textBoxCodigoM.Text};");
+                llenarTabla(0);
+                vaciarTextboxes();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Considere revisar los datos ingresados");
+            }
+                
+
+
+        }
+        public void vaciarTextboxes()
+        {
+            textBoxNombreM.Clear();
+            textBoxPatM.Clear();
+            textBoxMatM.Clear();
+            textBoxEdadM.Clear();
+            textBoxCarreraM.Clear();
+            textBoxCodigoM.Clear();
+        }
+
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBoxCodigoM.Text = dataGridView3.SelectedCells[0].Value.ToString();
+           textBoxNombreM.Text = dataGridView3.SelectedCells[1].Value.ToString();
+            textBoxPatM.Text = dataGridView3.SelectedCells[2].Value.ToString();
+            textBoxMatM.Text = dataGridView3.SelectedCells[3].Value.ToString();
+            textBoxEdadM.Text = dataGridView3.SelectedCells[4].Value.ToString();
+            textBoxCarreraM.Text = dataGridView3.SelectedCells[5].Value.ToString();
+
+            //
+            textBoxCarreraM.Enabled = true;
         }
 
         private void buttonRandom_Click(object sender, EventArgs e)
@@ -386,8 +673,8 @@ namespace Tarea_Algoritmos
             comboBox98.SelectedText = clavesitas[97].ToString();
             comboBox99.SelectedText = clavesitas[98].ToString();
             comboBox100.SelectedText = clavesitas[99].ToString();
-            
 
+            MessageBox.Show("Guarde los puntajes", "Paso 2");
         }
 
         /*foreach (char c in respuesta) textBoxOutput.Text += c.ToString();

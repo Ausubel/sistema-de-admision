@@ -80,3 +80,167 @@ A:\VisualStudioProjects\funcionario\Tarea_Algoritmos\bin\Debug\ru\Microsoft.Repo
 A:\VisualStudioProjects\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 A:\VisualStudioProjects\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 A:\VisualStudioProjects\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.csproj.CopyComplete
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\Tarea_Algoritmos.exe.config
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\Tarea_Algoritmos.exe
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\Tarea_Algoritmos.pdb
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.ReportViewer.WebDesign.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\EnvDTE.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\stdole.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\de\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\es\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\it\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.csproj.AssemblyReference.cache
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.csproj.SuggestedBindingRedirects.cache
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.Main.resources
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.Properties.Resources.resources
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.csproj.GenerateResource.cache
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.csproj.CoreCompileInputs.cache
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.csproj.CopyComplete
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.exe
+C:\Users\CASMA\Desktop\PROYECTO DE ALGORITMOS\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.pdb
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\Tarea_Algoritmos.exe.config
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\Tarea_Algoritmos.exe
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\Tarea_Algoritmos.pdb
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.ReportViewer.WebDesign.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\EnvDTE.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\stdole.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\de\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\es\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\it\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.csproj.AssemblyReference.cache
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.csproj.SuggestedBindingRedirects.cache
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.Main.resources
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.Properties.Resources.resources
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.csproj.GenerateResource.cache
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.csproj.CoreCompileInputs.cache
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.csproj.CopyComplete
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.exe
+C:\Users\intel\Desktop\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.pdb
