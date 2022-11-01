@@ -17,7 +17,7 @@ namespace Tarea_Algoritmos
         //RUTA DEL ARCHIVO RESPUESTAS
         private static string filePath = @"C:\Users\intel\Desktop\respuestas.txt";
 
-        //VARIABLE PARA SU POSTERIOR USO
+        //DECLARACION DE VARIABLES
         private static string CLAVES;
         private double CORRECTO, INCORRECTO, NULO;
         private int LINEASARCHIVO = 0;
@@ -41,7 +41,7 @@ namespace Tarea_Algoritmos
         private static SqlConnection conn = new SqlConnection("SERVER = AUSUBEL; DATABASE = Admission; USER ID=sa;PASSWORD=intelectus135");
 
         //METODOS DE LA BASE DE DATOS
-        public void consultaInput(string consulta)//mausquerramienta
+        public void consultaInput(string consulta)
         {
             conn.Open();
             SqlCommand comando = new SqlCommand(consulta, conn);
@@ -49,7 +49,7 @@ namespace Tarea_Algoritmos
             conn.Close();
         }
 
-        //array para guardar las respuestas
+        //ARREGLO PARA ALMACENAR LAS RESPUESTAS
         private static string[] RESPUESTAS = File.ReadAllLines(filePath).ToArray();
 
         public void llenarTabla(int a)
@@ -65,22 +65,16 @@ namespace Tarea_Algoritmos
             }
             else
             {
-                string consulta = "select codigo_postulante as CODIGO,nombre as NOMBRE, apellido_paterno as APE_PATERNO, apellido_materno as APE_MATERNO,edad as EDAD,nombre_carrera AS CARRERA from postulante p, carrera c where p.codigo_carrera = c.codigo_carrera;";
+                string consulta = "SELECT codigo_postulante AS CODIGO,nombre AS NOMBRE, apellido_paterno AS APE_PATERNO, apellido_materno as APE_MATERNO,edad as EDAD,nombre_carrera as CARRERA,nota AS NOTA FROM postulante p, carrera c WHERE p.codigo_carrera = c.codigo_carrera ORDER BY p.codigo_carrera,p.nota DESC ;";
                 SqlDataAdapter adapter = new SqlDataAdapter(consulta, conn);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);               
                 dataGridView3.DataSource = dt;
             }
-            
-            
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
-            //lee la cantidad de lineas que hay en el txt
-            StreamReader sr = new StreamReader(filePath);
-            while (sr.ReadLine() != null) { LINEASARCHIVO++; }
-            sr.Close();
             comboBoxInicializa();
             llenarTabla(1);
             for (int i = 0; i < dataGridView2.Columns.Count - 1; i++)
@@ -102,6 +96,8 @@ namespace Tarea_Algoritmos
             dataGridView2.DefaultCellStyle.Font = new Font("Comic Sans", 14);
             cargarDiccionario();
         }
+
+        //UTILIZAMOS LA CLASE DICCIONARIO
         Dictionary<string, string> dicCodigo = new Dictionary<string, string>();
         private void cargarDiccionario()
         {
@@ -111,16 +107,16 @@ namespace Tarea_Algoritmos
             for (int i=0; i<RESPUESTAS.Length;i++)
             {
                 linea = RESPUESTAS[i].ToArray();
-                string casmaRespuesta = "";
+                string respuesta = "";
 
-                for (int j = 9; j < 109; j++) casmaRespuesta += linea[j].ToString();
+                for (int j = 9; j < 109; j++) respuesta += linea[j].ToString();
                 
-                dicCodigo[$"{linea[0]}{linea[1]}{linea[2]}{linea[3]}{linea[4]}{linea[5]}{linea[6]}{linea[7]}"] = casmaRespuesta;    
+                dicCodigo[$"{linea[0]}{linea[1]}{linea[2]}{linea[3]}{linea[4]}{linea[5]}{linea[6]}{linea[7]}"] = respuesta;    
             }
-            foreach(KeyValuePair<string,string> item in dicCodigo)
+            /*foreach(KeyValuePair<string,string> item in dicCodigo)
             {
                 textBoxOutput.Text += $"{item.Key} {item.Value}\r\n";
-            }
+            }*/
         }
         private void buttonVista_Click(object sender, EventArgs e)
         {
@@ -528,16 +524,18 @@ namespace Tarea_Algoritmos
 
         private void buttonModificar_Click(object sender, EventArgs e)
         {
-            try
+            consultaInput($"UPDATE postulante SET nombre = '{textBoxNombreM.Text}', apellido_paterno = '{textBoxPatM.Text}', apellido_materno = '{textBoxMatM.Text}',edad = {textBoxEdadM.Text} where codigo_postulante = {textBoxCodigoM.Text}");
+            llenarTabla(0);
+            vaciarTextboxes();
+            MessageBox.Show("POSTULANTE MODIFICADO CORRECTAMENTE");
+            /*try
             {
-                consultaInput($"UPDATE postulante SET nombre = {textBoxNombreM.Text}, apellido_paterno = {textBoxPatM.Text}, apellido_materno = {textBoxMatM.Text},edad = , codigo_carrera={textBoxCarreraM.Text}  where codigo_postulante = {textBoxCodigoM.Text};");
-                llenarTabla(0);
-                vaciarTextboxes();
+                
             }
             catch (Exception)
             {
                 MessageBox.Show("Considere revisar los datos ingresados");
-            }
+            }*/
                 
 
 
@@ -561,8 +559,21 @@ namespace Tarea_Algoritmos
             textBoxEdadM.Text = dataGridView3.SelectedCells[4].Value.ToString();
             textBoxCarreraM.Text = dataGridView3.SelectedCells[5].Value.ToString();
 
-            //
-            textBoxCarreraM.Enabled = true;
+            //Deshabilito caja de texto carrera
+            textBoxCarreraM.Enabled = false;
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+
+            consultaInput("Delete from postulante where codigo_postulante = ' " + textBoxCodigoM.Text + "';");
+            MessageBox.Show("REGISTRO ELIMINADO");
+            llenarTabla(0);
+        }
+
+        private void textBoxOutput_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void buttonRandom_Click(object sender, EventArgs e)
@@ -674,12 +685,8 @@ namespace Tarea_Algoritmos
             comboBox99.SelectedText = clavesitas[98].ToString();
             comboBox100.SelectedText = clavesitas[99].ToString();
 
-            MessageBox.Show("Guarde los puntajes", "Paso 2");
+            MessageBox.Show("A continuación, guarde los puntajes.", "Paso 2");
         }
-
-        /*foreach (char c in respuesta) textBoxOutput.Text += c.ToString();
-textBoxOutput.Text += "\r\n";*/
-        //foreach (char c in CLAVES) textBoxOutput.Text += c.ToString();
         public void comboBoxInicializa()
         {
             comboBox1.SelectedIndex = 4;

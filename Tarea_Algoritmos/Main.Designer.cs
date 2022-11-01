@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -36,9 +37,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label138 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxOutput = new System.Windows.Forms.TextBox();
             this.buttonRes = new System.Windows.Forms.Button();
             this.buttonInfo = new System.Windows.Forms.Button();
@@ -65,7 +67,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.comboBox101 = new System.Windows.Forms.ComboBox();
             this.buttonGuardarNota = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.buttonRandom = new System.Windows.Forms.Button();
@@ -340,6 +341,7 @@
             this.buttonVolver = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -374,12 +376,14 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1264, 807);
+            this.tabControl1.Size = new System.Drawing.Size(1447, 807);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPage1.Controls.Add(this.label138);
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.textBoxOutput);
             this.tabPage1.Controls.Add(this.buttonRes);
             this.tabPage1.Controls.Add(this.buttonInfo);
@@ -389,27 +393,49 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1256, 781);
+            this.tabPage1.Size = new System.Drawing.Size(1439, 781);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
+            // 
+            // label138
+            // 
+            this.label138.AutoSize = true;
+            this.label138.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label138.Location = new System.Drawing.Point(29, 478);
+            this.label138.Name = "label138";
+            this.label138.Size = new System.Drawing.Size(113, 18);
+            this.label138.TabIndex = 6;
+            this.label138.Text = "Archivo de texto";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(430, 21);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(314, 319);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // textBoxOutput
             // 
             this.textBoxOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxOutput.Location = new System.Drawing.Point(22, 457);
+            this.textBoxOutput.Location = new System.Drawing.Point(22, 512);
             this.textBoxOutput.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOutput.Multiline = true;
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.Size = new System.Drawing.Size(1347, 204);
             this.textBoxOutput.TabIndex = 4;
+            this.textBoxOutput.TextChanged += new System.EventHandler(this.textBoxOutput_TextChanged);
             // 
             // buttonRes
             // 
             this.buttonRes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonRes.Location = new System.Drawing.Point(254, 382);
+            this.buttonRes.Location = new System.Drawing.Point(503, 373);
             this.buttonRes.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRes.Name = "buttonRes";
-            this.buttonRes.Size = new System.Drawing.Size(123, 44);
+            this.buttonRes.Size = new System.Drawing.Size(161, 49);
             this.buttonRes.TabIndex = 3;
             this.buttonRes.Text = "RESULTADOS";
             this.buttonRes.UseVisualStyleBackColor = true;
@@ -418,10 +444,10 @@
             // buttonInfo
             // 
             this.buttonInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonInfo.Location = new System.Drawing.Point(534, 196);
+            this.buttonInfo.Location = new System.Drawing.Point(731, 373);
             this.buttonInfo.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInfo.Name = "buttonInfo";
-            this.buttonInfo.Size = new System.Drawing.Size(123, 44);
+            this.buttonInfo.Size = new System.Drawing.Size(161, 49);
             this.buttonInfo.TabIndex = 2;
             this.buttonInfo.Text = "INFORMACION";
             this.buttonInfo.UseVisualStyleBackColor = true;
@@ -430,10 +456,10 @@
             // buttonCa
             // 
             this.buttonCa.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonCa.Location = new System.Drawing.Point(254, 36);
+            this.buttonCa.Location = new System.Drawing.Point(273, 373);
             this.buttonCa.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCa.Name = "buttonCa";
-            this.buttonCa.Size = new System.Drawing.Size(123, 44);
+            this.buttonCa.Size = new System.Drawing.Size(161, 49);
             this.buttonCa.TabIndex = 1;
             this.buttonCa.Text = "CALIFICAR RESPUESTAS";
             this.buttonCa.UseVisualStyleBackColor = true;
@@ -442,10 +468,10 @@
             // buttonVista
             // 
             this.buttonVista.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonVista.Location = new System.Drawing.Point(22, 196);
+            this.buttonVista.Location = new System.Drawing.Point(77, 373);
             this.buttonVista.Margin = new System.Windows.Forms.Padding(2);
             this.buttonVista.Name = "buttonVista";
-            this.buttonVista.Size = new System.Drawing.Size(123, 44);
+            this.buttonVista.Size = new System.Drawing.Size(161, 49);
             this.buttonVista.TabIndex = 0;
             this.buttonVista.Text = "VISTA DE POSTULANTES";
             this.buttonVista.UseVisualStyleBackColor = true;
@@ -462,7 +488,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1256, 781);
+            this.tabPage2.Size = new System.Drawing.Size(1439, 781);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPageVista";
             // 
@@ -486,6 +512,7 @@
             this.buttonEliminar.TabIndex = 532;
             this.buttonEliminar.Text = "ELIMINAR";
             this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // groupBox10
             // 
@@ -679,7 +706,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Size = new System.Drawing.Size(1256, 781);
+            this.tabPage3.Size = new System.Drawing.Size(1439, 781);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             // 
@@ -730,7 +757,6 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tabPage4.Controls.Add(this.comboBox101);
             this.tabPage4.Controls.Add(this.buttonGuardarNota);
             this.tabPage4.Controls.Add(this.groupBox5);
             this.tabPage4.Controls.Add(this.comboBox461);
@@ -944,23 +970,10 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Size = new System.Drawing.Size(1256, 781);
+            this.tabPage4.Size = new System.Drawing.Size(1439, 781);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
-            // 
-            // comboBox101
-            // 
-            this.comboBox101.FormattingEnabled = true;
-            this.comboBox101.Items.AddRange(new object[] {
-            "FISICA",
-            "MATEMATICA",
-            "COMUNICACION"});
-            this.comboBox101.Location = new System.Drawing.Point(805, 4);
-            this.comboBox101.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox101.Name = "comboBox101";
-            this.comboBox101.Size = new System.Drawing.Size(109, 21);
-            this.comboBox101.TabIndex = 635;
             // 
             // buttonGuardarNota
             // 
@@ -4174,7 +4187,7 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage5.Size = new System.Drawing.Size(1256, 781);
+            this.tabPage5.Size = new System.Drawing.Size(1439, 781);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
@@ -4357,7 +4370,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 781);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1264, 26);
+            this.panel2.Size = new System.Drawing.Size(1447, 26);
             this.panel2.TabIndex = 2;
             // 
             // buttonVolver
@@ -4375,7 +4388,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 807);
+            this.ClientSize = new System.Drawing.Size(1447, 807);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4387,6 +4400,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
@@ -4692,7 +4706,6 @@
         private System.Windows.Forms.ComboBox comboBox55;
         private System.Windows.Forms.ComboBox comboBox461;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.ComboBox comboBox101;
         private System.Windows.Forms.Button buttonRandom;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox textBoxNota;
@@ -4728,5 +4741,7 @@
         private System.Windows.Forms.TextBox textBoxEdadM;
         private System.Windows.Forms.Label label137;
         private System.Windows.Forms.TextBox textBoxCodigoM;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label138;
     }
 }
