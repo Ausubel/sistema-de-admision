@@ -9,10 +9,6 @@ A:\VisualStudioProjects\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.
 A:\VisualStudioProjects\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.exe
 A:\VisualStudioProjects\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.pdb
 A:\VisualStudioProjects\funcionario\Tarea_Algoritmos\obj\Debug\Tarea_Algoritmos.Main.resources
-A:\VisualStudioProjects\funcionario\Tarea_Algoritmos\bin\Debug\SqlServerTypes\x64\msvcr120.dll
-A:\VisualStudioProjects\funcionario\Tarea_Algoritmos\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
-A:\VisualStudioProjects\funcionario\Tarea_Algoritmos\bin\Debug\SqlServerTypes\x86\msvcr120.dll
-A:\VisualStudioProjects\funcionario\Tarea_Algoritmos\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 A:\VisualStudioProjects\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.ReportViewer.Common.dll
 A:\VisualStudioProjects\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 A:\VisualStudioProjects\funcionario\Tarea_Algoritmos\bin\Debug\Microsoft.ReportViewer.Design.dll

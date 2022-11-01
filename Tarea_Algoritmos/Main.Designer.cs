@@ -46,6 +46,10 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.buttonGuardarNota = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.buttonRandom = new System.Windows.Forms.Button();
+            this.buttonGuardarCalificar = new System.Windows.Forms.Button();
             this.comboBox461 = new System.Windows.Forms.ComboBox();
             this.comboBox100 = new System.Windows.Forms.ComboBox();
             this.comboBox99 = new System.Windows.Forms.ComboBox();
@@ -148,8 +152,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.buttonCalificar = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label130 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox101 = new System.Windows.Forms.ComboBox();
             this.label129 = new System.Windows.Forms.Label();
             this.label128 = new System.Windows.Forms.Label();
             this.label127 = new System.Windows.Forms.Label();
@@ -177,6 +181,8 @@
             this.label105 = new System.Windows.Forms.Label();
             this.label104 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBoxNota = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.textBoxCodigo = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.textBoxCarrera = new System.Windows.Forms.TextBox();
@@ -268,7 +274,6 @@
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.buttonBuscarCalificar = new System.Windows.Forms.Button();
-            this.buttonGuardarCalificar = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -308,6 +313,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -463,6 +469,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.buttonGuardarNota);
+            this.tabPage4.Controls.Add(this.groupBox5);
             this.tabPage4.Controls.Add(this.comboBox461);
             this.tabPage4.Controls.Add(this.comboBox100);
             this.tabPage4.Controls.Add(this.comboBox99);
@@ -565,7 +573,6 @@
             this.tabPage4.Controls.Add(this.comboBox1);
             this.tabPage4.Controls.Add(this.buttonCalificar);
             this.tabPage4.Controls.Add(this.dataGridView2);
-            this.tabPage4.Controls.Add(this.label130);
             this.tabPage4.Controls.Add(this.groupBox2);
             this.tabPage4.Controls.Add(this.groupBox3);
             this.tabPage4.Controls.Add(this.label84);
@@ -649,7 +656,6 @@
             this.tabPage4.Controls.Add(this.label42);
             this.tabPage4.Controls.Add(this.label43);
             this.tabPage4.Controls.Add(this.buttonBuscarCalificar);
-            this.tabPage4.Controls.Add(this.buttonGuardarCalificar);
             this.tabPage4.Controls.Add(this.label30);
             this.tabPage4.Controls.Add(this.label31);
             this.tabPage4.Controls.Add(this.label21);
@@ -681,6 +687,49 @@
             this.tabPage4.UseVisualStyleBackColor = true;
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
+            // buttonGuardarNota
+            // 
+            this.buttonGuardarNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGuardarNota.Location = new System.Drawing.Point(1119, 633);
+            this.buttonGuardarNota.Name = "buttonGuardarNota";
+            this.buttonGuardarNota.Size = new System.Drawing.Size(119, 65);
+            this.buttonGuardarNota.TabIndex = 635;
+            this.buttonGuardarNota.Text = "GUARDAR NOTA";
+            this.buttonGuardarNota.UseVisualStyleBackColor = true;
+            this.buttonGuardarNota.Click += new System.EventHandler(this.buttonGuardarNota_Click);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.buttonRandom);
+            this.groupBox5.Controls.Add(this.buttonGuardarCalificar);
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(100, 527);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(264, 220);
+            this.groupBox5.TabIndex = 325;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "CAPULLOS";
+            // 
+            // buttonRandom
+            // 
+            this.buttonRandom.Location = new System.Drawing.Point(77, 137);
+            this.buttonRandom.Name = "buttonRandom";
+            this.buttonRandom.Size = new System.Drawing.Size(112, 49);
+            this.buttonRandom.TabIndex = 635;
+            this.buttonRandom.Text = "RANDOM";
+            this.buttonRandom.UseVisualStyleBackColor = true;
+            this.buttonRandom.Click += new System.EventHandler(this.buttonRandom_Click);
+            // 
+            // buttonGuardarCalificar
+            // 
+            this.buttonGuardarCalificar.Location = new System.Drawing.Point(77, 24);
+            this.buttonGuardarCalificar.Name = "buttonGuardarCalificar";
+            this.buttonGuardarCalificar.Size = new System.Drawing.Size(112, 47);
+            this.buttonGuardarCalificar.TabIndex = 366;
+            this.buttonGuardarCalificar.Text = "GUARDAR CLAVES";
+            this.buttonGuardarCalificar.UseVisualStyleBackColor = true;
+            this.buttonGuardarCalificar.Click += new System.EventHandler(this.buttonGuardarCalificar_Click);
+            // 
             // comboBox461
             // 
             this.comboBox461.FormattingEnabled = true;
@@ -703,11 +752,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox100.Location = new System.Drawing.Point(917, 681);
             this.comboBox100.Name = "comboBox100";
             this.comboBox100.Size = new System.Drawing.Size(36, 21);
             this.comboBox100.TabIndex = 633;
+            this.comboBox100.Text = " ";
             // 
             // comboBox99
             // 
@@ -717,11 +767,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox99.Location = new System.Drawing.Point(917, 649);
             this.comboBox99.Name = "comboBox99";
             this.comboBox99.Size = new System.Drawing.Size(36, 21);
             this.comboBox99.TabIndex = 632;
+            this.comboBox99.Text = " ";
             // 
             // comboBox98
             // 
@@ -731,11 +782,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox98.Location = new System.Drawing.Point(917, 619);
             this.comboBox98.Name = "comboBox98";
             this.comboBox98.Size = new System.Drawing.Size(36, 21);
             this.comboBox98.TabIndex = 631;
+            this.comboBox98.Text = " ";
             // 
             // comboBox97
             // 
@@ -745,11 +797,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox97.Location = new System.Drawing.Point(917, 586);
             this.comboBox97.Name = "comboBox97";
             this.comboBox97.Size = new System.Drawing.Size(36, 21);
             this.comboBox97.TabIndex = 630;
+            this.comboBox97.Text = " ";
             // 
             // comboBox96
             // 
@@ -759,11 +812,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox96.Location = new System.Drawing.Point(917, 555);
             this.comboBox96.Name = "comboBox96";
             this.comboBox96.Size = new System.Drawing.Size(36, 21);
             this.comboBox96.TabIndex = 629;
+            this.comboBox96.Text = " ";
             // 
             // comboBox95
             // 
@@ -773,11 +827,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox95.Location = new System.Drawing.Point(917, 524);
             this.comboBox95.Name = "comboBox95";
             this.comboBox95.Size = new System.Drawing.Size(36, 21);
             this.comboBox95.TabIndex = 628;
+            this.comboBox95.Text = " ";
             // 
             // comboBox94
             // 
@@ -787,11 +842,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox94.Location = new System.Drawing.Point(917, 491);
             this.comboBox94.Name = "comboBox94";
             this.comboBox94.Size = new System.Drawing.Size(36, 21);
             this.comboBox94.TabIndex = 627;
+            this.comboBox94.Text = " ";
             // 
             // comboBox93
             // 
@@ -801,11 +857,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox93.Location = new System.Drawing.Point(917, 461);
             this.comboBox93.Name = "comboBox93";
             this.comboBox93.Size = new System.Drawing.Size(36, 21);
             this.comboBox93.TabIndex = 626;
+            this.comboBox93.Text = " ";
             // 
             // comboBox92
             // 
@@ -815,11 +872,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox92.Location = new System.Drawing.Point(917, 429);
             this.comboBox92.Name = "comboBox92";
             this.comboBox92.Size = new System.Drawing.Size(36, 21);
             this.comboBox92.TabIndex = 625;
+            this.comboBox92.Text = " ";
             // 
             // comboBox91
             // 
@@ -829,11 +887,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox91.Location = new System.Drawing.Point(917, 395);
             this.comboBox91.Name = "comboBox91";
             this.comboBox91.Size = new System.Drawing.Size(36, 21);
             this.comboBox91.TabIndex = 624;
+            this.comboBox91.Text = " ";
             // 
             // comboBox90
             // 
@@ -843,11 +902,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox90.Location = new System.Drawing.Point(917, 362);
             this.comboBox90.Name = "comboBox90";
             this.comboBox90.Size = new System.Drawing.Size(36, 21);
             this.comboBox90.TabIndex = 623;
+            this.comboBox90.Text = " ";
             // 
             // comboBox89
             // 
@@ -857,11 +917,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox89.Location = new System.Drawing.Point(917, 331);
             this.comboBox89.Name = "comboBox89";
             this.comboBox89.Size = new System.Drawing.Size(36, 21);
             this.comboBox89.TabIndex = 622;
+            this.comboBox89.Text = " ";
             // 
             // comboBox88
             // 
@@ -871,11 +932,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox88.Location = new System.Drawing.Point(917, 302);
             this.comboBox88.Name = "comboBox88";
             this.comboBox88.Size = new System.Drawing.Size(36, 21);
             this.comboBox88.TabIndex = 621;
+            this.comboBox88.Text = " ";
             // 
             // comboBox87
             // 
@@ -885,11 +947,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox87.Location = new System.Drawing.Point(917, 270);
             this.comboBox87.Name = "comboBox87";
             this.comboBox87.Size = new System.Drawing.Size(36, 21);
             this.comboBox87.TabIndex = 620;
+            this.comboBox87.Text = " ";
             // 
             // comboBox86
             // 
@@ -899,11 +962,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox86.Location = new System.Drawing.Point(917, 237);
             this.comboBox86.Name = "comboBox86";
             this.comboBox86.Size = new System.Drawing.Size(36, 21);
             this.comboBox86.TabIndex = 619;
+            this.comboBox86.Text = " ";
             // 
             // comboBox85
             // 
@@ -913,11 +977,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox85.Location = new System.Drawing.Point(917, 203);
             this.comboBox85.Name = "comboBox85";
             this.comboBox85.Size = new System.Drawing.Size(36, 21);
             this.comboBox85.TabIndex = 618;
+            this.comboBox85.Text = " ";
             // 
             // comboBox84
             // 
@@ -927,11 +992,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox84.Location = new System.Drawing.Point(917, 173);
             this.comboBox84.Name = "comboBox84";
             this.comboBox84.Size = new System.Drawing.Size(36, 21);
             this.comboBox84.TabIndex = 617;
+            this.comboBox84.Text = " ";
             // 
             // comboBox83
             // 
@@ -941,11 +1007,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox83.Location = new System.Drawing.Point(917, 139);
             this.comboBox83.Name = "comboBox83";
             this.comboBox83.Size = new System.Drawing.Size(36, 21);
             this.comboBox83.TabIndex = 616;
+            this.comboBox83.Text = " ";
             // 
             // comboBox82
             // 
@@ -955,11 +1022,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox82.Location = new System.Drawing.Point(917, 106);
             this.comboBox82.Name = "comboBox82";
             this.comboBox82.Size = new System.Drawing.Size(36, 21);
             this.comboBox82.TabIndex = 615;
+            this.comboBox82.Text = " ";
             // 
             // comboBox81
             // 
@@ -969,11 +1037,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox81.Location = new System.Drawing.Point(917, 72);
             this.comboBox81.Name = "comboBox81";
             this.comboBox81.Size = new System.Drawing.Size(36, 21);
             this.comboBox81.TabIndex = 614;
+            this.comboBox81.Text = " ";
             // 
             // comboBox80
             // 
@@ -983,7 +1052,7 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox80.Location = new System.Drawing.Point(839, 681);
             this.comboBox80.Name = "comboBox80";
             this.comboBox80.Size = new System.Drawing.Size(36, 21);
@@ -997,7 +1066,7 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox79.Location = new System.Drawing.Point(839, 649);
             this.comboBox79.Name = "comboBox79";
             this.comboBox79.Size = new System.Drawing.Size(36, 21);
@@ -1011,7 +1080,7 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox78.Location = new System.Drawing.Point(839, 619);
             this.comboBox78.Name = "comboBox78";
             this.comboBox78.Size = new System.Drawing.Size(36, 21);
@@ -1025,11 +1094,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox77.Location = new System.Drawing.Point(839, 586);
             this.comboBox77.Name = "comboBox77";
             this.comboBox77.Size = new System.Drawing.Size(36, 21);
             this.comboBox77.TabIndex = 610;
+            this.comboBox77.Text = " ";
             // 
             // comboBox76
             // 
@@ -1039,11 +1109,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox76.Location = new System.Drawing.Point(839, 555);
             this.comboBox76.Name = "comboBox76";
             this.comboBox76.Size = new System.Drawing.Size(36, 21);
             this.comboBox76.TabIndex = 609;
+            this.comboBox76.Text = " ";
             // 
             // comboBox75
             // 
@@ -1053,11 +1124,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox75.Location = new System.Drawing.Point(839, 524);
             this.comboBox75.Name = "comboBox75";
             this.comboBox75.Size = new System.Drawing.Size(36, 21);
             this.comboBox75.TabIndex = 608;
+            this.comboBox75.Text = " ";
             // 
             // comboBox74
             // 
@@ -1067,11 +1139,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox74.Location = new System.Drawing.Point(839, 491);
             this.comboBox74.Name = "comboBox74";
             this.comboBox74.Size = new System.Drawing.Size(36, 21);
             this.comboBox74.TabIndex = 607;
+            this.comboBox74.Text = " ";
             // 
             // comboBox73
             // 
@@ -1081,11 +1154,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox73.Location = new System.Drawing.Point(839, 461);
             this.comboBox73.Name = "comboBox73";
             this.comboBox73.Size = new System.Drawing.Size(36, 21);
             this.comboBox73.TabIndex = 606;
+            this.comboBox73.Text = " ";
             // 
             // comboBox72
             // 
@@ -1095,11 +1169,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox72.Location = new System.Drawing.Point(839, 429);
             this.comboBox72.Name = "comboBox72";
             this.comboBox72.Size = new System.Drawing.Size(36, 21);
             this.comboBox72.TabIndex = 605;
+            this.comboBox72.Text = " ";
             // 
             // comboBox71
             // 
@@ -1109,11 +1184,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox71.Location = new System.Drawing.Point(839, 395);
             this.comboBox71.Name = "comboBox71";
             this.comboBox71.Size = new System.Drawing.Size(36, 21);
             this.comboBox71.TabIndex = 604;
+            this.comboBox71.Text = " ";
             // 
             // comboBox70
             // 
@@ -1123,11 +1199,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox70.Location = new System.Drawing.Point(839, 362);
             this.comboBox70.Name = "comboBox70";
             this.comboBox70.Size = new System.Drawing.Size(36, 21);
             this.comboBox70.TabIndex = 603;
+            this.comboBox70.Text = " ";
             // 
             // comboBox69
             // 
@@ -1137,11 +1214,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox69.Location = new System.Drawing.Point(839, 331);
             this.comboBox69.Name = "comboBox69";
             this.comboBox69.Size = new System.Drawing.Size(36, 21);
             this.comboBox69.TabIndex = 602;
+            this.comboBox69.Text = " ";
             // 
             // comboBox68
             // 
@@ -1151,11 +1229,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox68.Location = new System.Drawing.Point(839, 302);
             this.comboBox68.Name = "comboBox68";
             this.comboBox68.Size = new System.Drawing.Size(36, 21);
             this.comboBox68.TabIndex = 601;
+            this.comboBox68.Text = " ";
             // 
             // comboBox67
             // 
@@ -1165,11 +1244,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox67.Location = new System.Drawing.Point(839, 270);
             this.comboBox67.Name = "comboBox67";
             this.comboBox67.Size = new System.Drawing.Size(36, 21);
             this.comboBox67.TabIndex = 600;
+            this.comboBox67.Text = " ";
             // 
             // comboBox66
             // 
@@ -1179,11 +1259,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox66.Location = new System.Drawing.Point(839, 237);
             this.comboBox66.Name = "comboBox66";
             this.comboBox66.Size = new System.Drawing.Size(36, 21);
             this.comboBox66.TabIndex = 599;
+            this.comboBox66.Text = " ";
             // 
             // comboBox65
             // 
@@ -1193,11 +1274,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox65.Location = new System.Drawing.Point(839, 203);
             this.comboBox65.Name = "comboBox65";
             this.comboBox65.Size = new System.Drawing.Size(36, 21);
             this.comboBox65.TabIndex = 598;
+            this.comboBox65.Text = " ";
             // 
             // comboBox64
             // 
@@ -1207,11 +1289,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox64.Location = new System.Drawing.Point(839, 173);
             this.comboBox64.Name = "comboBox64";
             this.comboBox64.Size = new System.Drawing.Size(36, 21);
             this.comboBox64.TabIndex = 597;
+            this.comboBox64.Text = " ";
             // 
             // comboBox63
             // 
@@ -1221,11 +1304,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox63.Location = new System.Drawing.Point(839, 139);
             this.comboBox63.Name = "comboBox63";
             this.comboBox63.Size = new System.Drawing.Size(36, 21);
             this.comboBox63.TabIndex = 596;
+            this.comboBox63.Text = " ";
             // 
             // comboBox62
             // 
@@ -1235,11 +1319,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox62.Location = new System.Drawing.Point(839, 106);
             this.comboBox62.Name = "comboBox62";
             this.comboBox62.Size = new System.Drawing.Size(36, 21);
             this.comboBox62.TabIndex = 595;
+            this.comboBox62.Text = " ";
             // 
             // comboBox61
             // 
@@ -1249,11 +1334,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox61.Location = new System.Drawing.Point(839, 72);
             this.comboBox61.Name = "comboBox61";
             this.comboBox61.Size = new System.Drawing.Size(36, 21);
             this.comboBox61.TabIndex = 594;
+            this.comboBox61.Text = " ";
             // 
             // comboBox60
             // 
@@ -1263,11 +1349,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox60.Location = new System.Drawing.Point(757, 681);
             this.comboBox60.Name = "comboBox60";
             this.comboBox60.Size = new System.Drawing.Size(36, 21);
             this.comboBox60.TabIndex = 593;
+            this.comboBox60.Text = " ";
             // 
             // comboBox59
             // 
@@ -1277,11 +1364,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox59.Location = new System.Drawing.Point(757, 649);
             this.comboBox59.Name = "comboBox59";
             this.comboBox59.Size = new System.Drawing.Size(36, 21);
             this.comboBox59.TabIndex = 592;
+            this.comboBox59.Text = " ";
             // 
             // comboBox58
             // 
@@ -1291,11 +1379,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox58.Location = new System.Drawing.Point(757, 619);
             this.comboBox58.Name = "comboBox58";
             this.comboBox58.Size = new System.Drawing.Size(36, 21);
             this.comboBox58.TabIndex = 591;
+            this.comboBox58.Text = " ";
             // 
             // comboBox57
             // 
@@ -1305,11 +1394,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox57.Location = new System.Drawing.Point(757, 586);
             this.comboBox57.Name = "comboBox57";
             this.comboBox57.Size = new System.Drawing.Size(36, 21);
             this.comboBox57.TabIndex = 590;
+            this.comboBox57.Text = " ";
             // 
             // comboBox56
             // 
@@ -1319,11 +1409,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox56.Location = new System.Drawing.Point(757, 555);
             this.comboBox56.Name = "comboBox56";
             this.comboBox56.Size = new System.Drawing.Size(36, 21);
             this.comboBox56.TabIndex = 589;
+            this.comboBox56.Text = " ";
             // 
             // comboBox55
             // 
@@ -1333,11 +1424,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox55.Location = new System.Drawing.Point(757, 524);
             this.comboBox55.Name = "comboBox55";
             this.comboBox55.Size = new System.Drawing.Size(36, 21);
             this.comboBox55.TabIndex = 588;
+            this.comboBox55.Text = " ";
             // 
             // comboBox54
             // 
@@ -1347,11 +1439,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox54.Location = new System.Drawing.Point(757, 491);
             this.comboBox54.Name = "comboBox54";
             this.comboBox54.Size = new System.Drawing.Size(36, 21);
             this.comboBox54.TabIndex = 587;
+            this.comboBox54.Text = " ";
             // 
             // comboBox53
             // 
@@ -1361,11 +1454,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox53.Location = new System.Drawing.Point(757, 461);
             this.comboBox53.Name = "comboBox53";
             this.comboBox53.Size = new System.Drawing.Size(36, 21);
             this.comboBox53.TabIndex = 586;
+            this.comboBox53.Text = " ";
             // 
             // comboBox52
             // 
@@ -1375,11 +1469,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox52.Location = new System.Drawing.Point(757, 429);
             this.comboBox52.Name = "comboBox52";
             this.comboBox52.Size = new System.Drawing.Size(36, 21);
             this.comboBox52.TabIndex = 585;
+            this.comboBox52.Text = " ";
             // 
             // comboBox51
             // 
@@ -1389,11 +1484,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox51.Location = new System.Drawing.Point(757, 395);
             this.comboBox51.Name = "comboBox51";
             this.comboBox51.Size = new System.Drawing.Size(36, 21);
             this.comboBox51.TabIndex = 584;
+            this.comboBox51.Text = " ";
             // 
             // comboBox50
             // 
@@ -1403,11 +1499,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox50.Location = new System.Drawing.Point(757, 362);
             this.comboBox50.Name = "comboBox50";
             this.comboBox50.Size = new System.Drawing.Size(36, 21);
             this.comboBox50.TabIndex = 583;
+            this.comboBox50.Text = " ";
             // 
             // comboBox49
             // 
@@ -1417,11 +1514,12 @@
             "B",
             "C",
             "D",
-            ""});
+            " "});
             this.comboBox49.Location = new System.Drawing.Point(757, 331);
             this.comboBox49.Name = "comboBox49";
             this.comboBox49.Size = new System.Drawing.Size(36, 21);
             this.comboBox49.TabIndex = 582;
+            this.comboBox49.Text = " ";
             // 
             // comboBox48
             // 
@@ -2076,7 +2174,7 @@
             "C",
             "D",
             " "});
-            this.comboBox1.Location = new System.Drawing.Point(594, 72);
+            this.comboBox1.Location = new System.Drawing.Point(594, 70);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(36, 21);
             this.comboBox1.TabIndex = 534;
@@ -2084,7 +2182,7 @@
             // buttonCalificar
             // 
             this.buttonCalificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCalificar.Location = new System.Drawing.Point(1119, 599);
+            this.buttonCalificar.Location = new System.Drawing.Point(1119, 537);
             this.buttonCalificar.Name = "buttonCalificar";
             this.buttonCalificar.Size = new System.Drawing.Size(119, 65);
             this.buttonCalificar.TabIndex = 533;
@@ -2114,7 +2212,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView2.Location = new System.Drawing.Point(408, 745);
+            this.dataGridView2.Location = new System.Drawing.Point(120, 803);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -2127,22 +2225,13 @@
             this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(703, 43);
+            this.dataGridView2.Size = new System.Drawing.Size(1161, 43);
             this.dataGridView2.TabIndex = 532;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
-            // label130
-            // 
-            this.label130.AutoSize = true;
-            this.label130.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label130.Location = new System.Drawing.Point(1101, 552);
-            this.label130.Name = "label130";
-            this.label130.Size = new System.Drawing.Size(174, 19);
-            this.label130.TabIndex = 531;
-            this.label130.Text = "¡¡SUERTE EN TU EXAMEN!!";
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.comboBox101);
             this.groupBox2.Controls.Add(this.label129);
             this.groupBox2.Controls.Add(this.label128);
             this.groupBox2.Controls.Add(this.label127);
@@ -2176,6 +2265,18 @@
             this.groupBox2.TabIndex = 529;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ORGANIZACIÓN DE CURSOS";
+            // 
+            // comboBox101
+            // 
+            this.comboBox101.FormattingEnabled = true;
+            this.comboBox101.Items.AddRange(new object[] {
+            "FISICA",
+            "MATEMATICA",
+            "COMUNICACION"});
+            this.comboBox101.Location = new System.Drawing.Point(6, 88);
+            this.comboBox101.Name = "comboBox101";
+            this.comboBox101.Size = new System.Drawing.Size(144, 27);
+            this.comboBox101.TabIndex = 635;
             // 
             // label129
             // 
@@ -2371,7 +2472,7 @@
             // 
             this.label110.AutoSize = true;
             this.label110.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label110.Location = new System.Drawing.Point(48, 151);
+            this.label110.Location = new System.Drawing.Point(49, 148);
             this.label110.Name = "label110";
             this.label110.Size = new System.Drawing.Size(85, 19);
             this.label110.TabIndex = 302;
@@ -2436,6 +2537,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.textBoxNota);
+            this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.textBoxCodigo);
             this.groupBox3.Controls.Add(this.lblNombre);
             this.groupBox3.Controls.Add(this.textBoxCarrera);
@@ -2449,10 +2552,27 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(54, 54);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(310, 203);
+            this.groupBox3.Size = new System.Drawing.Size(310, 242);
             this.groupBox3.TabIndex = 530;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DATOS DEL POSTULANTE";
+            // 
+            // textBoxNota
+            // 
+            this.textBoxNota.Location = new System.Drawing.Point(135, 198);
+            this.textBoxNota.Name = "textBoxNota";
+            this.textBoxNota.Size = new System.Drawing.Size(149, 24);
+            this.textBoxNota.TabIndex = 325;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(17, 200);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(39, 16);
+            this.label9.TabIndex = 324;
+            this.label9.Text = "Nota:";
             // 
             // textBoxCodigo
             // 
@@ -3270,16 +3390,6 @@
             this.buttonBuscarCalificar.MarginChanged += new System.EventHandler(this.Main_Load);
             this.buttonBuscarCalificar.Click += new System.EventHandler(this.buttonBuscarCalificar_Click);
             // 
-            // buttonGuardarCalificar
-            // 
-            this.buttonGuardarCalificar.Location = new System.Drawing.Point(212, 570);
-            this.buttonGuardarCalificar.Name = "buttonGuardarCalificar";
-            this.buttonGuardarCalificar.Size = new System.Drawing.Size(94, 45);
-            this.buttonGuardarCalificar.TabIndex = 366;
-            this.buttonGuardarCalificar.Text = "GUARDAR CLAVES";
-            this.buttonGuardarCalificar.UseVisualStyleBackColor = true;
-            this.buttonGuardarCalificar.Click += new System.EventHandler(this.buttonGuardarCalificar_Click);
-            // 
             // label30
             // 
             this.label30.AutoSize = true;
@@ -3479,7 +3589,7 @@
             this.groupBox1.Controls.Add(this.label131);
             this.groupBox1.Controls.Add(this.label133);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(124, 302);
+            this.groupBox1.Location = new System.Drawing.Point(100, 323);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(264, 180);
             this.groupBox1.TabIndex = 324;
@@ -3564,6 +3674,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1584, 10);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -3606,6 +3717,7 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -3639,7 +3751,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonVolver;
-        private System.Windows.Forms.Label label130;
         private System.Windows.Forms.TextBox textBoxCarrera;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxCodigo;
@@ -3790,108 +3901,114 @@
         private System.Windows.Forms.TextBox textBoxCorrecta;
         private System.Windows.Forms.TextBox textBoxBlanco;
         private System.Windows.Forms.TextBox textBoxIncorrecta;
-        public System.Windows.Forms.ComboBox comboBox1;
-        public System.Windows.Forms.ComboBox comboBox20;
-        public System.Windows.Forms.ComboBox comboBox19;
-        public System.Windows.Forms.ComboBox comboBox18;
-        public System.Windows.Forms.ComboBox comboBox17;
-        public System.Windows.Forms.ComboBox comboBox16;
-        public System.Windows.Forms.ComboBox comboBox15;
-        public System.Windows.Forms.ComboBox comboBox14;
-        public System.Windows.Forms.ComboBox comboBox13;
-        public System.Windows.Forms.ComboBox comboBox12;
-        public System.Windows.Forms.ComboBox comboBox11;
-        public System.Windows.Forms.ComboBox comboBox10;
-        public System.Windows.Forms.ComboBox comboBox9;
-        public System.Windows.Forms.ComboBox comboBox8;
-        public System.Windows.Forms.ComboBox comboBox7;
-        public System.Windows.Forms.ComboBox comboBox6;
-        public System.Windows.Forms.ComboBox comboBox5;
-        public System.Windows.Forms.ComboBox comboBox4;
-        public System.Windows.Forms.ComboBox comboBox3;
-        public System.Windows.Forms.ComboBox comboBox2;
-        public System.Windows.Forms.ComboBox comboBox100;
-        public System.Windows.Forms.ComboBox comboBox99;
-        public System.Windows.Forms.ComboBox comboBox98;
-        public System.Windows.Forms.ComboBox comboBox97;
-        public System.Windows.Forms.ComboBox comboBox96;
-        public System.Windows.Forms.ComboBox comboBox95;
-        public System.Windows.Forms.ComboBox comboBox94;
-        public System.Windows.Forms.ComboBox comboBox93;
-        public System.Windows.Forms.ComboBox comboBox92;
-        public System.Windows.Forms.ComboBox comboBox91;
-        public System.Windows.Forms.ComboBox comboBox90;
-        public System.Windows.Forms.ComboBox comboBox89;
-        public System.Windows.Forms.ComboBox comboBox88;
-        public System.Windows.Forms.ComboBox comboBox87;
-        public System.Windows.Forms.ComboBox comboBox86;
-        public System.Windows.Forms.ComboBox comboBox85;
-        public System.Windows.Forms.ComboBox comboBox84;
-        public System.Windows.Forms.ComboBox comboBox83;
-        public System.Windows.Forms.ComboBox comboBox82;
-        public System.Windows.Forms.ComboBox comboBox81;
-        public System.Windows.Forms.ComboBox comboBox80;
-        public System.Windows.Forms.ComboBox comboBox79;
-        public System.Windows.Forms.ComboBox comboBox78;
-        public System.Windows.Forms.ComboBox comboBox77;
-        public System.Windows.Forms.ComboBox comboBox76;
-        public System.Windows.Forms.ComboBox comboBox75;
-        public System.Windows.Forms.ComboBox comboBox74;
-        public System.Windows.Forms.ComboBox comboBox73;
-        public System.Windows.Forms.ComboBox comboBox72;
-        public System.Windows.Forms.ComboBox comboBox71;
-        public System.Windows.Forms.ComboBox comboBox70;
-        public System.Windows.Forms.ComboBox comboBox69;
-        public System.Windows.Forms.ComboBox comboBox68;
-        public System.Windows.Forms.ComboBox comboBox67;
-        public System.Windows.Forms.ComboBox comboBox66;
-        public System.Windows.Forms.ComboBox comboBox65;
-        public System.Windows.Forms.ComboBox comboBox64;
-        public System.Windows.Forms.ComboBox comboBox63;
-        public System.Windows.Forms.ComboBox comboBox62;
-        public System.Windows.Forms.ComboBox comboBox61;
-        public System.Windows.Forms.ComboBox comboBox60;
-        public System.Windows.Forms.ComboBox comboBox59;
-        public System.Windows.Forms.ComboBox comboBox58;
-        public System.Windows.Forms.ComboBox comboBox57;
-        public System.Windows.Forms.ComboBox comboBox56;
-        public System.Windows.Forms.ComboBox comboBox46;
-        public System.Windows.Forms.ComboBox comboBox54;
-        public System.Windows.Forms.ComboBox comboBox53;
-        public System.Windows.Forms.ComboBox comboBox52;
-        public System.Windows.Forms.ComboBox comboBox51;
-        public System.Windows.Forms.ComboBox comboBox50;
-        public System.Windows.Forms.ComboBox comboBox49;
-        public System.Windows.Forms.ComboBox comboBox48;
-        public System.Windows.Forms.ComboBox comboBox47;
-        public System.Windows.Forms.ComboBox comboBox551;
-        public System.Windows.Forms.ComboBox comboBox45;
-        public System.Windows.Forms.ComboBox comboBox44;
-        public System.Windows.Forms.ComboBox comboBox43;
-        public System.Windows.Forms.ComboBox comboBox42;
-        public System.Windows.Forms.ComboBox comboBox41;
-        public System.Windows.Forms.ComboBox comboBox40;
-        public System.Windows.Forms.ComboBox comboBox39;
-        public System.Windows.Forms.ComboBox comboBox38;
-        public System.Windows.Forms.ComboBox comboBox37;
-        public System.Windows.Forms.ComboBox comboBox36;
-        public System.Windows.Forms.ComboBox comboBox35;
-        public System.Windows.Forms.ComboBox comboBox34;
-        public System.Windows.Forms.ComboBox comboBox33;
-        public System.Windows.Forms.ComboBox comboBox32;
-        public System.Windows.Forms.ComboBox comboBox31;
-        public System.Windows.Forms.ComboBox comboBox30;
-        public System.Windows.Forms.ComboBox comboBox29;
-        public System.Windows.Forms.ComboBox comboBox28;
-        public System.Windows.Forms.ComboBox comboBox27;
-        public System.Windows.Forms.ComboBox comboBox26;
-        public System.Windows.Forms.ComboBox comboBox25;
-        public System.Windows.Forms.ComboBox comboBox24;
-        public System.Windows.Forms.ComboBox comboBox23;
-        public System.Windows.Forms.ComboBox comboBox22;
-        public System.Windows.Forms.ComboBox comboBox21;
-        public System.Windows.Forms.ComboBox comboBox55;
-        public System.Windows.Forms.ComboBox comboBox461;
-        public System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox20;
+        private System.Windows.Forms.ComboBox comboBox19;
+        private System.Windows.Forms.ComboBox comboBox18;
+        private System.Windows.Forms.ComboBox comboBox17;
+        private System.Windows.Forms.ComboBox comboBox16;
+        private System.Windows.Forms.ComboBox comboBox15;
+        private System.Windows.Forms.ComboBox comboBox14;
+        private System.Windows.Forms.ComboBox comboBox13;
+        private System.Windows.Forms.ComboBox comboBox12;
+        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox100;
+        private System.Windows.Forms.ComboBox comboBox99;
+        private System.Windows.Forms.ComboBox comboBox98;
+        private System.Windows.Forms.ComboBox comboBox97;
+        private System.Windows.Forms.ComboBox comboBox96;
+        private System.Windows.Forms.ComboBox comboBox95;
+        private System.Windows.Forms.ComboBox comboBox94;
+        private System.Windows.Forms.ComboBox comboBox93;
+        private System.Windows.Forms.ComboBox comboBox92;
+        private System.Windows.Forms.ComboBox comboBox91;
+        private System.Windows.Forms.ComboBox comboBox90;
+        private System.Windows.Forms.ComboBox comboBox89;
+        private System.Windows.Forms.ComboBox comboBox88;
+        private System.Windows.Forms.ComboBox comboBox87;
+        private System.Windows.Forms.ComboBox comboBox86;
+        private System.Windows.Forms.ComboBox comboBox85;
+        private System.Windows.Forms.ComboBox comboBox84;
+        private System.Windows.Forms.ComboBox comboBox83;
+        private System.Windows.Forms.ComboBox comboBox82;
+        private System.Windows.Forms.ComboBox comboBox81;
+        private System.Windows.Forms.ComboBox comboBox80;
+        private System.Windows.Forms.ComboBox comboBox79;
+        private System.Windows.Forms.ComboBox comboBox78;
+        private System.Windows.Forms.ComboBox comboBox77;
+        private System.Windows.Forms.ComboBox comboBox76;
+        private System.Windows.Forms.ComboBox comboBox75;
+        private System.Windows.Forms.ComboBox comboBox74;
+        private System.Windows.Forms.ComboBox comboBox73;
+        private System.Windows.Forms.ComboBox comboBox72;
+        private System.Windows.Forms.ComboBox comboBox71;
+        private System.Windows.Forms.ComboBox comboBox70;
+        private System.Windows.Forms.ComboBox comboBox69;
+        private System.Windows.Forms.ComboBox comboBox68;
+        private System.Windows.Forms.ComboBox comboBox67;
+        private System.Windows.Forms.ComboBox comboBox66;
+        private System.Windows.Forms.ComboBox comboBox65;
+        private System.Windows.Forms.ComboBox comboBox64;
+        private System.Windows.Forms.ComboBox comboBox63;
+        private System.Windows.Forms.ComboBox comboBox62;
+        private System.Windows.Forms.ComboBox comboBox61;
+        private System.Windows.Forms.ComboBox comboBox60;
+        private System.Windows.Forms.ComboBox comboBox59;
+        private System.Windows.Forms.ComboBox comboBox58;
+        private System.Windows.Forms.ComboBox comboBox57;
+        private System.Windows.Forms.ComboBox comboBox56;
+        private System.Windows.Forms.ComboBox comboBox46;
+        private System.Windows.Forms.ComboBox comboBox54;
+        private System.Windows.Forms.ComboBox comboBox53;
+        private System.Windows.Forms.ComboBox comboBox52;
+        private System.Windows.Forms.ComboBox comboBox51;
+        private System.Windows.Forms.ComboBox comboBox50;
+        private System.Windows.Forms.ComboBox comboBox49;
+        private System.Windows.Forms.ComboBox comboBox48;
+        private System.Windows.Forms.ComboBox comboBox47;
+        private System.Windows.Forms.ComboBox comboBox551;
+        private System.Windows.Forms.ComboBox comboBox45;
+        private System.Windows.Forms.ComboBox comboBox44;
+        private System.Windows.Forms.ComboBox comboBox43;
+        private System.Windows.Forms.ComboBox comboBox42;
+        private System.Windows.Forms.ComboBox comboBox41;
+        private System.Windows.Forms.ComboBox comboBox40;
+        private System.Windows.Forms.ComboBox comboBox39;
+        private System.Windows.Forms.ComboBox comboBox38;
+        private System.Windows.Forms.ComboBox comboBox37;
+        private System.Windows.Forms.ComboBox comboBox36;
+        private System.Windows.Forms.ComboBox comboBox35;
+        private System.Windows.Forms.ComboBox comboBox34;
+        private System.Windows.Forms.ComboBox comboBox33;
+        private System.Windows.Forms.ComboBox comboBox32;
+        private System.Windows.Forms.ComboBox comboBox31;
+        private System.Windows.Forms.ComboBox comboBox30;
+        private System.Windows.Forms.ComboBox comboBox29;
+        private System.Windows.Forms.ComboBox comboBox28;
+        private System.Windows.Forms.ComboBox comboBox27;
+        private System.Windows.Forms.ComboBox comboBox26;
+        private System.Windows.Forms.ComboBox comboBox25;
+        private System.Windows.Forms.ComboBox comboBox24;
+        private System.Windows.Forms.ComboBox comboBox23;
+        private System.Windows.Forms.ComboBox comboBox22;
+        private System.Windows.Forms.ComboBox comboBox21;
+        private System.Windows.Forms.ComboBox comboBox55;
+        private System.Windows.Forms.ComboBox comboBox461;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.ComboBox comboBox101;
+        private System.Windows.Forms.Button buttonRandom;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox textBoxNota;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button buttonGuardarNota;
     }
 }
