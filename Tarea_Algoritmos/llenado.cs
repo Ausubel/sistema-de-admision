@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace Tarea_Algoritmos
 {
-    internal class llenado
+    internal class Llenado
     {
+        //Atributos
         private int cifra;
         private string msj, msj2, msj3;
-        public llenado(int cifra)
+
+        //Constructor
+        public Llenado(int cifra)
         {
             this.cifra = cifra;
-
         }
 
         public void setCifra(int cifra)
@@ -25,6 +27,7 @@ namespace Tarea_Algoritmos
         {
             return cifra;
         }
+
         public string mostrarMensaje()
         {
             return msj;
@@ -37,14 +40,15 @@ namespace Tarea_Algoritmos
         {
             return msj3;
         }
+
         public void escogerCarrera(int area)
         {
-            if (area == 0)
+            if (area == 0)//CIENCIAS
             {
                 switch (cifra)
                 {
                     case 0:
-                        //perfil biologia
+                        //Perfil biologia
                         string Aa1 = "Tiene conocimientos básicos a un nivel medio superior en las áreas de las ciencias naturales.";
                         string Aa2 = "Es creativo e innovador en el estudio de procesos y técnicas biológicas.";
                         string Aa3 = "Tiene habilidades, destrezas y actitudes para la investigación en el campo de las ciencias biológicas.";
@@ -208,7 +212,7 @@ namespace Tarea_Algoritmos
             }
             if (area == 1)
             {
-                switch (cifra)
+                switch (cifra)//HUMANIDADES
                 {
                     case 0:
                         //perfil administracion
@@ -584,7 +588,7 @@ namespace Tarea_Algoritmos
 
                 }
             }
-            if (area == 2)
+            if (area == 2)//INGENIERAS
             {
                 switch (cifra)
                 {

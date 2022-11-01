@@ -9,33 +9,60 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Tarea_Algoritmos
 {
     public partial class Main : Form
     {
+
         //ARREGLO PARA ALMACENAR LAS RESPUESTAS
         private static string[] RESPUESTAS;
-        
-        private void rutas() {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+
+        //PARA GUARDAR LAS CARTILLAS
+        private static string outputAExportar = "";
+
+        //RUTA DEL ARCHIVO .TXT
+        private static string RUTA = @"";
+
+        //RUTA DEL ARCHIVO .MD
+        private static string RUTAEXPORTAR = @"";
+
+        private void rutas(int aux) {
+            if (aux == 0)
             {
-                RESPUESTAS = File.ReadAllLines(openFileDialog.FileName).ToArray();
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    RESPUESTAS = File.ReadAllLines(openFileDialog.FileName).ToArray();
+                    linkRuta.Text = openFileDialog.FileName;
+                    RUTA = @"" + openFileDialog.FileName + "";
+                }
             }
-        }        
+            else {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    RUTAEXPORTAR = @"" + openFileDialog.FileName + "";
+                }
+            }
+
+
+        }
+
         //DECLARACION DE VARIABLES
         private static string CLAVES;
-        private double CORRECTO, INCORRECTO, NULO;
+
+        private static double CORRECTO, INCORRECTO, NULO;
 
 
         public Main()
-        {            
+        {
             InitializeComponent();
         }
 
         //CONEXION A LA BASE DE DATOS
-        private static SqlConnection conn = new SqlConnection("SERVER = AUSUBEL; DATABASE = Admission; USER ID=sa;PASSWORD=intelectus135");
+        private static SqlConnection conn = new SqlConnection("SERVER = DESKTOP-UU53QVS; DATABASE = Admission ;INTEGRATED SECURITY = TRUE ");
 
         //METODOS DE LA BASE DE DATOS
         public void consultaInput(string consulta)
@@ -52,73 +79,83 @@ namespace Tarea_Algoritmos
         {
             if (a == 1)
             {
-                string consulta = "select codigo_postulante as CODIGO,nombre as NOMBRE, apellido_paterno as APE_PATERNO, apellido_materno as APE_MATERNO,nombre_carrera AS CARRERA,nota AS NOTA from postulante p, carrera c where p.codigo_carrera = c.codigo_carrera;";
+                string consulta = "SELECT codigo_postulante AS CODIGO,nombre AS NOMBRE, apellido_paterno AS APE_PATERNO, apellido_materno as APE_MATERNO,edad as EDAD,nombre_carrera as CARRERA,nota AS NOTA FROM postulante p, carrera c WHERE p.codigo_carrera = c.codigo_carrera AND nota IS NOT NULL ORDER BY p.codigo_carrera,p.nota DESC ;";
                 SqlDataAdapter adapter = new SqlDataAdapter(consulta, conn);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView1.DataSource = dt;
-                dataGridView2.DataSource = dt;
             }
-            else
+            if (a == 2)
             {
-                string consulta = "SELECT codigo_postulante AS CODIGO,nombre AS NOMBRE, apellido_paterno AS APE_PATERNO, apellido_materno as APE_MATERNO,edad as EDAD,nombre_carrera as CARRERA,nota AS NOTA FROM postulante p, carrera c WHERE p.codigo_carrera = c.codigo_carrera ORDER BY p.codigo_carrera,p.nota DESC ;";
+                string consulta = "SELECT codigo_postulante as CODIGO,nombre as NOMBRE, apellido_paterno as APE_PATERNO, apellido_materno as APE_MATERNO,nombre_carrera AS CARRERA,nota AS NOTA from postulante p, carrera c where p.codigo_carrera = c.codigo_carrera;";
                 SqlDataAdapter adapter = new SqlDataAdapter(consulta, conn);
                 DataTable dt = new DataTable();
-                adapter.Fill(dt);               
+                adapter.Fill(dt);
+                dataGridView2.DataSource = dt;
+            }
+
+            if (a == 3)
+            {
+                string consulta = "SELECT codigo_postulante AS CODIGO,nombre AS NOMBRE, apellido_paterno AS APE_PATERNO, apellido_materno as APE_MATERNO,edad as EDAD,nombre_carrera as CARRERA FROM postulante p, carrera c WHERE p.codigo_carrera = c.codigo_carrera ;";
+                SqlDataAdapter adapter = new SqlDataAdapter(consulta, conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
                 dataGridView3.DataSource = dt;
             }
         }
 
+        //UTILIZAMOS LA CLASE DICCIONARIO
+        Dictionary<string, string> dicCodigo = new Dictionary<string, string>();
+
+        //Creamos diccionario para obtener los codigos de los alumnos. 
+        private void cargarDiccionario()
+        {
+
+            // CODIGO STRING, ALTERNATIVAS STRING 
+            char[] linea;
+
+            for (int i = 0; i < RESPUESTAS.Length; i++)
+            {
+                linea = RESPUESTAS[i].ToArray();
+
+                string codigo = $"{linea[0]}{linea[1]}{linea[2]}{linea[3]}{linea[4]}{linea[5]}{linea[6]}{linea[7]}";
+
+                string respuesta = "";
+
+                for (int j = 9; j < 109; j++) respuesta += linea[j].ToString();
+
+                //AGREGANDO LLAVES CON SUS VALORES
+                dicCodigo[codigo] = respuesta;
+            }
+
+        }
         private void Main_Load(object sender, EventArgs e)
         {
-            rutas();
-            comboBoxInicializa();
-            llenarTabla(1);
-            for (int i = 0; i < dataGridView2.Columns.Count - 1; i++)
-            {
-                dataGridView2.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            }
-            dataGridView2.Columns[dataGridView2.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            rutas(0);
 
-            for (int i = 0; i < dataGridView2.Columns.Count; i++)
-            {
-                int colw = dataGridView2.Columns[i].Width;
-                dataGridView2.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                dataGridView2.Columns[i].Width = colw;
-            }
+            comboBoxInicializa();
+
             textBoxNombre.Enabled = false;
             textBoxCarrera.Enabled = false;
             textBoxMaterno.Enabled = false;
             textBoxPaterno.Enabled = false;
-            dataGridView2.DefaultCellStyle.Font = new Font("Comic Sans", 14);
+
+            dataGridView2.DefaultCellStyle.Font = new Font("", 14);
+
             cargarDiccionario();
+
+            buttonCalificar.Enabled = false;
+            buttonGuardarNota.Enabled = false;
+            buttonExportar.Enabled = false;
         }
 
-        //UTILIZAMOS LA CLASE DICCIONARIO
-        Dictionary<string, string> dicCodigo = new Dictionary<string, string>();
-        private void cargarDiccionario()
-        {
-            // CODIGO STRING, ALTERNATIVAS STRING 
-            //Creamos diccionario para obtener los codigos de los alumnos. 
-            char[] linea;
-            for (int i=0; i<RESPUESTAS.Length;i++)
-            {
-                linea = RESPUESTAS[i].ToArray();
-                string respuesta = "";
 
-                for (int j = 9; j < 109; j++) respuesta += linea[j].ToString();
-                
-                dicCodigo[$"{linea[0]}{linea[1]}{linea[2]}{linea[3]}{linea[4]}{linea[5]}{linea[6]}{linea[7]}"] = respuesta;    
-            }
-            foreach(KeyValuePair<string,string> item in dicCodigo)
-            {
-                textBoxOutput.Text += $"{item.Key} {item.Value}\r\n";
-            }
-        }
         private void buttonVista_Click(object sender, EventArgs e)
         {
-            llenarTabla(0);
+            //ESTO ES PARA LOS POSTULANTES
+            llenarTabla(3);
             tabControl1.SelectTab(1);
+
             for (int i = 0; i < dataGridView3.Columns.Count - 1; i++)
             {
                 dataGridView3.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -133,13 +170,17 @@ namespace Tarea_Algoritmos
             }
         }
 
-        private void buttonRes_Click(object sender, EventArgs e)
+        private void buttonRes_Click(object sender, EventArgs e)//RESULTADOS
         {
+            llenarTabla(1);
+            //ME LLEVA A LA PAGINA
             tabControl1.SelectTab(2);
+            //TUNEA EL DATAGRIDVIEW(AJUSTA LAS CELDAS)
             for (int i = 0; i < dataGridView1.Columns.Count - 1; i++)
             {
                 dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
+
             dataGridView1.Columns[dataGridView1.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
@@ -154,6 +195,7 @@ namespace Tarea_Algoritmos
         {
 
             tabControl1.SelectTab(3);
+            llenarTabla(2);
             for (int i = 0; i < dataGridView2.Columns.Count - 1; i++)
             {
                 dataGridView2.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -173,11 +215,6 @@ namespace Tarea_Algoritmos
             tabControl1.SelectTab(4);
         }
 
-        private void buttonVolver_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(0);
-        }
-
         private void buttonBuscarCalificar_Click(object sender, EventArgs e)//PAGCALCULAR
         {
             try
@@ -187,6 +224,7 @@ namespace Tarea_Algoritmos
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView2.DataSource = dt;
+                
                 for (int i = 0; i < dataGridView2.Columns.Count - 1; i++)
                 {
                     dataGridView2.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -199,17 +237,19 @@ namespace Tarea_Algoritmos
                     dataGridView2.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
                     dataGridView2.Columns[i].Width = colw;
                 }
+
                 textBoxCodigo.Text = dataGridView2.SelectedCells[0].Value.ToString();
                 textBoxNombre.Text = dataGridView2.SelectedCells[1].Value.ToString();
                 textBoxPaterno.Text = dataGridView2.SelectedCells[2].Value.ToString();
                 textBoxMaterno.Text = dataGridView2.SelectedCells[3].Value.ToString();
                 textBoxCarrera.Text = dataGridView2.SelectedCells[4].Value.ToString();
                 textBoxNota.Text = dataGridView2.SelectedCells[5].Value.ToString();
+
                 if (!buttonBuscarCalificar.Enabled)
-                
+
                     MessageBox.Show("Rellene datos correspondientes.", "Paso 1");
-                
-                
+
+                buttonCalificar.Enabled = true;
             }
             catch (Exception)
             {
@@ -242,40 +282,148 @@ namespace Tarea_Algoritmos
 
             calificacion.Calificacion91_100(comboBox91.GetItemText(comboBox91.SelectedItem), comboBox92.GetItemText(comboBox92.SelectedItem), comboBox93.GetItemText(comboBox93.SelectedItem), comboBox94.GetItemText(comboBox94.SelectedItem), comboBox95.GetItemText(comboBox95.SelectedItem), comboBox96.GetItemText(comboBox96.SelectedItem), comboBox97.GetItemText(comboBox97.SelectedItem), comboBox98.GetItemText(comboBox98.SelectedItem), comboBox99.GetItemText(comboBox99.SelectedItem), comboBox100.GetItemText(comboBox100.SelectedItem));
         }
-
+        private void ocultarComboBoxes()
+        {
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = false;
+            comboBox3.Enabled = false;
+            comboBox4.Enabled = false;
+            comboBox5.Enabled = false;
+            comboBox6.Enabled = false;
+            comboBox7.Enabled = false;
+            comboBox8.Enabled = false;
+            comboBox9.Enabled = false;
+            comboBox10.Enabled = false;
+            comboBox11.Enabled = false;
+            comboBox12.Enabled = false;
+            comboBox13.Enabled = false;
+            comboBox14.Enabled = false;
+            comboBox15.Enabled = false;
+            comboBox16.Enabled = false;
+            comboBox17.Enabled = false;
+            comboBox18.Enabled = false;
+            comboBox19.Enabled = false;
+            comboBox20.Enabled = false;
+            comboBox21.Enabled = false;
+            comboBox22.Enabled = false;
+            comboBox23.Enabled = false;
+            comboBox24.Enabled = false;
+            comboBox25.Enabled = false;
+            comboBox26.Enabled = false;
+            comboBox27.Enabled = false;
+            comboBox28.Enabled = false;
+            comboBox29.Enabled = false;
+            comboBox30.Enabled = false;
+            comboBox31.Enabled = false;
+            comboBox32.Enabled = false;
+            comboBox33.Enabled = false;
+            comboBox34.Enabled = false;
+            comboBox35.Enabled = false;
+            comboBox36.Enabled = false;
+            comboBox37.Enabled = false;
+            comboBox38.Enabled = false;
+            comboBox39.Enabled = false;
+            comboBox40.Enabled = false;
+            comboBox41.Enabled = false;
+            comboBox42.Enabled = false;
+            comboBox43.Enabled = false;
+            comboBox44.Enabled = false;
+            comboBox45.Enabled = false;
+            comboBox461.Enabled = false;
+            comboBox47.Enabled = false;
+            comboBox48.Enabled = false;
+            comboBox49.Enabled = false;
+            comboBox50.Enabled = false;
+            comboBox51.Enabled = false;
+            comboBox52.Enabled = false;
+            comboBox53.Enabled = false;
+            comboBox54.Enabled = false;
+            comboBox55.Enabled = false;
+            comboBox56.Enabled = false;
+            comboBox57.Enabled = false;
+            comboBox58.Enabled = false;
+            comboBox59.Enabled = false;
+            comboBox60.Enabled = false;
+            comboBox61.Enabled = false;
+            comboBox62.Enabled = false;
+            comboBox63.Enabled = false;
+            comboBox64.Enabled = false;
+            comboBox65.Enabled = false;
+            comboBox66.Enabled = false;
+            comboBox67.Enabled = false;
+            comboBox68.Enabled = false;
+            comboBox69.Enabled = false;
+            comboBox70.Enabled = false;
+            comboBox71.Enabled = false;
+            comboBox72.Enabled = false;
+            comboBox73.Enabled = false;
+            comboBox74.Enabled = false;
+            comboBox75.Enabled = false;
+            comboBox76.Enabled = false;
+            comboBox77.Enabled = false;
+            comboBox78.Enabled = false;
+            comboBox79.Enabled = false;
+            comboBox80.Enabled = false;
+            comboBox81.Enabled = false;
+            comboBox82.Enabled = false;
+            comboBox83.Enabled = false;
+            comboBox84.Enabled = false;
+            comboBox85.Enabled = false;
+            comboBox86.Enabled = false;
+            comboBox87.Enabled = false;
+            comboBox88.Enabled = false;
+            comboBox89.Enabled = false;
+            comboBox90.Enabled = false;
+            comboBox91.Enabled = false;
+            comboBox92.Enabled = false;
+            comboBox93.Enabled = false;
+            comboBox94.Enabled = false;
+            comboBox95.Enabled = false;
+            comboBox96.Enabled = false;
+            comboBox97.Enabled = false;
+            comboBox98.Enabled = false;
+            comboBox99.Enabled = false;
+            comboBox100.Enabled = false;
+        }
         private void buttonGuardarCalificar_Click(object sender, EventArgs e)
         {
 
             constructor();
             try
             {
-              
-                 
                 if (double.Parse(textBoxCorrecta.Text) > 0 && double.Parse(textBoxIncorrecta.Text) <= 0)
                 {
                     CORRECTO = double.Parse(textBoxCorrecta.Text);
                     INCORRECTO = double.Parse(textBoxIncorrecta.Text);
                     NULO = double.Parse(textBoxBlanco.Text);
+
+                    ocultarComboBoxes();
+
+                    buttonCalificar.Enabled = true;
+                    buttonGuardarNota.Enabled = true;
+                    buttonExportar.Enabled = true;
+
+                    textBoxCorrecta.Enabled = false;
+                    textBoxIncorrecta.Enabled = false;
+                    textBoxBlanco.Enabled = false;
+                    //SE AUTODESHABILITA
+                    buttonGuardarCalificar.Enabled = false;
+
+                    MessageBox.Show("¡Hora de calificar!", "Paso 3");
                 }
                 else
                 {
-                    MessageBox.Show("Considere poner los puntajes correctos","",MessageBoxButtons.RetryCancel,MessageBoxIcon.Warning);
+                    MessageBox.Show("Considere poner los puntajes correctos", "", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                 }
 
-               
+
 
             }
             catch (Exception)
             {
-                MessageBox.Show("Considere poner los puntajes correctos", "", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                MessageBox.Show("Considere revisar las entradas de datos", "", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
             }
-
-            textBoxCorrecta.Enabled = false;
-            textBoxIncorrecta.Enabled = false;
-            textBoxBlanco.Enabled = false; 
-            buttonGuardarCalificar.Enabled= false;
-            buttonRandom.Enabled = false;
-            MessageBox.Show("¡Hora de calificar!", "Paso 3");
+            
 
         }
         /*PARA SELECCIONAR DATOS DE LA TABLA Y UBICAR EN CAJAS DE TEXTO*/
@@ -286,77 +434,230 @@ namespace Tarea_Algoritmos
             textBoxPaterno.Text = dataGridView2.SelectedCells[2].Value.ToString();
             textBoxMaterno.Text = dataGridView2.SelectedCells[3].Value.ToString();
             textBoxCarrera.Text = dataGridView2.SelectedCells[4].Value.ToString();
+            textBoxNota.Text = dataGridView2.SelectedCells[5].Value.ToString();
         }
 
         private void buttonCalificar_Click(object sender, EventArgs e)
         {
-            //Obteniendo 
-            string codigoBus = textBoxCodigo.Text ;
-            string value;
-            double notas=0; 
-            if (dicCodigo.TryGetValue(codigoBus, out value))
+
+            string codigoBus = textBoxCodigo.Text;
+
+            string val;
+
+            if (dicCodigo.TryGetValue(codigoBus, out val))
             {
-                char[] chars = dicCodigo[codigoBus].ToCharArray();
+                double notas = 0;
+
+                char[] chars = dicCodigo[codigoBus].ToCharArray();//ADDDDCDDBDDCDADDCAACDBCCCDCDCADCCDABB
+
+                outputAExportar += $"\r\n# {textBoxCodigo.Text}: {textBoxNombre.Text} {textBoxPaterno.Text} {textBoxMaterno.Text}\r\n" +
+                    "| CURSO           | NOTA  | CORRECTOS ✅ | INCORRECTOS ❌ | NULOS ⚪ |\r\n" +
+                    "| --------------- | ---- | --------- | ----------- | ----- |\r\n" ;
+
+                double notaParcial = 0;
+
+                int correctoParcial = 0, incorrectoParcial = 0, nuloParcial = 0;
+
                 for (int i = 0; i < 100; i++)
                 {
                     if (chars[i] == CLAVES[i] && CLAVES[i] != ' ')
                     {
-                        notas = notas + CORRECTO;
+                        notas += CORRECTO;
+                        notaParcial += CORRECTO;
+                        correctoParcial++;
                     }
                     if (chars[i] != CLAVES[i] && CLAVES[i] != ' ')
                     {
-                        notas = notas + INCORRECTO;
+                        notas += INCORRECTO;
+                        notaParcial += INCORRECTO; 
+                        incorrectoParcial++;
                     }
                     if (chars[i] == ' ')
                     {
-                        notas = notas + NULO;
+                        notas += NULO;
+                        notaParcial += NULO;
+                        nuloParcial++;
+                    }
+
+                    switch (i)
+                    {
+                        case 6:
+                            outputAExportar += $"| FISICA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                            notaParcial = 0;
+                            correctoParcial = 0;
+                            incorrectoParcial = 0;
+                            nuloParcial = 0;
+                            break;
+                        case 13:
+                            outputAExportar += $"| GEOGRAFIA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                            notaParcial = 0;
+                            correctoParcial = 0;
+                            incorrectoParcial = 0;
+                            nuloParcial = 0;
+                            break;
+                        case 20:
+                            outputAExportar += $"| LITERATURA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                            notaParcial = 0;
+                            correctoParcial = 0;
+                            incorrectoParcial = 0;
+                            nuloParcial = 0;
+                            break;
+                        case 27:
+                            outputAExportar += $"| QUIMICA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                            notaParcial = 0;
+                            correctoParcial = 0;
+                            incorrectoParcial = 0;
+                            nuloParcial = 0;
+                            break;
+                        case 34:
+                            outputAExportar += $"| ALGEBRA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                            notaParcial = 0;
+                            correctoParcial = 0;
+                            incorrectoParcial = 0;
+                            nuloParcial = 0;
+                            break;
+                        case 41:
+                            outputAExportar += $"| TRIGONOMETRIA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                            notaParcial = 0;
+                            correctoParcial = 0;
+                            incorrectoParcial = 0;
+                            nuloParcial = 0;
+                            break;
+                        case 48:
+                            outputAExportar += $"| ARITMETICA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                            notaParcial = 0;
+                            correctoParcial = 0;
+                            incorrectoParcial = 0;
+                            nuloParcial = 0;
+                            break;
+                        case 55:
+                            outputAExportar += $"| GEOMETRIA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                            notaParcial = 0;
+                            correctoParcial = 0;
+                            incorrectoParcial = 0;
+                            nuloParcial = 0;
+                            break;
+                        case 62:
+                            outputAExportar += $"| HISTORIA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                            notaParcial = 0;
+                            correctoParcial = 0;
+                            incorrectoParcial = 0;
+                            nuloParcial = 0;
+                            break;
+                        case 69:
+                            outputAExportar += $"| CIVICA |{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                            notaParcial = 0;
+                            correctoParcial = 0;
+                            incorrectoParcial = 0;
+                            nuloParcial = 0;
+                            break;
+                        case 76:
+                            outputAExportar += $"| ECONOMIA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                            notaParcial = 0;
+                            correctoParcial = 0;
+                            incorrectoParcial = 0;
+                            nuloParcial = 0;
+                            break;
+                        case 87:                            
+                            outputAExportar += $"| RAZ. MATEMATICO|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                            notaParcial = 0;
+                            correctoParcial = 0;
+                            incorrectoParcial = 0;
+                            nuloParcial = 0;
+                            break;
+                        case 99:
+                            outputAExportar += $"| RAZ. VERBAL|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                            break;
                     }
                 }
+
                 textBoxNota.Text = notas.ToString();
+
+                outputAExportar += $"### PUNTAJE TOTAL: {notas}\r\n";
+
+                //ACTUALIZANDO TABLA 2
+                string consulta = $"select codigo_postulante as CODIGO,nombre as NOMBRE, apellido_paterno as APE_PATERNO, apellido_materno as APE_MATERNO,nombre_carrera AS CARRERA,nota AS NOTA from postulante p, carrera c where p.codigo_carrera = c.codigo_carrera and p.codigo_postulante = {textBoxCodigo.Text};";
+                SqlDataAdapter adapter = new SqlDataAdapter(consulta, conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                MessageBox.Show("CALIFICADO CORRECTAMENTE");
             }
-                
-            
-
-            
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtp1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage4_Click(object sender, EventArgs e)
-        {
-
+            //SE AUTODESHABILITA
+            buttonCalificar.Enabled = false;
+            buttonGuardarNota.Enabled = true;
         }
 
         private void buttonGuardarNota_Click(object sender, EventArgs e)
-        {
-            
+        {            
             try
             {
                 string estonoesnota = textBoxNota.Text.Replace(",", ".");
+
                 consultaInput($"UPDATE postulante SET nota = {estonoesnota} where codigo_postulante = {textBoxCodigo.Text};");
-                llenarTabla(1);
+
+                llenarTabla(2);
+
+                buttonBuscarCalificar_Click (sender, e);
+                //SE AUTODESHABILITA
+                buttonGuardarNota.Enabled = false;
+                buttonCalificar.Enabled = false;
+
             }
             catch (Exception)
             {
-                MessageBox.Show("TE CREES BOBY?");
-            }
-            buttonBuscarCalificar_Click(sender, e);
+                MessageBox.Show("Ocurrio un error");
+            }            
         }
-
+        public void soloSalud()
+        {
+            cmb_carrera.Items.Remove("ADMINISTRACIÓN");
+            cmb_carrera.Items.Remove("ARQUEOLOGÍA");
+            cmb_carrera.Items.Remove("CIENCIAS DE LA COMUNICACIÓN");
+            cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN CIENCIAS BIOLÓGICAS Y QUÍMICA");
+            cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN ARTÍSTICA");
+            cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN FÍSICA");
+            cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN INICIAL");
+            cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN PRIMARIA");
+            cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN FILOSOFÍA, PSICOLOGÍA Y CIENCIAS SOCIALES");
+            cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN HISTORIA Y GEOGRAFÍA");
+            cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN LENGUA Y LITERATURA");
+            cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN MATEMÁTICA E INFORMÁTICA");
+            cmb_carrera.Items.Remove("CONTABILIDAD");
+            cmb_carrera.Items.Remove("DERECHO");
+            cmb_carrera.Items.Remove("ECONOMÍA");
+            cmb_carrera.Items.Remove("NEGOCIOS INTERNACIONALES");
+            cmb_carrera.Items.Remove("TURISMO");
+            cmb_carrera.Items.Remove("AGRONOMÍA");
+            cmb_carrera.Items.Remove("ARQUITECTURA");
+            cmb_carrera.Items.Remove("ESTADÍSTICA");
+            cmb_carrera.Items.Remove("FÍSICA");
+            cmb_carrera.Items.Remove("INGENIERÍA AMBIENTAL Y SANITARIA");
+            cmb_carrera.Items.Remove("INGENIERÍA CIVIL");
+            cmb_carrera.Items.Remove("INGENIERÍA DE ALIMENTOS");
+            cmb_carrera.Items.Remove("INGENIERÍA DE MINAS");
+            cmb_carrera.Items.Remove("INGENIERÍA DE SISTEMAS");
+            cmb_carrera.Items.Remove("INGENIERÍA ELECTRÓNICA");
+            cmb_carrera.Items.Remove("INGENIERÍA METALÚRGICA");
+            cmb_carrera.Items.Remove("INGENIERÍA MECÁNICA ELÉCTRICA");
+            cmb_carrera.Items.Remove("INGENIERÍA PESQUERA");
+            cmb_carrera.Items.Remove("INGENIERÍA QUÍMICA");
+            cmb_carrera.Items.Remove("MATEMÁTICA E INFROMÁTICA");
+            cmb_carrera.Items.Remove("BIOLOGÍA");
+            cmb_carrera.Items.Remove("ENFERMERÍA");
+            cmb_carrera.Items.Remove("FARMACIA Y BIOQUÍMICA");
+            cmb_carrera.Items.Remove("MEDICINA VETERINARIA Y ZOOTECNIA");
+            cmb_carrera.Items.Remove("OBSTETRICIA");
+            cmb_carrera.Items.Remove("ODONTOLOGÍA");
+            cmb_carrera.Items.Remove("PSICOLOGÍA");
+        }
         private void cmb_cat_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             if (cmb_cat.SelectedIndex == 0)
             {
-
+                
+                soloSalud();
                 cmb_carrera.Enabled = true;
                 cmb_carrera.Items.Add("BIOLOGÍA");
                 cmb_carrera.Items.Add("ENFERMERÍA");
@@ -366,22 +667,12 @@ namespace Tarea_Algoritmos
                 cmb_carrera.Items.Add("ODONTOLOGÍA");
                 cmb_carrera.Items.Add("PSICOLOGÍA");
 
-
+               
 
             }
-            else
+            else if(cmb_cat.SelectedIndex == 1)
             {
-                cmb_carrera.Items.Remove("BIOLOGÍA");
-                cmb_carrera.Items.Remove("ENFERMERÍA");
-                cmb_carrera.Items.Remove("FARMACIA Y BIOQUÍMICA");
-                cmb_carrera.Items.Remove("MEDICINA VETERINARIA Y ZOOTECNIA");
-                cmb_carrera.Items.Remove("OBSTETRICIA");
-                cmb_carrera.Items.Remove("ODONTOLOGÍA");
-                cmb_carrera.Items.Remove("PSICOLOGÍA");
-            }
-
-            if (cmb_cat.SelectedIndex == 1)
-            {
+                soloSalud();
                 cmb_carrera.Enabled = true;
                 cmb_carrera.Items.Add("ADMINISTRACIÓN");
                 cmb_carrera.Items.Add("ARQUEOLOGÍA");
@@ -400,31 +691,14 @@ namespace Tarea_Algoritmos
                 cmb_carrera.Items.Add("ECONOMÍA");
                 cmb_carrera.Items.Add("NEGOCIOS INTERNACIONALES");
                 cmb_carrera.Items.Add("TURISMO");
+                
 
             }
-            else
+            else if (cmb_cat.SelectedIndex == 2)
             {
-                cmb_carrera.Items.Remove("ADMINISTRACIÓN");
-                cmb_carrera.Items.Remove("ARQUEOLOGÍA");
-                cmb_carrera.Items.Remove("CIENCIAS DE LA COMUNICACIÓN");
-                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN CIENCIAS BIOLÓGICAS Y QUÍMICA");
-                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN ARTÍSTICA");
-                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN FÍSICA");
-                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN INICIAL");
-                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN PRIMARIA");
-                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN FILOSOFÍA, PSICOLOGÍA Y CIENCIAS SOCIALES");
-                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN HISTORIA Y GEOGRAFÍA");
-                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN LENGUA Y LITERATURA");
-                cmb_carrera.Items.Remove("CIENCIAS DE LA EDUCACIÓN EN MATEMÁTICA E INFORMÁTICA");
-                cmb_carrera.Items.Remove("CONTABILIDAD");
-                cmb_carrera.Items.Remove("DERECHO");
-                cmb_carrera.Items.Remove("ECONOMÍA");
-                cmb_carrera.Items.Remove("NEGOCIOS INTERNACIONALES");
-                cmb_carrera.Items.Remove("TURISMO");
-            }
 
-            if (cmb_cat.SelectedIndex == 2)
-            {
+                soloSalud();
+
                 cmb_carrera.Enabled = true;
                 cmb_carrera.Items.Add("AGRONOMÍA");
                 cmb_carrera.Items.Add("ARQUITECTURA");
@@ -441,101 +715,28 @@ namespace Tarea_Algoritmos
                 cmb_carrera.Items.Add("INGENIERÍA PESQUERA");
                 cmb_carrera.Items.Add("INGENIERÍA QUÍMICA");
                 cmb_carrera.Items.Add("MATEMÁTICA E INFROMÁTICA");
-            }
-            else
-            {
-                cmb_carrera.Items.Remove("AGRONOMÍA");
-                cmb_carrera.Items.Remove("ARQUITECTURA");
-                cmb_carrera.Items.Remove("ESTADÍSTICA");
-                cmb_carrera.Items.Remove("FÍSICA");
-                cmb_carrera.Items.Remove("INGENIERÍA AMBIENTAL Y SANITARIA");
-                cmb_carrera.Items.Remove("INGENIERÍA CIVIL");
-                cmb_carrera.Items.Remove("INGENIERÍA DE ALIMENTOS");
-                cmb_carrera.Items.Remove("INGENIERÍA DE MINAS");
-                cmb_carrera.Items.Remove("INGENIERÍA DE SISTEMAS");
-                cmb_carrera.Items.Remove("INGENIERÍA ELECTRÓNICA");
-                cmb_carrera.Items.Remove("INGENIERÍA METALÚRGICA");
-                cmb_carrera.Items.Remove("INGENIERÍA MECÁNICA ELÉCTRICA");
-                cmb_carrera.Items.Remove("INGENIERÍA PESQUERA");
-                cmb_carrera.Items.Remove("INGENIERÍA QUÍMICA");
-                cmb_carrera.Items.Remove("MATEMÁTICA E INFROMÁTICA");
-            }
-
+                
+            } 
 
         }
 
         private void cmb_carrera_SelectedIndexChanged(object sender, EventArgs e)
         {
-            llenado carrera = new llenado(cmb_carrera.SelectedIndex);
-            //guardo los objetos en cada variable :b 
+            Llenado carrera = new Llenado(cmb_carrera.SelectedIndex);
+            //ESCOJEMOS DEL PRIMER COMBOBOX
             carrera.escogerCarrera(cmb_cat.SelectedIndex);
+            //GUARDANDO EN LOS LABEL
             txtperfil.Text = carrera.mostrarMensaje();
             txtcompetencias.Text = carrera.mostrarMensaje2();
             txtdatos.Text = carrera.mostrarMensaje3();
         }
 
-        private void tabPage5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxCarreraM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxMatM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxPatM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxNombreM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxCodigoM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label132_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label134_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label136_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonModificar_Click(object sender, EventArgs e)
         {
             consultaInput($"UPDATE postulante SET nombre = '{textBoxNombreM.Text}', apellido_paterno = '{textBoxPatM.Text}', apellido_materno = '{textBoxMatM.Text}',edad = {textBoxEdadM.Text} where codigo_postulante = {textBoxCodigoM.Text}");
-            llenarTabla(0);
+            llenarTabla(3);
             vaciarTextboxes();
             MessageBox.Show("POSTULANTE MODIFICADO CORRECTAMENTE");
-            /*try
-            {
-                
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Considere revisar los datos ingresados");
-            }*/
-                
-
-
         }
         public void vaciarTextboxes()
         {
@@ -565,15 +766,32 @@ namespace Tarea_Algoritmos
 
             consultaInput("Delete from postulante where codigo_postulante = ' " + textBoxCodigoM.Text + "';");
             MessageBox.Show("REGISTRO ELIMINADO");
-            llenarTabla(0);
+            llenarTabla(3);
         }
 
-        private void textBoxOutput_TextChanged(object sender, EventArgs e)
+        private void buttonExportar_Click(object sender, EventArgs e)
         {
+            rutas(1);
 
+            TextWriter archivo = new StreamWriter(RUTAEXPORTAR); ;
+            archivo.WriteLine(outputAExportar);
+            archivo.Close();
+            MessageBox.Show("ARCHIVO GUARDADO CORRECTAMENTE: "+ RUTAEXPORTAR);
+
+            Process.Start(RUTAEXPORTAR);
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        private void linkRuta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(RUTA);
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(0);//LLEVA  AL MAIN
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
         {
 
         }
@@ -581,10 +799,13 @@ namespace Tarea_Algoritmos
         private void buttonRandom_Click(object sender, EventArgs e)
         {
             constructor();
+
             //Generando machote
             calificacion.getRandom();
+
             //Obteniendo datos para evaluar
-            CLAVES = calificacion.getMachote();
+            CLAVES = calificacion.getMachote();//CLAVES VERDADERAS
+
             char[] clavesitas = CLAVES.ToCharArray();
             comboBox1.SelectedText= clavesitas[0].ToString();
             comboBox2.SelectedText = clavesitas[1].ToString();
@@ -686,12 +907,14 @@ namespace Tarea_Algoritmos
             comboBox98.SelectedText = clavesitas[97].ToString();
             comboBox99.SelectedText = clavesitas[98].ToString();
             comboBox100.SelectedText = clavesitas[99].ToString();
+            //DESHABILITA EL BOTON RANDOM
+            buttonRandom.Enabled = false;
 
             MessageBox.Show("A continuación, guarde los puntajes.", "Paso 2");
         }
         public void comboBoxInicializa()
         {
-            comboBox1.SelectedIndex = 4;
+            comboBox1.SelectedIndex = 4;//seleccione ( )
             comboBox2.SelectedIndex = 4;
             comboBox3.SelectedIndex = 4;
             comboBox4.SelectedIndex = 4;
