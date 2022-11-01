@@ -14,27 +14,24 @@ namespace Tarea_Algoritmos
 {
     public partial class Main : Form
     {
-        //RUTA DEL ARCHIVO RESPUESTAS
-        private static string filePath = @"C:\Users\intel\Desktop\respuestas.txt";
-
+        //ARREGLO PARA ALMACENAR LAS RESPUESTAS
+        private static string[] RESPUESTAS;
+        
+        private void rutas() {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                RESPUESTAS = File.ReadAllLines(openFileDialog.FileName).ToArray();
+            }
+        }        
         //DECLARACION DE VARIABLES
         private static string CLAVES;
         private double CORRECTO, INCORRECTO, NULO;
-        private int LINEASARCHIVO = 0;
 
 
         public Main()
-        {
-            //Verificando
-            if (filePath != null)
-            {
-                InitializeComponent();
-            }
-            else
-            {
-                //ingrese el la ruta
-            }
-
+        {            
+            InitializeComponent();
         }
 
         //CONEXION A LA BASE DE DATOS
@@ -49,8 +46,7 @@ namespace Tarea_Algoritmos
             conn.Close();
         }
 
-        //ARREGLO PARA ALMACENAR LAS RESPUESTAS
-        private static string[] RESPUESTAS = File.ReadAllLines(filePath).ToArray();
+
 
         public void llenarTabla(int a)
         {
@@ -75,6 +71,7 @@ namespace Tarea_Algoritmos
 
         private void Main_Load(object sender, EventArgs e)
         {
+            rutas();
             comboBoxInicializa();
             llenarTabla(1);
             for (int i = 0; i < dataGridView2.Columns.Count - 1; i++)
@@ -113,10 +110,10 @@ namespace Tarea_Algoritmos
                 
                 dicCodigo[$"{linea[0]}{linea[1]}{linea[2]}{linea[3]}{linea[4]}{linea[5]}{linea[6]}{linea[7]}"] = respuesta;    
             }
-            /*foreach(KeyValuePair<string,string> item in dicCodigo)
+            foreach(KeyValuePair<string,string> item in dicCodigo)
             {
                 textBoxOutput.Text += $"{item.Key} {item.Value}\r\n";
-            }*/
+            }
         }
         private void buttonVista_Click(object sender, EventArgs e)
         {
@@ -572,6 +569,11 @@ namespace Tarea_Algoritmos
         }
 
         private void textBoxOutput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
         }
