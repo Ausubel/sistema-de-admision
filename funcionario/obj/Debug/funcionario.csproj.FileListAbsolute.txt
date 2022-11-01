@@ -1,0 +1,22 @@
+A:\Archivos de programas\VisualStudioProjects\funcionario\funcionario\bin\Debug\funcionario.exe.config
+A:\Archivos de programas\VisualStudioProjects\funcionario\funcionario\bin\Debug\funcionario.exe
+A:\Archivos de programas\VisualStudioProjects\funcionario\funcionario\bin\Debug\funcionario.pdb
+A:\Archivos de programas\VisualStudioProjects\funcionario\funcionario\obj\Debug\funcionario.csproj.AssemblyReference.cache
+A:\Archivos de programas\VisualStudioProjects\funcionario\funcionario\obj\Debug\funcionario.csproj.SuggestedBindingRedirects.cache
+A:\Archivos de programas\VisualStudioProjects\funcionario\funcionario\obj\Debug\funcionario.Form1.resources
+A:\Archivos de programas\VisualStudioProjects\funcionario\funcionario\obj\Debug\funcionario.Properties.Resources.resources
+A:\Archivos de programas\VisualStudioProjects\funcionario\funcionario\obj\Debug\funcionario.csproj.GenerateResource.cache
+A:\Archivos de programas\VisualStudioProjects\funcionario\funcionario\obj\Debug\funcionario.csproj.CoreCompileInputs.cache
+A:\Archivos de programas\VisualStudioProjects\funcionario\funcionario\obj\Debug\funcionario.exe
+A:\Archivos de programas\VisualStudioProjects\funcionario\funcionario\obj\Debug\funcionario.pdb
+A:\VisualStudioProjects\funcionario\funcionario\bin\Debug\funcionario.exe.config
+A:\VisualStudioProjects\funcionario\funcionario\bin\Debug\funcionario.exe
+A:\VisualStudioProjects\funcionario\funcionario\bin\Debug\funcionario.pdb
+A:\VisualStudioProjects\funcionario\funcionario\obj\Debug\funcionario.csproj.AssemblyReference.cache
+A:\VisualStudioProjects\funcionario\funcionario\obj\Debug\funcionario.csproj.SuggestedBindingRedirects.cache
+A:\VisualStudioProjects\funcionario\funcionario\obj\Debug\funcionario.Form1.resources
+A:\VisualStudioProjects\funcionario\funcionario\obj\Debug\funcionario.Properties.Resources.resources
+A:\VisualStudioProjects\funcionario\funcionario\obj\Debug\funcionario.csproj.GenerateResource.cache
+A:\VisualStudioProjects\funcionario\funcionario\obj\Debug\funcionario.csproj.CoreCompileInputs.cache
+A:\VisualStudioProjects\funcionario\funcionario\obj\Debug\funcionario.exe
+A:\VisualStudioProjects\funcionario\funcionario\obj\Debug\funcionario.pdb
