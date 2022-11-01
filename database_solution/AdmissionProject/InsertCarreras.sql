@@ -1,0 +1,27 @@
+USE Admission;
+GO 
+
+INSERT INTO carrera(nombre_carrera) VALUES ('Administración');
+INSERT INTO carrera(nombre_carrera) VALUES ('Ciencias Económicas y Negocios Internacionales');
+INSERT INTO carrera(nombre_carrera) VALUES ('Contabilidad');
+INSERT INTO carrera(nombre_carrera) VALUES ('Turismo y Arqueología');
+INSERT INTO carrera(nombre_carrera) VALUES ('Agronomía');
+INSERT INTO carrera(nombre_carrera) VALUES ('Arquitectura');
+INSERT INTO carrera(nombre_carrera) VALUES ('Ingeniería Ambiental y Sanitaria');
+INSERT INTO carrera(nombre_carrera) VALUES ('Ingeniería Civil');
+INSERT INTO carrera(nombre_carrera) VALUES ('Ingeniería Mecánica, Eléctrica y Electrónica');
+INSERT INTO carrera(nombre_carrera) VALUES ('Ingeniería Pesquera y de Alimentos');
+INSERT INTO carrera(nombre_carrera) VALUES ('Ingeniería Química');
+INSERT INTO carrera(nombre_carrera) VALUES ('Ingeniería de Minas y Metalúrgica');
+INSERT INTO carrera(nombre_carrera) VALUES ('Ingeniería de Sistemas');
+INSERT INTO carrera(nombre_carrera) VALUES ('Ciencias Físicas');
+INSERT INTO carrera(nombre_carrera) VALUES ('Ciencias Biológicas');
+INSERT INTO carrera(nombre_carrera) VALUES ('Enfermería');
+INSERT INTO carrera(nombre_carrera) VALUES ('Farmacia y Bioquímica');
+INSERT INTO carrera(nombre_carrera) VALUES ('Medicina Humana');
+INSERT INTO carrera(nombre_carrera) VALUES ('Medicina Veterinaria y Zootecnia');
+INSERT INTO carrera(nombre_carrera) VALUES ('Obstetricia');
+INSERT INTO carrera(nombre_carrera) VALUES ('Odontología');
+INSERT INTO carrera(nombre_carrera) VALUES ('Psicología');
+INSERT INTO carrera(nombre_carrera) VALUES ('Ciencias de la Educación y Humanidades');
+INSERT INTO carrera(nombre_carrera) VALUES ('Derecho y Ciencia Políticas');
