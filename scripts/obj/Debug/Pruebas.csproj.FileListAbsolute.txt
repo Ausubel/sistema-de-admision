@@ -1,8 +1,0 @@
-A:\VisualStudioProjects\Pruebas\bin\Debug\Pruebas.exe.config
-A:\VisualStudioProjects\Pruebas\bin\Debug\Pruebas.exe
-A:\VisualStudioProjects\Pruebas\bin\Debug\Pruebas.pdb
-A:\VisualStudioProjects\Pruebas\obj\Debug\Pruebas.csproj.AssemblyReference.cache
-A:\VisualStudioProjects\Pruebas\obj\Debug\Pruebas.csproj.SuggestedBindingRedirects.cache
-A:\VisualStudioProjects\Pruebas\obj\Debug\Pruebas.csproj.CoreCompileInputs.cache
-A:\VisualStudioProjects\Pruebas\obj\Debug\Pruebas.exe
-A:\VisualStudioProjects\Pruebas\obj\Debug\Pruebas.pdb
