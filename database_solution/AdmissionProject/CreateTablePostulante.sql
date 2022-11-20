@@ -6,7 +6,7 @@ BEGIN
 	CREATE TABLE Postulante(
 		id_postulante INT IDENTITY(20220000,1)NOT NULL,
 		id_escuela INT NOT NULL,
-		id_area INT NOT NULL,
+		id_area CHAR NOT NULL,
 		nombre VARCHAR(100) NOT NULL,
 		apellido_paterno VARCHAR(100) NOT NULL,
 		apellido_materno VARCHAR(100) NOT NULL,
