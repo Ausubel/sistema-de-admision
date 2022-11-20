@@ -1,0 +1,16 @@
+C:\Users\CASMA\Desktop\proyecto Poo2\Sistema-de-admision\ProyectoPooBKND\bin\Debug\ProyectoPooBKND.exe.config
+C:\Users\CASMA\Desktop\proyecto Poo2\Sistema-de-admision\ProyectoPooBKND\bin\Debug\ProyectoPooBKND.exe
+C:\Users\CASMA\Desktop\proyecto Poo2\Sistema-de-admision\ProyectoPooBKND\bin\Debug\ProyectoPooBKND.pdb
+C:\Users\CASMA\Desktop\proyecto Poo2\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.csproj.AssemblyReference.cache
+C:\Users\CASMA\Desktop\proyecto Poo2\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.csproj.SuggestedBindingRedirects.cache
+C:\Users\CASMA\Desktop\proyecto Poo2\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.Form1.resources
+C:\Users\CASMA\Desktop\proyecto Poo2\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.Properties.Resources.resources
+C:\Users\CASMA\Desktop\proyecto Poo2\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.csproj.GenerateResource.cache
+C:\Users\CASMA\Desktop\proyecto Poo2\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.csproj.CoreCompileInputs.cache
+C:\Users\CASMA\Desktop\proyecto Poo2\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.exe
+C:\Users\CASMA\Desktop\proyecto Poo2\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.pdb
+C:\Users\CASMA\Desktop\proyecto Poo2\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.FormPresetancion.resources
+C:\Users\CASMA\Desktop\proyecto Poo2\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.FormPostulante.resources
+C:\Users\CASMA\Desktop\proyecto Poo2\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.FormCalificar.resources
+C:\Users\CASMA\Desktop\proyecto Poo2\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.FormResultados.resources
+C:\Users\CASMA\Desktop\proyecto Poo2\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.FormInformacion.resources

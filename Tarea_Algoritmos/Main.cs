@@ -15,16 +15,12 @@ namespace Tarea_Algoritmos
 {
     public partial class Main : Form
     {
-
         //ARREGLO PARA ALMACENAR LAS RESPUESTAS
         private static string[] RESPUESTAS;
-
         //PARA GUARDAR LAS CARTILLAS
         private static string outputAExportar = "";
-
         //RUTA DEL ARCHIVO .TXT
         private static string RUTA = @"";
-
         //RUTA DEL ARCHIVO .MD
         private static string RUTAEXPORTAR = @"";
 
@@ -49,10 +45,8 @@ namespace Tarea_Algoritmos
 
 
         }
-
         //DECLARACION DE VARIABLES
         private static string CLAVES;
-
         private static double CORRECTO, INCORRECTO, NULO;
 
 
@@ -62,7 +56,7 @@ namespace Tarea_Algoritmos
         }
 
         //CONEXION A LA BASE DE DATOS
-        private static SqlConnection conn = new SqlConnection("SERVER = DESKTOP-UU53QVS; DATABASE = Admission ;INTEGRATED SECURITY = TRUE ");
+        private static SqlConnection conn = new SqlConnection("SERVER = LAPTOP-6KL9OJU4; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
 
         //METODOS DE LA BASE DE DATOS
         public void consultaInput(string consulta)
@@ -103,27 +97,20 @@ namespace Tarea_Algoritmos
                 dataGridView3.DataSource = dt;
             }
         }
-
         //UTILIZAMOS LA CLASE DICCIONARIO
         Dictionary<string, string> dicCodigo = new Dictionary<string, string>();
-
         //Creamos diccionario para obtener los codigos de los alumnos. 
         private void cargarDiccionario()
         {
-
             // CODIGO STRING, ALTERNATIVAS STRING 
             char[] linea;
 
             for (int i = 0; i < RESPUESTAS.Length; i++)
             {
                 linea = RESPUESTAS[i].ToArray();
-
                 string codigo = $"{linea[0]}{linea[1]}{linea[2]}{linea[3]}{linea[4]}{linea[5]}{linea[6]}{linea[7]}";
-
                 string respuesta = "";
-
                 for (int j = 9; j < 109; j++) respuesta += linea[j].ToString();
-
                 //AGREGANDO LLAVES CON SUS VALORES
                 dicCodigo[codigo] = respuesta;
             }
@@ -155,7 +142,6 @@ namespace Tarea_Algoritmos
             //ESTO ES PARA LOS POSTULANTES
             llenarTabla(3);
             tabControl1.SelectTab(1);
-
             for (int i = 0; i < dataGridView3.Columns.Count - 1; i++)
             {
                 dataGridView3.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -224,7 +210,7 @@ namespace Tarea_Algoritmos
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView2.DataSource = dt;
-                
+
                 for (int i = 0; i < dataGridView2.Columns.Count - 1; i++)
                 {
                     dataGridView2.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -439,7 +425,6 @@ namespace Tarea_Algoritmos
 
         private void buttonCalificar_Click(object sender, EventArgs e)
         {
-
             string codigoBus = textBoxCodigo.Text;
 
             string val;
@@ -570,7 +555,6 @@ namespace Tarea_Algoritmos
                             break;
                     }
                 }
-
                 textBoxNota.Text = notas.ToString();
 
                 outputAExportar += $"### PUNTAJE TOTAL: {notas}\r\n";
@@ -593,7 +577,6 @@ namespace Tarea_Algoritmos
             try
             {
                 string estonoesnota = textBoxNota.Text.Replace(",", ".");
-
                 consultaInput($"UPDATE postulante SET nota = {estonoesnota} where codigo_postulante = {textBoxCodigo.Text};");
 
                 llenarTabla(2);
@@ -772,7 +755,6 @@ namespace Tarea_Algoritmos
         private void buttonExportar_Click(object sender, EventArgs e)
         {
             rutas(1);
-
             TextWriter archivo = new StreamWriter(RUTAEXPORTAR); ;
             archivo.WriteLine(outputAExportar);
             archivo.Close();
@@ -796,13 +778,46 @@ namespace Tarea_Algoritmos
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void buttonRandom_Click(object sender, EventArgs e)
         {
             constructor();
-
             //Generando machote
             calificacion.getRandom();
-
             //Obteniendo datos para evaluar
             CLAVES = calificacion.getMachote();//CLAVES VERDADERAS
 
