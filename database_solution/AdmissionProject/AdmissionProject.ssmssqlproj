@@ -25,11 +25,11 @@
           <AssociatedConnUserName />
           <FullPath>CreateDataBase.sql</FullPath>
         </FileNode>
-        <FileNode Name="CreateTableArea.sql">
+        <FileNode Name="CreateTableArea_I.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UU53QVS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-UU53QVS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>CreateTableArea.sql</FullPath>
+          <FullPath>CreateTableArea_I.sql</FullPath>
         </FileNode>
         <FileNode Name="CreateTableDetalle.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UU53QVS:True</AssociatedConnectionMoniker>
@@ -43,11 +43,11 @@
           <AssociatedConnUserName />
           <FullPath>CreateTableEscuela.sql</FullPath>
         </FileNode>
-        <FileNode Name="CreateTableFacultad.sql">
+        <FileNode Name="CreateTableFacultad_I.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UU53QVS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-UU53QVS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>CreateTableFacultad.sql</FullPath>
+          <FullPath>CreateTableFacultad_I.sql</FullPath>
         </FileNode>
         <FileNode Name="CreateTablePostulante.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UU53QVS:True</AssociatedConnectionMoniker>
@@ -55,11 +55,17 @@
           <AssociatedConnUserName />
           <FullPath>CreateTablePostulante.sql</FullPath>
         </FileNode>
-        <FileNode Name="InsertCarreras.sql">
+        <FileNode Name="InsertArea_I.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UU53QVS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-UU53QVS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>InsertCarreras.sql</FullPath>
+          <FullPath>InsertArea_I.sql</FullPath>
+        </FileNode>
+        <FileNode Name="InsertFacultad_I.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UU53QVS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-UU53QVS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>InsertFacultad_I.sql</FullPath>
         </FileNode>
         <FileNode Name="InsertPostulante.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UU53QVS:True</AssociatedConnectionMoniker>
