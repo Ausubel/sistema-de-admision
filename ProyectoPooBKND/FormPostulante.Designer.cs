@@ -58,6 +58,7 @@
             this.buttonModificar.FlatAppearance.BorderSize = 0;
             this.buttonModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.buttonModificar.Location = new System.Drawing.Point(234, 0);
             this.buttonModificar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonModificar.Name = "buttonModificar";
@@ -73,6 +74,7 @@
             this.buttonEliminar.FlatAppearance.BorderSize = 0;
             this.buttonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.buttonEliminar.Location = new System.Drawing.Point(0, 0);
             this.buttonEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEliminar.Name = "buttonEliminar";
@@ -98,6 +100,7 @@
             this.groupBox10.Controls.Add(this.textBoxNombreM);
             this.groupBox10.Controls.Add(this.textBoxPatM);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.groupBox10.Location = new System.Drawing.Point(430, 55);
             this.groupBox10.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox10.Name = "groupBox10";
@@ -123,10 +126,11 @@
             // textBoxCodigoM
             // 
             this.textBoxCodigoM.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxCodigoM.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCodigoM.Location = new System.Drawing.Point(145, 56);
             this.textBoxCodigoM.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCodigoM.Name = "textBoxCodigoM";
-            this.textBoxCodigoM.Size = new System.Drawing.Size(260, 33);
+            this.textBoxCodigoM.Size = new System.Drawing.Size(260, 26);
             this.textBoxCodigoM.TabIndex = 327;
             this.textBoxCodigoM.TextChanged += new System.EventHandler(this.textBoxCodigoM_TextChanged);
             // 
@@ -145,10 +149,11 @@
             // textBoxEdadM
             // 
             this.textBoxEdadM.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxEdadM.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEdadM.Location = new System.Drawing.Point(145, 207);
             this.textBoxEdadM.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEdadM.Name = "textBoxEdadM";
-            this.textBoxEdadM.Size = new System.Drawing.Size(260, 33);
+            this.textBoxEdadM.Size = new System.Drawing.Size(260, 26);
             this.textBoxEdadM.TabIndex = 325;
             // 
             // label132
@@ -166,10 +171,11 @@
             // textBoxCarreraM
             // 
             this.textBoxCarreraM.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxCarreraM.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCarreraM.Location = new System.Drawing.Point(145, 244);
             this.textBoxCarreraM.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCarreraM.Name = "textBoxCarreraM";
-            this.textBoxCarreraM.Size = new System.Drawing.Size(260, 33);
+            this.textBoxCarreraM.Size = new System.Drawing.Size(260, 26);
             this.textBoxCarreraM.TabIndex = 323;
             // 
             // label134
@@ -211,36 +217,38 @@
             // textBoxMatM
             // 
             this.textBoxMatM.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxMatM.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxMatM.Location = new System.Drawing.Point(145, 170);
             this.textBoxMatM.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMatM.Name = "textBoxMatM";
-            this.textBoxMatM.Size = new System.Drawing.Size(260, 33);
+            this.textBoxMatM.Size = new System.Drawing.Size(260, 26);
             this.textBoxMatM.TabIndex = 320;
             // 
             // textBoxNombreM
             // 
             this.textBoxNombreM.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxNombreM.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNombreM.Location = new System.Drawing.Point(145, 93);
             this.textBoxNombreM.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombreM.Name = "textBoxNombreM";
-            this.textBoxNombreM.Size = new System.Drawing.Size(260, 33);
+            this.textBoxNombreM.Size = new System.Drawing.Size(260, 26);
             this.textBoxNombreM.TabIndex = 318;
             // 
             // textBoxPatM
             // 
             this.textBoxPatM.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxPatM.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPatM.Location = new System.Drawing.Point(145, 133);
             this.textBoxPatM.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPatM.Name = "textBoxPatM";
-            this.textBoxPatM.Size = new System.Drawing.Size(260, 33);
+            this.textBoxPatM.Size = new System.Drawing.Size(260, 26);
             this.textBoxPatM.TabIndex = 319;
             // 
             // dataGridView3
             // 
-            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.ColumnHeadersHeight = 29;
             this.dataGridView3.Location = new System.Drawing.Point(24, 55);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView3.Name = "dataGridView3";
@@ -263,9 +271,10 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Bisque;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.panel1.Controls.Add(this.buttonModificar);
             this.panel1.Controls.Add(this.buttonEliminar);
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Location = new System.Drawing.Point(430, 371);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(457, 74);
@@ -275,7 +284,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.NavajoWhite;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.ClientSize = new System.Drawing.Size(912, 592);
             this.Controls.Add(this.prueba);
             this.Controls.Add(this.groupBox10);

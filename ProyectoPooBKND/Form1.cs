@@ -12,10 +12,11 @@ namespace ProyectoPooBKND
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
-
+            this.CenterToScreen();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -85,6 +86,26 @@ namespace ProyectoPooBKND
         private void button2_Click_1(object sender, EventArgs e)
         {
             openchildForm(new FormCalificar());
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+
+            timerExit.Enabled = true;
+
+            
+
+
+        }
+
+        private void timerExit_Tick(object sender, EventArgs e)
+        {
+            this.Opacity -= 0.03;
+            if (this.Opacity == 0)
+            {
+                timerExit.Stop();
+                this.Close();
+            }
         }
     }
 }
