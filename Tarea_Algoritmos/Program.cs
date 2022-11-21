@@ -17,7 +17,7 @@ namespace Tarea_Algoritmos
         {
             //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Presentacion());
+            Application.Run(new Main());
         }
     }
 }
