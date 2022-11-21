@@ -49,7 +49,7 @@ namespace Tarea_Algoritmos
                 {
                     case 0:
                         //Perfil biologia
-                        string Aa1 = "Tiene conocimientos básicos a un nivel medio superior en las áreas de las ciencias naturales.";
+                        string Aa1 = "Tiene conocimientos básicos a un nivel medio superior en las áreas de las ciencias naturales.\r\n";
                         string Aa2 = "Es creativo e innovador en el estudio de procesos y técnicas biológicas.";
                         string Aa3 = "Tiene habilidades, destrezas y actitudes para la investigación en el campo de las ciencias biológicas.";
                         string Aa4 = "Tiene disponibilidad para el trabajo en equipo mostrando principios y valores éticos.";
