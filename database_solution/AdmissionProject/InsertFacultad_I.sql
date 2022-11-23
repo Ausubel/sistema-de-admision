@@ -15,7 +15,7 @@ INSERT INTO Facultad (nombre_facultad) VALUES
 ('Ingeniería Química'),
 ('Ingeniería de Minas y Metalúrgica'),
 ('Ingeniería de Sistemas'),
-('Ciencias Físicas'),
+('Ciencias'),
 ('Ciencias Biológicas'),
 ('Enfermería'),
 ('Farmacia y Bioquímica'),
