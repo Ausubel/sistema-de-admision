@@ -67,11 +67,11 @@
           <AssociatedConnUserName />
           <FullPath>InsertFacultad_I.sql</FullPath>
         </FileNode>
-        <FileNode Name="InsertPostulante.sql">
+        <FileNode Name="InsertPostulante_D.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UU53QVS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-UU53QVS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>InsertPostulante.sql</FullPath>
+          <FullPath>InsertPostulante_D.sql</FullPath>
         </FileNode>
         <FileNode Name="UpdateNotas.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UU53QVS:True</AssociatedConnectionMoniker>
