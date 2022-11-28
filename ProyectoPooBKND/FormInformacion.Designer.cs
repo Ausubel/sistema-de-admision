@@ -36,9 +36,6 @@
             this.cbbHumanidades = new System.Windows.Forms.ComboBox();
             this.cbbIngenierias = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panelnfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,6 +95,7 @@
             // 
             // cbbSalud
             // 
+            this.cbbSalud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.cbbSalud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbSalud.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.cbbSalud.Items.AddRange(new object[] {
@@ -117,6 +115,7 @@
             // 
             // cbbHumanidades
             // 
+            this.cbbHumanidades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.cbbHumanidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbHumanidades.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.cbbHumanidades.FormattingEnabled = true;
@@ -184,68 +183,6 @@
             this.label1.Text = "label1";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoEllipsis = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label2.Location = new System.Drawing.Point(188, 121);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(666, 421);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label1";
-            this.label2.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.comboBox1.Items.AddRange(new object[] {
-            "BIOLOGÍA",
-            "ENFERMERÍA",
-            "FARMACIA Y BIOQUÍMICA",
-            "MEDICINA VETERINARIA Y ZOOTECNIA",
-            "OBSTETRICIA",
-            "ODONTOLOGÍA",
-            "PSICOLOGÍA"});
-            this.comboBox1.Location = new System.Drawing.Point(154, 68);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(537, 24);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.Visible = false;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.cbbSalud_SelectedIndexChanged);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "ADMINISTRACIÓN",
-            "ARQUEOLOGÍA",
-            "CIENCIAS DE LA COMUNICACIÓN",
-            "CIENCIAS DE LA EDUCACIÓN EN CIENCIAS BIOLÓGICAS Y QUÍMICA",
-            "CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN ARTÍSTICA",
-            "CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN FÍSICA",
-            "CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN INICIAL",
-            "CIENCIAS DE LA EDUCACIÓN EN EDUCACIÓN PRIMARIA",
-            "CIENCIAS DE LA EDUCACIÓN EN FILOSOFÍA, PSICOLOGÍA Y CIENCIAS SOCIALES",
-            "CIENCIAS DE LA EDUCACIÓN EN HISTORIA Y GEOGRAFÍA",
-            "CIENCIAS DE LA EDUCACIÓN EN LENGUA Y LITERATURA",
-            "CIENCIAS DE LA EDUCACIÓN EN MATEMÁTICA E INFORMÁTICA",
-            "CONTABILIDAD",
-            "DERECHO",
-            "ECONOMÍA",
-            "NEGOCIOS INTERNACIONALES",
-            "TURISMO"});
-            this.comboBox2.Location = new System.Drawing.Point(154, 223);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(537, 24);
-            this.comboBox2.TabIndex = 2;
-            this.comboBox2.Visible = false;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.cbbHumanidades_SelectedIndexChanged);
-            // 
             // FormInformacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -254,10 +191,7 @@
             this.ClientSize = new System.Drawing.Size(992, 660);
             this.Controls.Add(this.panelnfo);
             this.Controls.Add(this.cbbIngenierias);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.cbbHumanidades);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.cbbSalud);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -279,8 +213,5 @@
         private System.Windows.Forms.ComboBox cbbHumanidades;
         private System.Windows.Forms.ComboBox cbbIngenierias;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
