@@ -1014,3 +1014,5 @@ INSERT INTO Postulante (id_postulante,id_escuela,nombre,apellido_paterno,apellid
 (20221005,34,'Edivaldo','Hermoso','Alberto',22),
 (20221006,3,'Grober','Alcorta','Villegas',19)
 GO
+
+SELECT * FROM Postulante
