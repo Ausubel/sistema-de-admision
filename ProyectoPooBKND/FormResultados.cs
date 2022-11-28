@@ -18,7 +18,7 @@ namespace ProyectoPooBKND
             InitializeComponent();
 
         }
-        private static SqlConnection conn = new SqlConnection("SERVER = LAPTOP-6KL9OJU4; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
+        private static SqlConnection conn = new SqlConnection("SERVER = LAPTOP-PC5U6OIA; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
         private void FormResultados_Load(object sender, EventArgs e)
         {
             string consulta = "SELECT P.id_postulante AS 'Codigo', CONCAT(P.apellido_paterno,' ',P.apellido_materno,' ',P.nombre) AS 'Postulante', E.nombre_escuela AS 'Carrera', CASE WHEN P.nota IS NULL THEN 'No tiene nota' ELSE CAST(P.nota AS VARCHAR) END AS 'Nota' FROM Postulante P INNER JOIN Escuela E ON P.id_escuela=E.id_escuela; ";
