@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+<<<<<<< HEAD
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
+=======
+using System.Drawing;
+>>>>>>> 20943d35cd4df61e81adcb56c5c7ec34ca48313d
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,8 +25,12 @@ namespace ProyectoPooBKND
 
         private void FormCalificar_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             rutas(0);
             llenarTabla();
+=======
+
+>>>>>>> 20943d35cd4df61e81adcb56c5c7ec34ca48313d
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -34,6 +42,7 @@ namespace ProyectoPooBKND
         {
 
         }
+<<<<<<< HEAD
 
         //ARREGLO PARA ALMACENAR LAS RESPUESTAS
         private static string[] RESPUESTAS;
@@ -624,5 +633,7 @@ namespace ProyectoPooBKND
                 MessageBox.Show("Considere revisar las entradas de datos", "", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
             }
         }
+=======
+>>>>>>> 20943d35cd4df61e81adcb56c5c7ec34ca48313d
     }
 }

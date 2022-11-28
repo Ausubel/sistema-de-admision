@@ -179,7 +179,11 @@ namespace Tarea_Algoritmos
 
         private void buttonCal_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             //CALIFICAR
+=======
+
+>>>>>>> 20943d35cd4df61e81adcb56c5c7ec34ca48313d
             tabControl1.SelectTab(3);
             llenarTabla(2);
             for (int i = 0; i < dataGridView2.Columns.Count - 1; i++)

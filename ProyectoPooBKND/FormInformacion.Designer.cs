@@ -32,10 +32,17 @@
             this.bttnIngenierias = new System.Windows.Forms.Button();
             this.bttnHumanidades = new System.Windows.Forms.Button();
             this.bttnSalud = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.cbbSalud = new System.Windows.Forms.ComboBox();
             this.cbbHumanidades = new System.Windows.Forms.ComboBox();
             this.cbbIngenierias = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+=======
+            this.cbbHumanidades = new System.Windows.Forms.ComboBox();
+            this.cbbIngenierias = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbbSalud = new System.Windows.Forms.ComboBox();
+>>>>>>> 20943d35cd4df61e81adcb56c5c7ec34ca48313d
             this.panelnfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,6 +100,7 @@
             this.bttnSalud.UseVisualStyleBackColor = true;
             this.bttnSalud.Click += new System.EventHandler(this.bttnSalud_Click);
             // 
+<<<<<<< HEAD
             // cbbSalud
             // 
             this.cbbSalud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -113,6 +121,8 @@
             this.cbbSalud.Visible = false;
             this.cbbSalud.SelectedIndexChanged += new System.EventHandler(this.cbbSalud_SelectedIndexChanged);
             // 
+=======
+>>>>>>> 20943d35cd4df61e81adcb56c5c7ec34ca48313d
             // cbbHumanidades
             // 
             this.cbbHumanidades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -137,7 +147,11 @@
             "ECONOMÍA",
             "NEGOCIOS INTERNACIONALES",
             "TURISMO"});
+<<<<<<< HEAD
             this.cbbHumanidades.Location = new System.Drawing.Point(154, 224);
+=======
+            this.cbbHumanidades.Location = new System.Drawing.Point(154, 223);
+>>>>>>> 20943d35cd4df61e81adcb56c5c7ec34ca48313d
             this.cbbHumanidades.Name = "cbbHumanidades";
             this.cbbHumanidades.Size = new System.Drawing.Size(537, 24);
             this.cbbHumanidades.TabIndex = 2;
@@ -165,7 +179,11 @@
             "INGENIERÍA PESQUERA",
             "INGENIERÍA QUÍMICA",
             "MATEMÁTICA E INFROMÁTICA"});
+<<<<<<< HEAD
             this.cbbIngenierias.Location = new System.Drawing.Point(154, 383);
+=======
+            this.cbbIngenierias.Location = new System.Drawing.Point(154, 371);
+>>>>>>> 20943d35cd4df61e81adcb56c5c7ec34ca48313d
             this.cbbIngenierias.Name = "cbbIngenierias";
             this.cbbIngenierias.Size = new System.Drawing.Size(537, 24);
             this.cbbIngenierias.TabIndex = 3;
@@ -183,6 +201,29 @@
             this.label1.Text = "label1";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+<<<<<<< HEAD
+=======
+            // cbbSalud
+            // 
+            this.cbbSalud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.cbbSalud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbSalud.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.cbbSalud.Items.AddRange(new object[] {
+            "BIOLOGÍA",
+            "ENFERMERÍA",
+            "FARMACIA Y BIOQUÍMICA",
+            "MEDICINA VETERINARIA Y ZOOTECNIA",
+            "OBSTETRICIA",
+            "ODONTOLOGÍA",
+            "PSICOLOGÍA"});
+            this.cbbSalud.Location = new System.Drawing.Point(154, 69);
+            this.cbbSalud.Name = "cbbSalud";
+            this.cbbSalud.Size = new System.Drawing.Size(537, 24);
+            this.cbbSalud.TabIndex = 1;
+            this.cbbSalud.Visible = false;
+            this.cbbSalud.SelectedIndexChanged += new System.EventHandler(this.cbbSalud_SelectedIndexChanged);
+            // 
+>>>>>>> 20943d35cd4df61e81adcb56c5c7ec34ca48313d
             // FormInformacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -209,9 +250,16 @@
         private System.Windows.Forms.Button bttnIngenierias;
         private System.Windows.Forms.Button bttnHumanidades;
         private System.Windows.Forms.Button bttnSalud;
+<<<<<<< HEAD
         private System.Windows.Forms.ComboBox cbbSalud;
         private System.Windows.Forms.ComboBox cbbHumanidades;
         private System.Windows.Forms.ComboBox cbbIngenierias;
         private System.Windows.Forms.Label label1;
+=======
+        private System.Windows.Forms.ComboBox cbbHumanidades;
+        private System.Windows.Forms.ComboBox cbbIngenierias;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbbSalud;
+>>>>>>> 20943d35cd4df61e81adcb56c5c7ec34ca48313d
     }
 }
