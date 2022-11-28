@@ -813,6 +813,11 @@ namespace Tarea_Algoritmos
 
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void buttonRandom_Click(object sender, EventArgs e)
         {
             constructor();

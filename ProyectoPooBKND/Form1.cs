@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,16 +13,47 @@ namespace ProyectoPooBKND
 {
     public partial class Form1 : Form
     {
-        
+        //ARREGLO PARA ALMACENAR LAS RESPUESTAS
+        private static string[] RESPUESTAS;
+        //PARA GUARDAR LAS CARTILLAS
+        private static string outputAExportar = "";
+        //RUTA DEL ARCHIVO .TXT
+        private static string RUTA = @"";
+        //RUTA DEL ARCHIVO .MD
+        private static string RUTAEXPORTAR = @"";
+        private void rutas(int aux)
+        {
+            if (aux == 0)
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    RESPUESTAS = File.ReadAllLines(openFileDialog.FileName).ToArray();
+                    //linkRuta.Text = openFileDialog.FileName;
+                    RUTA = @"" + openFileDialog.FileName + "";
+                }
+            }
+            else
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    RUTAEXPORTAR = @"" + openFileDialog.FileName + "";
+                }
+            }
+
+
+        }
         public Form1()
         {
             InitializeComponent();
             this.CenterToScreen();
+            //rutas(0);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            openchildForm(new FormResultados());
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -80,7 +112,7 @@ namespace ProyectoPooBKND
 
         private void button7_Click(object sender, EventArgs e)
         {
-            openchildForm(new FormResultados());
+            
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -106,6 +138,16 @@ namespace ProyectoPooBKND
                 timerExit.Stop();
                 this.Close();
             }
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            openchildForm(new FormResultados());
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
