@@ -1,0 +1,16 @@
+A:\VisualStudioProjects\Pruebas\bin\Debug\Pruebas.exe.config
+A:\VisualStudioProjects\Pruebas\bin\Debug\Pruebas.exe
+A:\VisualStudioProjects\Pruebas\bin\Debug\Pruebas.pdb
+A:\VisualStudioProjects\Pruebas\obj\Debug\Pruebas.csproj.AssemblyReference.cache
+A:\VisualStudioProjects\Pruebas\obj\Debug\Pruebas.csproj.SuggestedBindingRedirects.cache
+A:\VisualStudioProjects\Pruebas\obj\Debug\Pruebas.csproj.CoreCompileInputs.cache
+A:\VisualStudioProjects\Pruebas\obj\Debug\Pruebas.exe
+A:\VisualStudioProjects\Pruebas\obj\Debug\Pruebas.pdb
+C:\Users\intel\Desktop\Sistema-de-admision\scritps\scripts_c#\bin\Debug\Pruebas.exe.config
+C:\Users\intel\Desktop\Sistema-de-admision\scritps\scripts_c#\bin\Debug\Pruebas.exe
+C:\Users\intel\Desktop\Sistema-de-admision\scritps\scripts_c#\bin\Debug\Pruebas.pdb
+C:\Users\intel\Desktop\Sistema-de-admision\scritps\scripts_c#\obj\Debug\Pruebas.csproj.AssemblyReference.cache
+C:\Users\intel\Desktop\Sistema-de-admision\scritps\scripts_c#\obj\Debug\Pruebas.csproj.SuggestedBindingRedirects.cache
+C:\Users\intel\Desktop\Sistema-de-admision\scritps\scripts_c#\obj\Debug\Pruebas.csproj.CoreCompileInputs.cache
+C:\Users\intel\Desktop\Sistema-de-admision\scritps\scripts_c#\obj\Debug\Pruebas.exe
+C:\Users\intel\Desktop\Sistema-de-admision\scritps\scripts_c#\obj\Debug\Pruebas.pdb

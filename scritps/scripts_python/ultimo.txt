@@ -1,0 +1,458 @@
+
+
+cs comunicacion
+
+
+cs comunicacion
+
+
+cs comunicacion
+
+
+
+cs ed biologia y quimica
+
+
+cs ed biologia y quimica
+
+
+cs ed biologia y quimica
+
+
+
+cs ed artistica
+
+
+cs ed artistica
+
+
+cs ed artistica
+
+
+
+cs ed educacion fisica
+
+
+cs ed educacion fisica
+
+
+cs ed educacion fisica
+
+
+
+cs ed inicial
+
+
+cs ed inicial
+
+
+cs ed inicial
+
+
+
+cs ed primaria
+
+
+cs ed primaria
+
+
+cs ed primaria
+
+
+
+filosofia
+
+
+filosofia
+
+
+filosofia
+
+
+
+historia y geo
+
+
+historia y geo
+
+
+historia y geo
+
+
+
+lengua y lit
+
+
+lengua y lit
+
+
+
+lengua y lit
+
+
+
+ matematica e info
+
+
+ed matematica e inf
+
+
+ed matematica e inf
+
+
+---------------------------------------------------------------------------
+contabilidad
+Iniciativa y curiosidad por el ámbito profesional.\r\n
+Interés por las actividades económicas y empresariales.\r\n
+Evidencia habilidades blandas, comunicativas en forma oral y escrita.\r\n
+Comprende los procesos históricos y sociales de nuestro país y del mundo.\r\n
+
+contabilidad
+Establece el programa de auditoría y peritaje según el sector de acuerdo con las normas legales vigentes.\r\n
+Desarrolla los presupuestos y costos de acuerdo con las políticas empresariales y normas gubernamentales, agropecuarias, mineras \r\n y pesqueras.\r\n
+Establece el cumplimiento de las obligaciones tributarias en beneficio del estado por rentas y comercio externo de acuerdo con el \r\n marco normativo vigente.\r\n
+
+contabilidad
+GRADO ACADÉMICO: Bachiller en Contabilidad.\r\n
+TÍTULO PROFESIONAL: Contador público.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+derecho
+Cumple con sus deberes oportunamente.\r\n
+Es defensor objetivo de sus derechos.\r\n
+Demuestra habilidades comunicativas.\r\n
+Capacidad de análisis y síntesis.\r\n
+Habilidades para producción de textos.\r\n
+Conocimientos geográficos, históricos del Perú.\r\n
+
+derecho
+Gestiona aspectos vinculados al Estado de Derecho para personas naturales y jurídicas mediante la aplicación de técnicas de \r\n solución de controversias y el marco normativo de gobernanza.\r\n
+Brinda asistencia legal a personas naturales y personas jurídicas en las distintas especialidades del Derecho Privado, teniendo \r\n en cuenta el marco legal vigente.\r\n
+Asesora en la solución de controversias en las materias del Derecho Público, de acuerdo a los requerimientos de los usuarios, \r\n normas vigentes y los aportes de los métodos de investigación.\r\n
+
+derecho
+GRADO ACADÉMICO: Bachiller en derecho.\r\n
+TÍTULO PROFESIONAL: Abogado.\r\n
+DURACIÓN DE ESTUDIOS: 6 años y 12 semestres.\r\n
+
+
+economia
+Expresa libremente sus ideas y conocimientos previos sobre materias relacionadas a modelos matemáticos, comunicativos y \r\n sociales.\r\n
+Comprende la importancia de ser ciudadano y como en ello contribuye al desarrollo económico de nuestro país.\r\n
+Aplica procesos propios de aprendizaje para la obtención de conocimiento básicos para el desarrollo de su carrera \r\n universitaria en el ámbito social, político, económico y tecnológico.\r\n
+Conoce la realidad y evalúa las decisiones a partir de conocimientos previos en base a la situación problemática \r\n de nuestro país.\r\n
+
+economia
+Diseña estrategias financieras de acuerdo con las características del mercado financiero y políticas monetarias.\r\n
+Realiza el planeamiento del desarrollo económico de acuerdo con la política económica y políticas nacionales.\r\n
+Propone alternativas de optimización de actividades económicas de los agentes económicos, basadas en condiciones \r\n del mercado y los principios de la microeconomía.\r\n
+
+economia
+GRADO ACADÉMICO: Bachiller en Economia.\r\n
+TÍTULO PROFESIONAL: Economista.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+neg int
+Realiza un desenvolvimiento en sus expresiones comunicativas y culturales que están sujetas a la interacción con \r\n la sociedad.\r\n
+Aplica responsablemente la utilización de las tecnologías de la información y de la comunicación (TIC) en la \r\n interacción en el mundo globalizado.\r\n
+Utiliza procesos de aprendizaje para la obtención de conocimientos para el desarrollo de su carrera universitaria \r\n en los ámbitos socioeconómicos, culturales, políticos y ambientales.\r\n
+Analiza la situación problemática de nuestro país con la finalidad de comprender los paradigmas en la gestión de las \r\n empresas públicas y privadas.\r\n
+
+neg int
+Plantear alternativas de inversión utilizando herramientas financieras, económicas y contables para su aplicación a \r\n proyectos internacionales.\r\n
+Evalúa estrategias comerciales de importación, exportación de las empresas y análisis matemático acorde con la \r\n biodiversidad existente, mediante la redacción de documentos de gestión de los negocios.\r\n
+Plantea propuestas de mercado, teniendo en cuenta la identificación de oportunidades de negocios internacionales \r\n mediante la aplicación de instrumentos de investigación.\r\n
+
+neg int
+GRADO ACADÉMICO: Bachiller en Negocios internacionales.\r\n
+TÍTULO PROFESIONAL: Licenciado en Negocios internacionales.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+turismo
+Iniciativa y curiosidad por el ámbito profesional.\r\n
+Comprensión lectora.\r\n
+Compromiso de responsabilidad social y ambiental.\r\n
+Cuenta con aprendizajes previos de los procesos históricos y sociales de nuestro país y del mundo.\r\n
+
+turismo
+Gestiona los productos y destinos turísticos sostenibles según el marco regulatorio.\r\n
+Gestiona los servicios turísticos según la tendencia de mercado actual y normativa vigente.\r\n
+Desarrolla planes y proyectos turísticos según lineamientos de investigación y política de estado.\r\n
+
+turismo
+GRADO ACADÉMICO: Bachiller en Turismo.\r\n
+TÍTULO PROFESIONAL: Licenciado en Turismo.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+agronomia
+Tener conocimientos básicos en el agroecosistema y la necesidad de conservar el medio ambiente.\r\n
+Tener dominio básico de informática.\r\n
+Tener conocimientos elementales de las ciencias básicas, buena redacción y ortografía.\r\n
+Tener autoestima y practica de valores de respeto, responsabilidad y puntualidad.\r\n
+
+agronomia
+Gestiona los procesos de sanidad y mejora vegetal en la producción de manera eficiente, considerando la \r\n sostenibilidad agrícola.\r\n
+Gestiona procesos productivos combinando y movilizando recursos, a través de técnicas e instrumentos con \r\n tecnología innovadoras de manera eficiente, en el marco de una agricultura sostenible.\r\n
+Gestiona recursos en los procesos productivos a través de técnicas e instrumentos con tecnología innovadoras \r\n de manera eficiente, en el marco de una agricultura sostenible.\r\n
+
+agronomia
+GRADO ACADÉMICO: Bachiller en Ciencias Agrícolas.\r\n
+TÍTULO PROFESIONAL: Ingeniero Agrónomo.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+uitectura
+Conocimientos matemáticos para entender el mundo que los rodea, resolver problemas y tomar decisiones \r\n útiles al entorno.\r\n
+Interés por las humanidades e historia, así como la contribución del patrimonio cultural en el arte y \r\n la identidad del ingresante.\r\n
+Uso del lenguaje de manera asertiva, propositiva, ética y responsable para comunicarse en diversas situaciones \r\n y comprender distintos tipos de textos orales y escritos.\r\n
+Comprensión del mundo físico que lo rodea en diálogo con los saberes locales, que le permitan asimilar el \r\n entorno natural, los modos de vida, aspectos socio económicos y culturales, sostenibles y responsables con el ambiente.\r\n
+
+arquitectura
+Diseña proyectos Arquitectónicos de nivel básico (pequeño nivel de complejidad), respondiendo a las \r\n necesidades locales en el marco del Reglamento Nacional de Edificaciones (RNE) con ética, creatividad e innovación.\r\n
+Diseña proyectos arquitectónicos y urbanos de mediana complejidad, así como el planeamiento de ciudades en el marco \r\n de la normatividad vigente, del trabajo colaborativo multi disciplinario desarrollando el ejercicio de la arquitectura a nivel técnico.\r\n
+Gestiona proyectos arquitectónicos y obras, así como de planeamiento urbano, incorporando la Gestión del Riesgo de \r\n Desastres (GRD) y la investigación en las áreas del ejercicio profesional de la arquitectura, en el marco de la normatividad vigente.\r\n
+
+arquitectura
+GRADO ACADÉMICO: Bachiller en Arquitectura.\r\n
+TÍTULO PROFESIONAL: Arquitecto.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+adistica
+Tener conocimientos básicos y habilidades en matemática y estadística.\r\n
+Trabajar en equipo demostrando interés por la experimentación.\r\n
+Poseer valores, como sentido de responsabilidad e interés de superación profesional.\r\n
+Demostrar interés por la ciencia.\r\n Capacidad de observación y análisis, facilidad de expresar sus ideas.\r\n
+
+estadistica
+Construye modelos estadísticos para su aplicación en el análisis de datos en el ámbito de estudio e investigación \r\n utilizando software especializado, demostrando responsabilidad en el desempeño profesional.\r\n
+Emplea la Teoría de las probabilidades y las TICs para la ejecución de un plan de acción que facilite una adecuada \r\n toma de decisiones.\r\n
+Propone métodos y técnicas estadísticas para la aplicación de actividades en la investigación científica y en la \r\n didáctica, que contribuyan al acervo cognitivo de las ciencias.\r\n
+
+estadistica
+GRADO ACADÉMICO: Bachiller de Ciencias en Estadisticas.\r\n
+TÍTULO PROFESIONAL: Estadistico.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+ica
+Conocimientos básicos del idioma inglés y de tecnología informática.\r\n
+Conocimientos en las Ciencias Básicas (Matemática, Física y Química), así como una amplia cultura.\r\n
+Valores éticos y morales como la honestidad,responsabilidad, respeto y tolerancia con las personas y comprometidos \r\n en el logro de una realidad cada vez más justa y afirmando su identidad.\r\n
+Amplia responsabilidad con el medio ambiente en cualquier actividad que desarrolle.\r\n Desarrolla su proceso de \r\n aprendizaje de manera continua y autónoma tanto individual, como grupalmente.\r\n
+
+fisica
+Planifica aplicaciones de la Física del Estado Sólido en el estudio de los minerales, de acuerdo a las normas \r\n establecidas.\r\n
+Implementa aplicaciones de la física nuclear y la biofísica para el tratamiento de la salud, de acuerdo a normas \r\n establecidas.\r\n
+Desarrolla estudios de las energías renovables para su aprovechamiento en el marco del desarrollo sostenible.\r\n
+
+fisica
+GRADO ACADÉMICO: Bachiller de Ciencias Físicas.\r\n
+TÍTULO PROFESIONAL: Físico.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+ ambiental
+Interés por las interacciones del ser humano con su ambiente.\r\n
+Poseer un amplio interés por el campo de la investigación científica y tecnológica.\r\n
+Capacidad creativa, analítica y de liderazgo para la solución de problemas ambientales.\r\n
+Conocimientos básicos de programas virtuales, para el manejo de información de textos, revistas científicas, etc.\r\n
+
+ing ambiental
+Diseña procesos físicos, químicos, biológicos y de tecnologías limpias mitigando los efectos de las actividades \r\n industriales y de servicios en el marco del desarrollo sostenible.\r\n
+Formula proyectos de inversión de sistemas de abastecimiento de agua potable, alcantarillado, aguas residuales y residuos \r\n sólidos en el marco de la legislación ambiental.\r\n
+Evalúa los sistemas de gestión ambiental y sanitaria según la normatividad vigente en el marco de un trabajo \r\n colaborativo de acuerdo al sector.\r\n
+
+ing ambiental
+GRADO ACADÉMICO: Bachiller en Ingenieria ambiental y sanitaria.\r\n
+TÍTULO PROFESIONAL:Ingeniero ambiental y sanitario.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+ civil
+Manejo básico de recursos informáticos.\r\n
+Respeto a la sociedad y así mismo.\r\n
+Decidido y comprometido con la Responsabilidad Social al desarrollo social y el respeto al medio ambiente.\r\n
+Solucionar problemas matemáticos básicos, concordante con el razonamiento lógico.\r\n
+
+ing civil
+Planifica proyectos de ingeniería de acuerdo a las etapas propias de la actividad profesional respetando las \r\n normativas nacionales e internacionales.\r\n
+Propicia la investigación científica aplicando instrumentos científicos y tecnológicos para la innovación de los \r\n procesos constructivos, de acuerdo a las normas técnicas y principios éticos.\r\n
+Implementa proyectos de ingeniería aplicando gestión prospectiva en el marco de la gestión de riesgo, del medio \r\n ambiente, adaptación al cambio climático y desarrollo sostenible.\r\n
+
+ing civil
+GRADO ACADÉMICO: Bachiller en Ingenieria Civil.\r\n
+TÍTULO PROFESIONAL:Ingeniero Civil.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+ alimentos
+Demuestra capacidad para el razonamiento verbal, comprensión lectora, técnicas de comunicación y redacción.\r\n
+Trabaja en equipo de manera efectiva.\r\n
+Demuestra capacidad para el razonamiento matemático.\r\n
+Aplica los fundamentos generales de las ciencias exactas (algebra, aritmética, geometría y trigonometría).\r\n
+
+ing alimentos
+Investiga en las áreas de ciencia, ingeniería y tecnología de alimentos para dar soluciones científicas e \r\n innovadoras mediante la aplicación de métodos científicos, técnicas e instrumentos adecuado.\r\n
+Analiza los factores que influyen en la transformación de la materia prima y producto terminado, garantizando \r\n un alimento saludable y nutritivo.\r\n
+Desarrolla sistemas de calidad en los productos para que cumplan con los estándares, en base a la normativa vigente \r\n y compromiso con el medio ambiente.\r\n
+Elabora productos para el aprovechamiento integral de materias primas, según los estándares de calidad \r\n alimentaria.\r\n
+
+ing alimentos
+GRADO ACADÉMICO: Bachiller en Ingenieria de alimentos.\r\n
+TÍTULO PROFESIONAL:Ingeniero de alimentos.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+ de minas
+Responsabilidad con el medio ambiente.\r\n
+Habilidades para la creatividad e innovación.\r\n
+Conocimiento básico en inglés y Tecnología Informática.\r\n
+Poseer habilidad y conocimientos en las Ciencias y la Matemática Básica, (matemáticas, físicas y químicas).\r\n
+Poseer sólidos valores éticos y morales (honestidad, responsabilidad, respeto por la persona), reafirmando \r\n su identidad.\r\n
+
+
+ing de minas
+Formula investigación científica e innovación tecnológica en ingeniería de minas con ética y responsabilidad \r\n social.\r\n
+Controla operaciones mineras, desarrollando actividades amigables con el medio ambiente y cumpliendo con \r\n los estándares y normas vigentes.\r\n
+Ejecuta proyectos mineros, de acuerdo al plan de minado, que aseguren la extracción racional de las \r\n reservas minerales y respeten la normatividad vigente.\r\n
+
+
+ing de minas
+GRADO ACADÉMICO: Bachiller en Ingenieria de Minas.\r\n
+TÍTULO PROFESIONAL:Ingeniero de Minas.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+ sistemas
+Habilidades para la creatividad e innovación.\r\n
+Responsabilidad con el medio ambiente.\r\n
+Conocimiento básico en inglés y Tecnología Informática.\r\n
+Poseer sólidos valores éticos y morales (honestidad,responsabilidad, respeto por la persona), \r\n reafirmando su identidad.\r\n
+Poseer habilidad y conocimientos en las Ciencias y la Matemática Básica, (matemáticas, físicas \r\n y químicas).\r\n
+
+ing sistemas
+Gestiona proyectos de investigación e innovación tecnológica, de acuerdo a las normas internacionales.\r\n
+Desarrolla aplicaciones empresariales mediante algoritmos que permitan las predicciones según las \r\n normas internacionales y la aplicación de los métodos de investigación.\r\n
+Establece una infraestructura tecnológica, según a las normas Internacionales.\r\n
+
+ing sistemas
+GRADO ACADÉMICO: Bachiller en Ingenieria de Sistemas.\r\n
+TÍTULO PROFESIONAL:Ingeniero de Sistemas.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+ electronica
+Los estudiantes amplían sus conocimientos aprendidos durante la sesión de aprendizaje, para proponer \r\n nuevas formas de actuar en el mundo y mejorar la vida de las personas.\r\n
+Tienen habilidad para combinar varias disciplinas, aplicar la teoría en la práctica e integrar varias \r\n áreas, lo cual ayuda a que los estudiantes consigan asociar los conceptos y obtengan una educación integral.\r\n
+El cuidado del medio ambiente, la tolerancia e inclusión social son fundamentales para el estudiante de \r\n esta nueva generación, pues tratan de llevar a cabo acciones en beneficio del planeta, así como respetar las diferentes formas de vivir y el expresarse de cada persona.\r\n
+Conocen otras culturas y personas ya que provienen no sólo de la región Ica, sino también de otras zonas o \r\n departamentos.\r\n Hombres y mujeres: Igualdad de oportunidades para acceder a una educación de calidad de acuerdo con el MODELO EDUCATIVO UNIVERSIDAD NACIONAL “SAN LUIS GONZAGA”.\r\n
+
+ing electronica
+Diseña sistemas electrónicos de conversión de potencia eléctrica empleando herramientas CAD y CAM, \r\n verificados en base a especificaciones técnicas.\r\n
+Evaluar programas de operación y mantenimiento de equipos y sistemas electrónicos proponiendo soluciones \r\n tecnológicas integrales, según protocolos y estándares internacionales.\r\n
+Implementa soluciones en proyectos de ingeniería de sistemas de comunicaciones y telecomunicaciones \r\n analógicas y digitales verificando su operatividad, según criterios, normas técnicas y legislación vigente.\r\n
+Proyecta el desarrollo de sistemas electrónicos automatizados y de inteligencia artificial para la \r\n industria, comunicación e investigación, empleando herramientas que garanticen el funcionamiento de prototipos, de acuerdo con principios de ingeniería y especificaciones técnicas.\r\n
+
+ing electronica
+GRADO ACADÉMICO: Bachiller en Ingenieria Electrónica.\r\n
+TÍTULO PROFESIONAL:Ingeniero Electrónico.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+ metalurgica
+Practicar la asertividad y empatía.\r\n
+Sensibilidad para apreciar los valores humanos.\r\n
+Conocimiento básico de Tecnología Informática.\r\n
+Permanente observancia de la ética y la moral.\r\n
+Aptitud para la investigación científica y tecnológica.\r\n
+
+ing metalurgica
+Desarrolla proyectos metalúrgicos, con criterios de calidad, eficiencia, productividad, rentabilidad, \r\n sostenibilidad y responsabilidad social.\r\n
+Desarrolla procesos metalúrgicos de extracción de metales que contribuyan al desarrollo sostenible de \r\n la región, el país y del mundo.\r\n
+Propicia la investigación científica aplicando tecnologías limpias en la industria metalúrgica para la \r\n innovación, según la normativa en la prevención de impactos.\r\n
+Aplica tecnologías para transformar metales y aleaciones en productos acabados, que contribuya al \r\n desarrollo sostenible de la región, del país y del mundo
+
+ing metalurgiaca
+GRADO ACADÉMICO: Bachiller en Ingenieria Metalúrgica.\r\n
+TÍTULO PROFESIONAL:Ingeniero Metalúrgico.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+ mecanica electrica
+Los estudiantes amplían sus conocimientos aprendidos durante la sesión de aprendizaje, para proponer \r\n nuevas formas de actuar en el mundo y mejorar la vida de las personas.\r\n
+Tienen habilidad para combinar varias disciplinas, aplicar la teoría en la práctica e integrar varias \r\n áreas, lo cual ayuda a que los estudiantes consigan asociar los conceptos y obtengan una educación integral.\r\n
+El cuidado del medio ambiente, la tolerancia e inclusión social son fundamentales para el estudiante de \r\n esta nueva generación, pues tratan de llevar a cabo acciones en beneficio del planeta así como respetar las diferentes formas de vivir y el expresarse de cada persona.\r\n
+Conocen otras culturas y personas ya que provienen no sólo de la región Ica, sino también de otras zonas \r\n o departamentos.\r\n Hombres y mujeres: Igualdad de oportunidades para acceder a una educación de calidad de acuerdo con el MODELO EDUCATIVO UNIVERSIDAD NACIONAL “SAN LUIS GONZAGA”.\r\n
+
+ing mecanica electrica
+Implementa mecanismos de control de energía en los equipos electromecánicos automatizados, garantizando su \r\n funcionamiento, según normas técnicas y estándares internacionales.\r\n
+Elabora proyectos de estructuras mecánicas, garantizando su operatividad, según principios de ingeniería, \r\n estándares internacionales y normas técnicas vigentes.\r\n
+Planifica proyectos de sistemas electromecánicos de generación, transmisión y distribución de energía \r\n garantizando su factibilidad, de acuerdo con principios de ingeniería y estándares nacionales e internacionales.\r\n
+Desarrollar planes de mantenimiento de equipos electromecánicos e incorpora las mejoras necesarias \r\n garantizando su óptimo funcionamiento, según protocolos y especificaciones técnicas.\r\n
+
+ing mecanica electrica
+GRADO ACADÉMICO: Bachiller en Ingenieria Mecácina Eléctrica.\r\n
+TÍTULO PROFESIONAL:Ingeniero Mecánico Eléctrico.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+ pesquera
+Muestra compromiso ético y respeto por las personas, comunidades y medio ambiente.\r\n
+Conoce de ciencias básicas.\r\n
+Conoce el lenguaje y comunicación.\r\n
+Muestra capacidad de comunicarse y trabajar en equipo.\r\n
+Posee noción básica de la realidad nacional e internacional de la pesquería.\r\n
+
+ing pesquera
+Elabora productos hidrobiológicos garantizando la calidad, según normas vigentes.\r\n
+Formula proceso aprovechamiento integral de los re-hidrobiológicos, disposiciones vigentes.\r\n
+Desarrolla procesos de operación y mantenimiento de embarcaciones pesqueras de acuerdo a la normatividad vigente.\r\n
+Gestiona la investigación científica y tecnológica en transformación, pesca y acuicultura de la \r\n ingeniería Pesquera.\r\n
+
+ing pesquera
+GRADO ACADÉMICO: Bachiller en Ciencias pesqueras.\r\n
+TÍTULO PROFESIONAL:Ingeniero Pesquero.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+ quimica
+Maneja con regularidad el lenguaje escrito y verbal.\r\n
+Demuestra conocimientos de cultura general.\r\n
+Presenta condiciones para el trabajo en equipo y para el manejo adecuado de relaciones interpersonales.\r\n
+Demuestra actitud positiva, respetuosa y responsable.\r\n
+Aplica los fundamentos básicos de matemática, física, química y biología.\r\n
+Conoce las herramientas básicas de la computación e informáticas.\r\n
+
+ing quimica
+Desarrolla proyectos de industrialización responsable de los recursos naturales que contribuyan al \r\n desarrollo sostenible de la Región y del País.\r\n
+Desarrolla sistemas de control de la calidad de los productos industriales.\r\n
+Aplica tecnologías modernas en los procesos químicos para la solución de problemas de la industria química.\r\n
+Desarrolla investigación científica y tecnológica en el campo de la ingeniería química para resolver \r\n problemas de la Región.\r\n
+
+ing quimica
+GRADO ACADÉMICO: Bachiller en Ingerniería Química.\r\n
+TÍTULO PROFESIONAL:Ingeniero Químico.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
+
+
+ematica e inf
+Tener capacidad para el razonamiento lógico y la abstracción.\r\n
+Poseer conocimientos elementales de álgebra, geometría, trigonometría, física y estadística.\r\n
+Tener habilidad para el manejo de símbolos que representan fenómenos y problemas concretos.\r\n
+Poseer valores, como sentido de responsabilidad e interés de superación profesional.\r\n
+
+matematica e inf
+Comprueba el modelo matemático mediante el uso de algoritmos en la resolución de problemas y la simulación \r\n del problema planteado.\r\n
+Construye proposiciones o contraejemplos mediante la aplicación del método científico, la superación de los \r\n problemas resueltos o no resueltos y la difusión de sus resultados.\r\n
+Plantea modelos matemáticos mediante el discernimiento de sus ventajas y desventajas en las teorías y técnicas \r\n de la matemática e informática.\r\n
+Aplica teorías de las áreas de la matemática e informática, mediante la creación de modelos matemáticos que \r\n describan la realidad.\r\n
+
+matematica e inf
+GRADO ACADÉMICO: Bachiller en Ciencias Matemática e informática.\r\n
+TÍTULO PROFESIONAL:Matemático e informático.\r\n
+DURACIÓN DE ESTUDIOS: 5 años y 10 semestres.\r\n
