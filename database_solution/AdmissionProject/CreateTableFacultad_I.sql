@@ -11,6 +11,4 @@ BEGIN
 END;
 GO
 
-SELECT * from Facultad
-
 

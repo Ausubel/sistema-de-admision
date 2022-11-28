@@ -11,5 +11,3 @@ BEGIN
 	);
 END;
 GO
-select * 
-from Area
