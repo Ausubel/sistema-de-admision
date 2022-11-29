@@ -49,41 +49,29 @@
           <AssociatedConnUserName />
           <FullPath>4_CreateTablePostulante_D.sql</FullPath>
         </FileNode>
-        <FileNode Name="InsertArea_I.sql">
+        <FileNode Name="5_InsertArea_I.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UU53QVS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-UU53QVS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>InsertArea_I.sql</FullPath>
+          <FullPath>5_InsertArea_I.sql</FullPath>
         </FileNode>
-        <FileNode Name="InsertEscuela_D.sql">
+        <FileNode Name="6_InsertFacultad_I.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UU53QVS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-UU53QVS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>InsertEscuela_D.sql</FullPath>
+          <FullPath>6_InsertFacultad_I.sql</FullPath>
         </FileNode>
-        <FileNode Name="InsertFacultad_I.sql">
+        <FileNode Name="7_InsertEscuela_D.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UU53QVS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-UU53QVS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>InsertFacultad_I.sql</FullPath>
+          <FullPath>7_InsertEscuela_D.sql</FullPath>
         </FileNode>
-        <FileNode Name="InsertPostulante_D.sql">
+        <FileNode Name="8_InsertPostulante_D.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UU53QVS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-UU53QVS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>InsertPostulante_D.sql</FullPath>
-        </FileNode>
-        <FileNode Name="UpdateNotas.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UU53QVS:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-UU53QVS</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>UpdateNotas.sql</FullPath>
-        </FileNode>
-        <FileNode Name="UpdateNullNotas.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UU53QVS:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-UU53QVS</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>UpdateNullNotas.sql</FullPath>
+          <FullPath>8_InsertPostulante_D.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

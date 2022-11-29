@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tarea_Algoritmos", "Tarea_Algoritmos\Tarea_Algoritmos.csproj", "{53D0480D-4733-48BB-B8A1-A7029C64D0FD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoPooBKND", "ProyectoPooBKND\ProyectoPooBKND.csproj", "{E0CFC5AB-4232-43B8-8091-0C38832C3A58}"
 EndProject
 Global
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{53D0480D-4733-48BB-B8A1-A7029C64D0FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53D0480D-4733-48BB-B8A1-A7029C64D0FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53D0480D-4733-48BB-B8A1-A7029C64D0FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53D0480D-4733-48BB-B8A1-A7029C64D0FD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E0CFC5AB-4232-43B8-8091-0C38832C3A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E0CFC5AB-4232-43B8-8091-0C38832C3A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0CFC5AB-4232-43B8-8091-0C38832C3A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
