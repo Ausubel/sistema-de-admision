@@ -23,9 +23,9 @@ namespace ProyectoPooBKND
         }
 
         //BRUNNER
-        //private static SqlConnection conn = new SqlConnection("SERVER = DESKTOP-UU53QVS; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
+        private static SqlConnection conn = new SqlConnection("SERVER = DESKTOP-UU53QVS; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
         //ALDAHIR
-        private static SqlConnection conn = new SqlConnection("SERVER = LAPTOP-6KL9OJU4; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
+        //private static SqlConnection conn = new SqlConnection("SERVER = LAPTOP-6KL9OJU4; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
         private void bttnIngenierias_Click(object sender, EventArgs e)
         {
             cbbIngenierias.Visible = true;
@@ -54,7 +54,7 @@ namespace ProyectoPooBKND
 
         private string consultaInsana(int aux) {
             conn.Open();
-            string men = "";
+            string men;
             string query = $"SELECT nombre_escuela, perfil_estudiante, competencias_profesionales, datos_adicionales FROM Escuela WHERE id_escuela = {aux+1}";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.ExecuteNonQuery();
@@ -62,7 +62,7 @@ namespace ProyectoPooBKND
 
             if (reg.Read())
             {
-                men = reg["nombre_escuela"].ToString() + reg["perfil_estudiante"].ToString() + reg["competencias_profesionales"].ToString() + reg["datos_adicionales"].ToString();
+                men = reg["nombre_escuela"].ToString()+ "\n\r" + reg["perfil_estudiante"].ToString() + "\n\r" + reg["competencias_profesionales"].ToString() + reg["datos_adicionales"].ToString();
             }
             else
             {
