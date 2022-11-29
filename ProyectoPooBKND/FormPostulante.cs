@@ -22,7 +22,6 @@ namespace ProyectoPooBKND
         }
         private static SqlConnection conn = new SqlConnection($"SERVER = {Environment.MachineName}; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
 
-        //METODOS DE LA BASE DE DATOS
         public void consultaInput(string consulta)
         {
             conn.Open();
