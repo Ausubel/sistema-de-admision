@@ -22,6 +22,7 @@ namespace ProyectoPooBKND
 
         private void FormCalificar_Load(object sender, EventArgs e)
         {
+            comboBoxInicializa();
             rutas(0);
             llenarTabla();
             textBoxNombre.Enabled = false;
@@ -32,7 +33,7 @@ namespace ProyectoPooBKND
             buttonGuardarNota.Enabled = false;
             buttonExportar.Enabled = false;
             cargarDiccionario();
-            comboBoxInicializa();
+
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -124,120 +125,126 @@ namespace ProyectoPooBKND
                 double notaParcial = 0;
 
                 int correctoParcial = 0, incorrectoParcial = 0, nuloParcial = 0;
-
-                for (int i = 0; i < 100; i++)
+                try
                 {
-                    if (chars[i] == CLAVES[i] && CLAVES[i] != ' ')
+                    for (int i = 0; i < 100; i++)
                     {
-                        notas += CORRECTO;
-                        notaParcial += CORRECTO;
-                        correctoParcial++;
-                    }
-                    if (chars[i] != CLAVES[i] && CLAVES[i] != ' ')
-                    {
-                        notas += INCORRECTO;
-                        notaParcial += INCORRECTO;
-                        incorrectoParcial++;
-                    }
-                    if (chars[i] == ' ')
-                    {
-                        notas += NULO;
-                        notaParcial += NULO;
-                        nuloParcial++;
-                    }
+                        if (chars[i] == CLAVES[i] && CLAVES[i] != ' ')
+                        {
+                            notas += CORRECTO;
+                            notaParcial += CORRECTO;
+                            correctoParcial++;
+                        }
+                        if (chars[i] != CLAVES[i] && CLAVES[i] != ' ')
+                        {
+                            notas += INCORRECTO;
+                            notaParcial += INCORRECTO;
+                            incorrectoParcial++;
+                        }
+                        if (chars[i] == ' ')
+                        {
+                            notas += NULO;
+                            notaParcial += NULO;
+                            nuloParcial++;
+                        }
 
-                    switch (i)
-                    {
-                        case 6:
-                            outputAExportar += $"| FISICA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
-                            notaParcial = 0;
-                            correctoParcial = 0;
-                            incorrectoParcial = 0;
-                            nuloParcial = 0;
-                            break;
-                        case 13:
-                            outputAExportar += $"| GEOGRAFIA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
-                            notaParcial = 0;
-                            correctoParcial = 0;
-                            incorrectoParcial = 0;
-                            nuloParcial = 0;
-                            break;
-                        case 20:
-                            outputAExportar += $"| LITERATURA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
-                            notaParcial = 0;
-                            correctoParcial = 0;
-                            incorrectoParcial = 0;
-                            nuloParcial = 0;
-                            break;
-                        case 27:
-                            outputAExportar += $"| QUIMICA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
-                            notaParcial = 0;
-                            correctoParcial = 0;
-                            incorrectoParcial = 0;
-                            nuloParcial = 0;
-                            break;
-                        case 34:
-                            outputAExportar += $"| ALGEBRA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
-                            notaParcial = 0;
-                            correctoParcial = 0;
-                            incorrectoParcial = 0;
-                            nuloParcial = 0;
-                            break;
-                        case 41:
-                            outputAExportar += $"| TRIGONOMETRIA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
-                            notaParcial = 0;
-                            correctoParcial = 0;
-                            incorrectoParcial = 0;
-                            nuloParcial = 0;
-                            break;
-                        case 48:
-                            outputAExportar += $"| ARITMETICA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
-                            notaParcial = 0;
-                            correctoParcial = 0;
-                            incorrectoParcial = 0;
-                            nuloParcial = 0;
-                            break;
-                        case 55:
-                            outputAExportar += $"| GEOMETRIA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
-                            notaParcial = 0;
-                            correctoParcial = 0;
-                            incorrectoParcial = 0;
-                            nuloParcial = 0;
-                            break;
-                        case 62:
-                            outputAExportar += $"| HISTORIA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
-                            notaParcial = 0;
-                            correctoParcial = 0;
-                            incorrectoParcial = 0;
-                            nuloParcial = 0;
-                            break;
-                        case 69:
-                            outputAExportar += $"| CIVICA |{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
-                            notaParcial = 0;
-                            correctoParcial = 0;
-                            incorrectoParcial = 0;
-                            nuloParcial = 0;
-                            break;
-                        case 76:
-                            outputAExportar += $"| ECONOMIA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
-                            notaParcial = 0;
-                            correctoParcial = 0;
-                            incorrectoParcial = 0;
-                            nuloParcial = 0;
-                            break;
-                        case 87:
-                            outputAExportar += $"| RAZ. MATEMATICO|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
-                            notaParcial = 0;
-                            correctoParcial = 0;
-                            incorrectoParcial = 0;
-                            nuloParcial = 0;
-                            break;
-                        case 99:
-                            outputAExportar += $"| RAZ. VERBAL|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
-                            break;
-                    }
+                        switch (i)
+                        {
+                            case 6:
+                                outputAExportar += $"| FISICA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                                notaParcial = 0;
+                                correctoParcial = 0;
+                                incorrectoParcial = 0;
+                                nuloParcial = 0;
+                                break;
+                            case 13:
+                                outputAExportar += $"| GEOGRAFIA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                                notaParcial = 0;
+                                correctoParcial = 0;
+                                incorrectoParcial = 0;
+                                nuloParcial = 0;
+                                break;
+                            case 20:
+                                outputAExportar += $"| LITERATURA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                                notaParcial = 0;
+                                correctoParcial = 0;
+                                incorrectoParcial = 0;
+                                nuloParcial = 0;
+                                break;
+                            case 27:
+                                outputAExportar += $"| QUIMICA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                                notaParcial = 0;
+                                correctoParcial = 0;
+                                incorrectoParcial = 0;
+                                nuloParcial = 0;
+                                break;
+                            case 34:
+                                outputAExportar += $"| ALGEBRA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                                notaParcial = 0;
+                                correctoParcial = 0;
+                                incorrectoParcial = 0;
+                                nuloParcial = 0;
+                                break;
+                            case 41:
+                                outputAExportar += $"| TRIGONOMETRIA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                                notaParcial = 0;
+                                correctoParcial = 0;
+                                incorrectoParcial = 0;
+                                nuloParcial = 0;
+                                break;
+                            case 48:
+                                outputAExportar += $"| ARITMETICA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                                notaParcial = 0;
+                                correctoParcial = 0;
+                                incorrectoParcial = 0;
+                                nuloParcial = 0;
+                                break;
+                            case 55:
+                                outputAExportar += $"| GEOMETRIA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                                notaParcial = 0;
+                                correctoParcial = 0;
+                                incorrectoParcial = 0;
+                                nuloParcial = 0;
+                                break;
+                            case 62:
+                                outputAExportar += $"| HISTORIA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                                notaParcial = 0;
+                                correctoParcial = 0;
+                                incorrectoParcial = 0;
+                                nuloParcial = 0;
+                                break;
+                            case 69:
+                                outputAExportar += $"| CIVICA |{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                                notaParcial = 0;
+                                correctoParcial = 0;
+                                incorrectoParcial = 0;
+                                nuloParcial = 0;
+                                break;
+                            case 76:
+                                outputAExportar += $"| ECONOMIA|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                                notaParcial = 0;
+                                correctoParcial = 0;
+                                incorrectoParcial = 0;
+                                nuloParcial = 0;
+                                break;
+                            case 87:
+                                outputAExportar += $"| RAZ. MATEMATICO|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                                notaParcial = 0;
+                                correctoParcial = 0;
+                                incorrectoParcial = 0;
+                                nuloParcial = 0;
+                                break;
+                            case 99:
+                                outputAExportar += $"| RAZ. VERBAL|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
+                                break;
+                        }
 
+                    }
                 }
+                catch (Exception)
+                {
+                }
+               
 
                 textBoxNota.Text = notas.ToString();
 
@@ -599,6 +606,11 @@ namespace ProyectoPooBKND
             }
         }
 
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
 
         //SEGUNDO PASO
         private void buttonGuardarcalificar_Click(object sender, EventArgs e)
@@ -639,7 +651,7 @@ namespace ProyectoPooBKND
                 MessageBox.Show("Considere revisar las entradas de datos", "", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
             }
         }
-        public void comboBoxInicializa()
+        private void comboBoxInicializa()
         {
             comboBox1.SelectedIndex = 4;//seleccione ( )
             comboBox2.SelectedIndex = 4;
