@@ -20,8 +20,10 @@ namespace ProyectoPooBKND
             InitializeComponent();
             llenarTabla();
         }
-        //Iniciamos la conexion
-        private static SqlConnection conn = new SqlConnection("SERVER = DESKTOP-UU53QVS; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
+        //BRUNNER
+        //private static SqlConnection conn = new SqlConnection("SERVER = DESKTOP-UU53QVS; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
+        //ALDAHIR
+        private static SqlConnection conn = new SqlConnection("SERVER = LAPTOP-6KL9OJU4; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
 
         //METODOS DE LA BASE DE DATOS
         public void consultaInput(string consulta)
@@ -83,6 +85,11 @@ namespace ProyectoPooBKND
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

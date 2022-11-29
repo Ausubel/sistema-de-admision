@@ -55,9 +55,9 @@ namespace ProyectoPooBKND
         private static string RUTAEXPORTAR = @"";
 
         //BRUNNER
-        private static SqlConnection conn = new SqlConnection("SERVER = DESKTOP-UU53QVS; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
+        //private static SqlConnection conn = new SqlConnection("SERVER = DESKTOP-UU53QVS; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
         //ALDAHIR
-        //private static SqlConnection conn = new SqlConnection("SERVER = LAPTOP-6KL9OJU4; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
+        private static SqlConnection conn = new SqlConnection("SERVER = LAPTOP-6KL9OJU4; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
 
 
         //CREO OBJETO 
@@ -539,10 +539,9 @@ namespace ProyectoPooBKND
                 //SE AUTODESHABILITA
                 buttonGuardarNota.Enabled = false;
                 buttonCalificar.Enabled = false;
-                
-                //Conectando al data griedview
 
-            
+           
+
         }
 
 
@@ -580,24 +579,11 @@ namespace ProyectoPooBKND
         {
             try
             {
-                string consulta = $"SELECT P.[id_postulante] AS 'CODIGO' , P.[nombre] AS 'NOMBRE', P.[apellido_paterno] AS 'A. PATERNO' , P.[apellido_materno] AS 'A. MATERNO' ,E.nombre_escuela 'CARRERA', P.[nota] AS 'NOTA'  FROM Postulante P INNER JOIN Escuela E ON P.id_escuela = E.id_escuela inner join Facultad F on F.id_facultad = E.id_facultad where id_postulante={textBoxCodigo.Text}";
+                string consulta = $"SELECT P.[id_postulante] AS 'CODIGO' , P.[nombre] AS 'NOMBRE', P.[apellido_paterno] AS 'A. PATERNO' , P.[apellido_materno] AS 'A. MATERNO' ,E.nombre_escuela 'CARRERA', P.[nota] AS 'NOTA'  FROM Postulante P INNER JOIN Escuela E ON P.id_escuela = E.id_escuela inner join Facultad F on F.id_facultad = E.id_facultad where id_postulante={textBoxCodigo.Text}";
                 SqlDataAdapter adapter = new SqlDataAdapter(consulta, conn);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView2.DataSource = dt;
-
-                for (int i = 0; i < dataGridView2.Columns.Count - 1; i++)
-                {
-                    dataGridView2.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                }
-                dataGridView2.Columns[dataGridView2.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-                for (int i = 0; i < dataGridView2.Columns.Count; i++)
-                {
-                    int colw = dataGridView2.Columns[i].Width;
-                    dataGridView2.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                    dataGridView2.Columns[i].Width = colw;
-                }
 
                 textBoxCodigo.Text = dataGridView2.SelectedCells[0].Value.ToString();
                 textBoxNombre.Text = dataGridView2.SelectedCells[1].Value.ToString();
