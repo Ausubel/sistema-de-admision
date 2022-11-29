@@ -47,8 +47,9 @@
             this.panelnfo.Controls.Add(this.bttnSalud);
             this.panelnfo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelnfo.Location = new System.Drawing.Point(0, 0);
+            this.panelnfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelnfo.Name = "panelnfo";
-            this.panelnfo.Size = new System.Drawing.Size(152, 660);
+            this.panelnfo.Size = new System.Drawing.Size(114, 536);
             this.panelnfo.TabIndex = 0;
             // 
             // bttnIngenierias
@@ -57,9 +58,10 @@
             this.bttnIngenierias.FlatAppearance.BorderSize = 0;
             this.bttnIngenierias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnIngenierias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.bttnIngenierias.Location = new System.Drawing.Point(0, 310);
+            this.bttnIngenierias.Location = new System.Drawing.Point(0, 252);
+            this.bttnIngenierias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bttnIngenierias.Name = "bttnIngenierias";
-            this.bttnIngenierias.Size = new System.Drawing.Size(152, 144);
+            this.bttnIngenierias.Size = new System.Drawing.Size(114, 117);
             this.bttnIngenierias.TabIndex = 2;
             this.bttnIngenierias.Text = "Ciencias e Ingenierías";
             this.bttnIngenierias.UseVisualStyleBackColor = true;
@@ -71,9 +73,10 @@
             this.bttnHumanidades.FlatAppearance.BorderSize = 0;
             this.bttnHumanidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnHumanidades.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.bttnHumanidades.Location = new System.Drawing.Point(0, 158);
+            this.bttnHumanidades.Location = new System.Drawing.Point(0, 128);
+            this.bttnHumanidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bttnHumanidades.Name = "bttnHumanidades";
-            this.bttnHumanidades.Size = new System.Drawing.Size(152, 152);
+            this.bttnHumanidades.Size = new System.Drawing.Size(114, 124);
             this.bttnHumanidades.TabIndex = 1;
             this.bttnHumanidades.Text = "Ciencias Sociales y Humanidades";
             this.bttnHumanidades.UseVisualStyleBackColor = true;
@@ -86,8 +89,9 @@
             this.bttnSalud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnSalud.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.bttnSalud.Location = new System.Drawing.Point(0, 0);
+            this.bttnSalud.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bttnSalud.Name = "bttnSalud";
-            this.bttnSalud.Size = new System.Drawing.Size(152, 158);
+            this.bttnSalud.Size = new System.Drawing.Size(114, 128);
             this.bttnSalud.TabIndex = 0;
             this.bttnSalud.Text = "Ciencias de la salud ";
             this.bttnSalud.UseVisualStyleBackColor = true;
@@ -117,9 +121,10 @@
             "ECONOMÍA",
             "NEGOCIOS INTERNACIONALES",
             "TURISMO"});
-            this.cbbHumanidades.Location = new System.Drawing.Point(154, 223);
+            this.cbbHumanidades.Location = new System.Drawing.Point(116, 181);
+            this.cbbHumanidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbbHumanidades.Name = "cbbHumanidades";
-            this.cbbHumanidades.Size = new System.Drawing.Size(537, 24);
+            this.cbbHumanidades.Size = new System.Drawing.Size(404, 21);
             this.cbbHumanidades.TabIndex = 2;
             this.cbbHumanidades.SelectedIndexChanged += new System.EventHandler(this.cbbHumanidades_SelectedIndexChanged);
             // 
@@ -145,9 +150,10 @@
             "INGENIERÍA PESQUERA",
             "INGENIERÍA QUÍMICA",
             "MATEMÁTICA E INFROMÁTICA"});
-            this.cbbIngenierias.Location = new System.Drawing.Point(154, 371);
+            this.cbbIngenierias.Location = new System.Drawing.Point(116, 301);
+            this.cbbIngenierias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbbIngenierias.Name = "cbbIngenierias";
-            this.cbbIngenierias.Size = new System.Drawing.Size(537, 24);
+            this.cbbIngenierias.Size = new System.Drawing.Size(404, 21);
             this.cbbIngenierias.TabIndex = 3;
             this.cbbIngenierias.Visible = false;
             this.cbbIngenierias.SelectedIndexChanged += new System.EventHandler(this.cbbIngenierias_SelectedIndexChanged);
@@ -156,11 +162,11 @@
             // 
             this.label1.AutoEllipsis = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label1.Location = new System.Drawing.Point(188, 122);
+            this.label1.Location = new System.Drawing.Point(141, 99);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(666, 421);
+            this.label1.Size = new System.Drawing.Size(500, 342);
             this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cbbSalud
@@ -176,25 +182,27 @@
             "OBSTETRICIA",
             "ODONTOLOGÍA",
             "PSICOLOGÍA"});
-            this.cbbSalud.Location = new System.Drawing.Point(154, 69);
+            this.cbbSalud.Location = new System.Drawing.Point(116, 56);
+            this.cbbSalud.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbbSalud.Name = "cbbSalud";
-            this.cbbSalud.Size = new System.Drawing.Size(537, 24);
+            this.cbbSalud.Size = new System.Drawing.Size(404, 21);
             this.cbbSalud.TabIndex = 1;
             this.cbbSalud.Visible = false;
             this.cbbSalud.SelectedIndexChanged += new System.EventHandler(this.cbbSalud_SelectedIndexChanged);
             // 
             // FormInformacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(992, 660);
+            this.ClientSize = new System.Drawing.Size(744, 536);
             this.Controls.Add(this.panelnfo);
             this.Controls.Add(this.cbbIngenierias);
             this.Controls.Add(this.cbbHumanidades);
             this.Controls.Add(this.cbbSalud);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormInformacion";
             this.Text = "FormInformacion";
             this.Load += new System.EventHandler(this.FormInformacion_Load);

@@ -18,6 +18,27 @@ namespace ProyectoPooBKND
         public FormPostulante()
         {
             InitializeComponent();
+            llenarTabla();
+        }
+        //Iniciamos la conexion
+        private static SqlConnection conn = new SqlConnection("SERVER = DESKTOP-UU53QVS; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
+
+        //METODOS DE LA BASE DE DATOS
+        public void consultaInput(string consulta)
+        {
+            conn.Open();
+            SqlCommand comando = new SqlCommand(consulta, conn);
+            comando.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        public void llenarTabla()
+        {
+            string consulta = "SELECT P.id_postulante AS 'Codigo', CONCAT(P.apellido_paterno,' ',P.apellido_materno,' ',P.nombre) AS 'Postulante', E.nombre_escuela AS 'Carrera', CASE WHEN P.nota IS NULL THEN 'No tiene nota' ELSE CAST(P.nota AS VARCHAR) END AS 'Nota' FROM Postulante P INNER JOIN Escuela E ON P.id_escuela=E.id_escuela; ";
+            SqlDataAdapter adapter = new SqlDataAdapter(consulta, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView3.DataSource = dt;
         }
 
 
@@ -44,11 +65,24 @@ namespace ProyectoPooBKND
         private void prueba_Click(object sender, EventArgs e)
         {
 
-                this.Close();
-
         }
 
         private void FormPostulante_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonEliminar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

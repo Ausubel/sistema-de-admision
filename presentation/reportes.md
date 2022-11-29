@@ -1,79 +1,91 @@
-# 20220000: Aldahir Casma Nieto
 
+# 20221004: Leónidas Santiyan Guete
 | CURSO           | NOTA  | CORRECTOS ✅ | INCORRECTOS ❌ | NULOS ⚪ |
-| --------------- | ----- | ------------ | -------------- | -------- |
-| FISICA          | 12,5  | 1            | 6              | 0        |
-| GEOGRAFIA       | 12,5  | 1            | 6              | 0        |
-| LITERATURA      | -8,75 | 0            | 7              | 0        |
-| QUIMICA         | 33,75 | 2            | 5              | 0        |
-| ALGEBRA         | 12,5  | 1            | 6              | 0        |
-| TRIGONOMETRIA   | 33,75 | 2            | 5              | 0        |
-| ARITMETICA      | 33,75 | 2            | 5              | 0        |
-| GEOMETRIA       | 55    | 3            | 4              | 0        |
-| HISTORIA        | 33,75 | 2            | 5              | 0        |
-| CIVICA          | 35    | 2            | 5              | 1        |
-| ECONOMIA        | 33,75 | 2            | 5              | 0        |
-| RAZ. MATEMATICO | 50    | 3            | 8              | 0        |
-| RAZ. VERBAL     | 28,75 | 2            | 10             | 1        |
+| --------------- | ---- | --------- | ----------- | ----- |
+| FISICA|-7|0|7|0|
+| GEOGRAFIA|94|1|6|0|
+| LITERATURA|296|3|4|0|
+| QUIMICA|94|1|6|0|
+| ALGEBRA|94|1|6|0|
+| TRIGONOMETRIA|195|2|5|0|
+| ARITMETICA|94|1|6|0|
+| GEOMETRIA|94|1|6|0|
+| HISTORIA|94|1|6|0|
+| CIVICA |195|2|5|0|
+| ECONOMIA|397|4|3|0|
+| RAZ. MATEMATICO|191|2|9|0|
+| RAZ. VERBAL|392|4|8|0|
+### PUNTAJE TOTAL: 2223
 
-### PUNTAJE TOTAL: 366,25
+# 20221003: Raúl Melgarejo Guiza
+| CURSO           | NOTA  | CORRECTOS ✅ | INCORRECTOS ❌ | NULOS ⚪ |
+| --------------- | ---- | --------- | ----------- | ----- |
+| FISICA|296|3|4|0|
+| GEOGRAFIA|498|5|2|0|
+| LITERATURA|195|2|5|0|
+| QUIMICA|-7|0|7|0|
+| ALGEBRA|94|1|6|0|
+| TRIGONOMETRIA|296|3|4|0|
+| ARITMETICA|498|5|2|0|
+| GEOMETRIA|296|3|4|0|
+| HISTORIA|195|2|5|0|
+| CIVICA |195|2|5|0|
+| ECONOMIA|195|2|5|0|
+| RAZ. MATEMATICO|191|2|9|0|
+| RAZ. VERBAL|392|4|8|0|
+### PUNTAJE TOTAL: 3334
+
+# 20221002: Luca Almonte Ghihuidzu
+| CURSO           | NOTA  | CORRECTOS ✅ | INCORRECTOS ❌ | NULOS ⚪ |
+| --------------- | ---- | --------- | ----------- | ----- |
+| FISICA|397|4|3|0|
+| GEOGRAFIA|94|1|6|0|
+| LITERATURA|94|1|6|0|
+| QUIMICA|94|1|6|0|
+| ALGEBRA|-7|0|7|0|
+| TRIGONOMETRIA|195|2|5|0|
+| ARITMETICA|94|1|6|0|
+| GEOMETRIA|195|2|5|0|
+| HISTORIA|94|1|6|0|
+| CIVICA |397|4|3|0|
+| ECONOMIA|195|2|5|0|
+| RAZ. MATEMATICO|191|2|9|0|
+| RAZ. VERBAL|493|5|7|0|
+### PUNTAJE TOTAL: 2526
+
+# 20221001: Lucas Albarado Molla
+| CURSO           | NOTA  | CORRECTOS ✅ | INCORRECTOS ❌ | NULOS ⚪ |
+| --------------- | ---- | --------- | ----------- | ----- |
+| FISICA|195|2|5|0|
+| GEOGRAFIA|94|1|6|0|
+| LITERATURA|94|1|6|0|
+| QUIMICA|-7|0|7|0|
+| ALGEBRA|195|2|5|0|
+| TRIGONOMETRIA|94|1|6|0|
+| ARITMETICA|498|5|2|0|
+| GEOMETRIA|195|2|5|0|
+| HISTORIA|94|1|6|0|
+| CIVICA |94|1|6|0|
+| ECONOMIA|94|1|6|0|
+| RAZ. MATEMATICO|191|2|9|0|
+| RAZ. VERBAL|89|1|11|0|
+### PUNTAJE TOTAL: 1920
 
 # 20220001: Brunner Velasquez Curilla
-
 | CURSO           | NOTA  | CORRECTOS ✅ | INCORRECTOS ❌ | NULOS ⚪ |
-| --------------- | ----- | ------------ | -------------- | -------- |
-| FISICA          | 12,5  | 1            | 6              | 0        |
-| GEOGRAFIA       | 55    | 3            | 4              | 0        |
-| LITERATURA      | 33,75 | 2            | 5              | 0        |
-| QUIMICA         | 33,75 | 2            | 5              | 0        |
-| ALGEBRA         | 33,75 | 2            | 5              | 0        |
-| TRIGONOMETRIA   | 55    | 3            | 4              | 0        |
-| ARITMETICA      | 12,5  | 1            | 6              | 0        |
-| GEOMETRIA       | -8,75 | 0            | 7              | 0        |
-| HISTORIA        | 33,75 | 2            | 5              | 0        |
-| CIVICA          | 13,75 | 1            | 6              | 1        |
-| ECONOMIA        | 12,5  | 1            | 6              | 0        |
-| RAZ. MATEMATICO | 50    | 3            | 8              | 0        |
-| RAZ. VERBAL     | 50    | 3            | 9              | 1        |
+| --------------- | ---- | --------- | ----------- | ----- |
+| FISICA|-1|3|4|0|
+| GEOGRAFIA|-3|2|5|0|
+| LITERATURA|-3|2|5|0|
+| QUIMICA|-5|1|6|0|
+| ALGEBRA|-7|0|7|0|
+| TRIGONOMETRIA|-3|2|5|0|
+| ARITMETICA|-1|3|4|0|
+| GEOMETRIA|-1|3|4|0|
+| HISTORIA|-5|1|6|0|
+| CIVICA |-2|2|5|1|
+| ECONOMIA|-3|2|5|0|
+| RAZ. MATEMATICO|-9|1|10|0|
+| RAZ. VERBAL|-7|2|10|1|
+### PUNTAJE TOTAL: -50
 
-### PUNTAJE TOTAL: 387,5
-
-# 20220002: Santiago Canales Cuelllar
-
-| CURSO           | NOTA  | CORRECTOS ✅ | INCORRECTOS ❌ | NULOS ⚪ |
-| --------------- | ----- | ------------ | -------------- | -------- |
-| FISICA          | 76,25 | 4            | 3              | 0        |
-| GEOGRAFIA       | -8,75 | 0            | 7              | 0        |
-| LITERATURA      | 12,5  | 1            | 6              | 0        |
-| QUIMICA         | 12,5  | 1            | 6              | 0        |
-| ALGEBRA         | 33,75 | 2            | 5              | 0        |
-| TRIGONOMETRIA   | 12,5  | 1            | 6              | 0        |
-| ARITMETICA      | 76,25 | 4            | 3              | 0        |
-| GEOMETRIA       | 33,75 | 2            | 5              | 0        |
-| HISTORIA        | 55    | 3            | 4              | 0        |
-| CIVICA          | 33,75 | 2            | 5              | 0        |
-| ECONOMIA        | -8,75 | 0            | 7              | 0        |
-| RAZ. MATEMATICO | 92,5  | 5            | 6              | 0        |
-| RAZ. VERBAL     | 70    | 4            | 8              | 0        |
-
-### PUNTAJE TOTAL: 491,25
-
-# 20220100: Fiorenzo Minguela Samora
-
-| CURSO           | NOTA  | CORRECTOS ✅ | INCORRECTOS ❌ | NULOS ⚪ |
-| --------------- | ----- | ------------ | -------------- | -------- |
-| FISICA          | 33,75 | 2            | 5              | 0        |
-| GEOGRAFIA       | 76,25 | 4            | 3              | 0        |
-| LITERATURA      | 55    | 3            | 4              | 0        |
-| QUIMICA         | 33,75 | 2            | 5              | 0        |
-| ALGEBRA         | 12,5  | 1            | 6              | 0        |
-| TRIGONOMETRIA   | 33,75 | 2            | 5              | 0        |
-| ARITMETICA      | 33,75 | 2            | 5              | 0        |
-| GEOMETRIA       | 12,5  | 1            | 6              | 0        |
-| HISTORIA        | 55    | 3            | 4              | 0        |
-| CIVICA          | 55    | 3            | 4              | 0        |
-| ECONOMIA        | 76,25 | 4            | 3              | 0        |
-| RAZ. MATEMATICO | 71,25 | 4            | 7              | 0        |
-| RAZ. VERBAL     | 27,5  | 2            | 10             | 0        |
-
-### PUNTAJE TOTAL: 576,25

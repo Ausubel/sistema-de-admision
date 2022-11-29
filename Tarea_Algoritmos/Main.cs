@@ -55,8 +55,10 @@ namespace Tarea_Algoritmos
             InitializeComponent();
         }
 
-        //CONEXION A LA BASE DE DATOS
-        private static SqlConnection conn = new SqlConnection("SERVER = LAPTOP-6KL9OJU4; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
+        //CONEXION A LA BASE DE DATOS BRUNNER
+        private static SqlConnection conn = new SqlConnection("SERVER = DESKTOP-UU53QVS; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
+        //CONEXION A LA BASE DE DATOS ALDAHIR
+        //private static SqlConnection conn = new SqlConnection("SERVER = LAPTOP-6KL9OJU4; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
 
         //METODOS DE LA BASE DE DATOS
         public void consultaInput(string consulta)

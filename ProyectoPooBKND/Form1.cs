@@ -47,7 +47,7 @@ namespace ProyectoPooBKND
         public Form1()
         {
             InitializeComponent();
-            this.CenterToScreen();
+            CenterToScreen();
             //rutas(0);
         }
 
