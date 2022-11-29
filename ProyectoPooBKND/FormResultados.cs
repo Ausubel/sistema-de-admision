@@ -18,7 +18,7 @@ namespace ProyectoPooBKND
             InitializeComponent();
 
         }
-        private static SqlConnection conn = new SqlConnection("SERVER = DESKTOP-UU53QVS; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
+        private static SqlConnection conn = new SqlConnection("SERVER = LAPTOP-6KL9OJU4; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
 
         private void FormResultados_Load(object sender, EventArgs e)
         {
@@ -35,6 +35,11 @@ namespace ProyectoPooBKND
         }
 
         private void lblResultados_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

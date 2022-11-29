@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -23,6 +24,15 @@ namespace ProyectoPooBKND
         {
             rutas(0);
             llenarTabla();
+            textBoxNombre.Enabled = false;
+            textBoxCarrera.Enabled = false;
+            textBoxMaterno.Enabled = false;
+            textBoxPaterno.Enabled = false;
+            buttonCalificar.Enabled = false;
+            buttonGuardarNota.Enabled = false;
+            buttonExportar.Enabled = false;
+            cargarDiccionario();
+            comboBoxInicializa();
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -44,7 +54,7 @@ namespace ProyectoPooBKND
         //RUTA DEL ARCHIVO .MD
         private static string RUTAEXPORTAR = @"";
 
-        private static SqlConnection conn = new SqlConnection("SERVER = DESKTOP-UU53QVS; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
+        private static SqlConnection conn = new SqlConnection("SERVER = LAPTOP-6KL9OJU4; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
 
 
         //CREO OBJETO 
@@ -228,7 +238,9 @@ namespace ProyectoPooBKND
                             outputAExportar += $"| RAZ. VERBAL|{notaParcial}|{correctoParcial}|{incorrectoParcial}|{nuloParcial}|\r\n";
                             break;
                     }
+
                 }
+
                 textBoxNota.Text = notas.ToString();
 
                 outputAExportar += $"### PUNTAJE TOTAL: {notas}\r\n";
@@ -240,6 +252,9 @@ namespace ProyectoPooBKND
                     adapter.Fill(dt);
 
                 MessageBox.Show("CALIFICADO CORRECTAMENTE");
+            }else
+            {
+
             }
             //SE AUTODESHABILITA
             buttonCalificar.Enabled = false;
@@ -477,7 +492,7 @@ namespace ProyectoPooBKND
 
         public void llenarTabla()
         {
-            string consulta = "SELECT P.[id_postulante] , P.[nombre] , P.[apellido_paterno] , P.[apellido_materno] ,E.nombre_escuela , P.[nota]  FROM [Admission].[dbo].[Postulante] P INNER JOIN Escuela E ON P.id_escuela = E.id_escuela inner join Facultad F on F.id_facultad = E.id_facultad";
+            string consulta = "SELECT P.[id_postulante] AS 'CODIGO', P.[nombre] AS 'NOMBRE' , P.[apellido_paterno] 'A. PATERNO', P.[apellido_materno] AS 'A. MATERNO',E.nombre_escuela AS 'FACULTAD', P.[nota] AS 'NOTA' FROM [Admission].[dbo].[Postulante] P INNER JOIN Escuela E ON P.id_escuela = E.id_escuela inner join Facultad F on F.id_facultad = E.id_facultad";
 
 
                 SqlDataAdapter adapter = new SqlDataAdapter(consulta, conn);
@@ -513,15 +528,15 @@ namespace ProyectoPooBKND
 
                 string estonoesnota = textBoxNota.Text.Replace(",", ".");
                 consultaInput($"UPDATE postulante set nota = {estonoesnota} where id_postulante = {textBoxCodigo.Text};");
-                //consultaInput($"UPDATE postulante SET nota = {estonoesnota} where id_postulante = {textBoxCodigo.Text}");
-                
+            //consultaInput($"UPDATE postulante SET nota = {estonoesnota} where id_postulante = {textBoxCodigo.Text}");
+
                 llenarTabla();
 
                 buttonBuscarCalificar_Click(sender, e);
                 //SE AUTODESHABILITA
                 buttonGuardarNota.Enabled = false;
                 buttonCalificar.Enabled = false;
-
+                
                 //Conectando al data griedview
 
             
@@ -534,6 +549,11 @@ namespace ProyectoPooBKND
         //EVENTO DATA GRID VIEW2
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+           
+        }
+
+        private void dataGridView2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
             textBoxCodigo.Text = dataGridView2.SelectedCells[0].Value.ToString();
             textBoxNombre.Text = dataGridView2.SelectedCells[1].Value.ToString();
             textBoxPaterno.Text = dataGridView2.SelectedCells[2].Value.ToString();
@@ -542,11 +562,22 @@ namespace ProyectoPooBKND
             textBoxNota.Text = dataGridView2.SelectedCells[5].Value.ToString();
         }
 
+        private void buttonExportar_Click(object sender, EventArgs e)
+        {
+            rutas(1);
+            TextWriter archivo = new StreamWriter(RUTAEXPORTAR); ;
+            archivo.WriteLine(outputAExportar);
+            archivo.Close();
+            MessageBox.Show("ARCHIVO GUARDADO CORRECTAMENTE: " + RUTAEXPORTAR);
+
+            Process.Start(RUTAEXPORTAR);
+        }
+
         private void buttonBuscarCalificar_Click(object sender, EventArgs e)
         {
             try
             {
-                string consulta = $"SELECT P.[id_postulante] , P.[nombre] , P.[apellido_paterno] , P.[apellido_materno] ,E.nombre_escuela , P.[nota]  FROM Postulante P INNER JOIN Escuela E ON P.id_escuela = E.id_escuela inner join Facultad F on F.id_facultad = E.id_facultad where id_postulante={textBoxCodigo.Text}";
+                string consulta = $"SELECT P.[id_postulante] AS 'CODIGO' , P.[nombre] AS 'NOMBRE', P.[apellido_paterno] AS 'A. PATERNO' , P.[apellido_materno] AS 'A. MATERNO' ,E.nombre_escuela 'CARRERA', P.[nota] AS 'NOTA'  FROM Postulante P INNER JOIN Escuela E ON P.id_escuela = E.id_escuela inner join Facultad F on F.id_facultad = E.id_facultad where id_postulante={textBoxCodigo.Text}";
                 SqlDataAdapter adapter = new SqlDataAdapter(consulta, conn);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
@@ -623,6 +654,109 @@ namespace ProyectoPooBKND
             {
                 MessageBox.Show("Considere revisar las entradas de datos", "", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
             }
+        }
+        public void comboBoxInicializa()
+        {
+            comboBox1.SelectedIndex = 4;//seleccione ( )
+            comboBox2.SelectedIndex = 4;
+            comboBox3.SelectedIndex = 4;
+            comboBox4.SelectedIndex = 4;
+            comboBox5.SelectedIndex = 4;
+            comboBox6.SelectedIndex = 4;
+            comboBox7.SelectedIndex = 4;
+            comboBox8.SelectedIndex = 4;
+            comboBox9.SelectedIndex = 4;
+            comboBox10.SelectedIndex = 4;
+            comboBox11.SelectedIndex = 4;
+            comboBox12.SelectedIndex = 4;
+            comboBox13.SelectedIndex = 4;
+            comboBox14.SelectedIndex = 4;
+            comboBox15.SelectedIndex = 4;
+            comboBox16.SelectedIndex = 4;
+            comboBox17.SelectedIndex = 4;
+            comboBox18.SelectedIndex = 4;
+            comboBox19.SelectedIndex = 4;
+            comboBox20.SelectedIndex = 4;
+            comboBox21.SelectedIndex = 4;
+            comboBox22.SelectedIndex = 4;
+            comboBox23.SelectedIndex = 4;
+            comboBox24.SelectedIndex = 4;
+            comboBox25.SelectedIndex = 4;
+            comboBox26.SelectedIndex = 4;
+            comboBox27.SelectedIndex = 4;
+            comboBox28.SelectedIndex = 4;
+            comboBox29.SelectedIndex = 4;
+            comboBox30.SelectedIndex = 4;
+            comboBox31.SelectedIndex = 4;
+            comboBox32.SelectedIndex = 4;
+            comboBox33.SelectedIndex = 4;
+            comboBox34.SelectedIndex = 4;
+            comboBox35.SelectedIndex = 4;
+            comboBox36.SelectedIndex = 4;
+            comboBox37.SelectedIndex = 4;
+            comboBox38.SelectedIndex = 4;
+            comboBox39.SelectedIndex = 4;
+            comboBox40.SelectedIndex = 4;
+            comboBox41.SelectedIndex = 4;
+            comboBox42.SelectedIndex = 4;
+            comboBox43.SelectedIndex = 4;
+            comboBox44.SelectedIndex = 4;
+            comboBox45.SelectedIndex = 4;
+            comboBox461.SelectedIndex = 4;
+            comboBox47.SelectedIndex = 4;
+            comboBox48.SelectedIndex = 4;
+            comboBox49.SelectedIndex = 4;
+            comboBox50.SelectedIndex = 4;
+            comboBox51.SelectedIndex = 4;
+            comboBox52.SelectedIndex = 4;
+            comboBox53.SelectedIndex = 4;
+            comboBox54.SelectedIndex = 4;
+            comboBox55.SelectedIndex = 4;
+            comboBox56.SelectedIndex = 4;
+            comboBox57.SelectedIndex = 4;
+            comboBox58.SelectedIndex = 4;
+            comboBox59.SelectedIndex = 4;
+            comboBox60.SelectedIndex = 4;
+            comboBox61.SelectedIndex = 4;
+            comboBox62.SelectedIndex = 4;
+            comboBox63.SelectedIndex = 4;
+            comboBox64.SelectedIndex = 4;
+            comboBox65.SelectedIndex = 4;
+            comboBox66.SelectedIndex = 4;
+            comboBox67.SelectedIndex = 4;
+            comboBox68.SelectedIndex = 4;
+            comboBox69.SelectedIndex = 4;
+            comboBox70.SelectedIndex = 4;
+            comboBox71.SelectedIndex = 4;
+            comboBox72.SelectedIndex = 4;
+            comboBox73.SelectedIndex = 4;
+            comboBox74.SelectedIndex = 4;
+            comboBox75.SelectedIndex = 4;
+            comboBox76.SelectedIndex = 4;
+            comboBox77.SelectedIndex = 4;
+            comboBox78.SelectedIndex = 4;
+            comboBox79.SelectedIndex = 4;
+            comboBox80.SelectedIndex = 4;
+            comboBox81.SelectedIndex = 4;
+            comboBox82.SelectedIndex = 4;
+            comboBox83.SelectedIndex = 4;
+            comboBox84.SelectedIndex = 4;
+            comboBox85.SelectedIndex = 4;
+            comboBox86.SelectedIndex = 4;
+            comboBox87.SelectedIndex = 4;
+            comboBox88.SelectedIndex = 4;
+            comboBox89.SelectedIndex = 4;
+            comboBox90.SelectedIndex = 4;
+            comboBox91.SelectedIndex = 4;
+            comboBox92.SelectedIndex = 4;
+            comboBox93.SelectedIndex = 4;
+            comboBox94.SelectedIndex = 4;
+            comboBox95.SelectedIndex = 4;
+            comboBox96.SelectedIndex = 4;
+            comboBox97.SelectedIndex = 4;
+            comboBox98.SelectedIndex = 4;
+            comboBox99.SelectedIndex = 4;
+            comboBox100.SelectedIndex = 4;
         }
     }
 }
