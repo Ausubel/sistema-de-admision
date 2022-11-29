@@ -59,7 +59,7 @@ namespace ProyectoPooBKND
 
             if (reg.Read())
             {
-                men = reg["nombre_escuela"].ToString()+ "\n\r" + reg["perfil_estudiante"].ToString() + "\n\r" + reg["competencias_profesionales"].ToString() + reg["datos_adicionales"].ToString();
+                men = reg["nombre_escuela"].ToString()+ "\r\n\r\n" + reg["perfil_estudiante"].ToString() + "\r\n\r\n" + reg["competencias_profesionales"].ToString() + "\r\n\r\n" + reg["datos_adicionales"].ToString();
             }
             else
             {

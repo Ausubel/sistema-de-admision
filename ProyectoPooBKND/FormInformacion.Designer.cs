@@ -47,7 +47,7 @@
             this.panelnfo.Controls.Add(this.bttnSalud);
             this.panelnfo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelnfo.Location = new System.Drawing.Point(0, 0);
-            this.panelnfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelnfo.Margin = new System.Windows.Forms.Padding(2);
             this.panelnfo.Name = "panelnfo";
             this.panelnfo.Size = new System.Drawing.Size(114, 536);
             this.panelnfo.TabIndex = 0;
@@ -59,7 +59,7 @@
             this.bttnIngenierias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnIngenierias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.bttnIngenierias.Location = new System.Drawing.Point(0, 252);
-            this.bttnIngenierias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bttnIngenierias.Margin = new System.Windows.Forms.Padding(2);
             this.bttnIngenierias.Name = "bttnIngenierias";
             this.bttnIngenierias.Size = new System.Drawing.Size(114, 117);
             this.bttnIngenierias.TabIndex = 2;
@@ -74,7 +74,7 @@
             this.bttnHumanidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnHumanidades.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.bttnHumanidades.Location = new System.Drawing.Point(0, 128);
-            this.bttnHumanidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bttnHumanidades.Margin = new System.Windows.Forms.Padding(2);
             this.bttnHumanidades.Name = "bttnHumanidades";
             this.bttnHumanidades.Size = new System.Drawing.Size(114, 124);
             this.bttnHumanidades.TabIndex = 1;
@@ -89,7 +89,7 @@
             this.bttnSalud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnSalud.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.bttnSalud.Location = new System.Drawing.Point(0, 0);
-            this.bttnSalud.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bttnSalud.Margin = new System.Windows.Forms.Padding(2);
             this.bttnSalud.Name = "bttnSalud";
             this.bttnSalud.Size = new System.Drawing.Size(114, 128);
             this.bttnSalud.TabIndex = 0;
@@ -122,7 +122,7 @@
             "NEGOCIOS INTERNACIONALES",
             "TURISMO"});
             this.cbbHumanidades.Location = new System.Drawing.Point(116, 181);
-            this.cbbHumanidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbHumanidades.Margin = new System.Windows.Forms.Padding(2);
             this.cbbHumanidades.Name = "cbbHumanidades";
             this.cbbHumanidades.Size = new System.Drawing.Size(404, 21);
             this.cbbHumanidades.TabIndex = 2;
@@ -151,7 +151,7 @@
             "INGENIERÍA QUÍMICA",
             "MATEMÁTICA E INFROMÁTICA"});
             this.cbbIngenierias.Location = new System.Drawing.Point(116, 301);
-            this.cbbIngenierias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbIngenierias.Margin = new System.Windows.Forms.Padding(2);
             this.cbbIngenierias.Name = "cbbIngenierias";
             this.cbbIngenierias.Size = new System.Drawing.Size(404, 21);
             this.cbbIngenierias.TabIndex = 3;
@@ -161,6 +161,7 @@
             // label1
             // 
             this.label1.AutoEllipsis = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.label1.Location = new System.Drawing.Point(141, 99);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -183,7 +184,7 @@
             "ODONTOLOGÍA",
             "PSICOLOGÍA"});
             this.cbbSalud.Location = new System.Drawing.Point(116, 56);
-            this.cbbSalud.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbSalud.Margin = new System.Windows.Forms.Padding(2);
             this.cbbSalud.Name = "cbbSalud";
             this.cbbSalud.Size = new System.Drawing.Size(404, 21);
             this.cbbSalud.TabIndex = 1;
@@ -202,7 +203,7 @@
             this.Controls.Add(this.cbbSalud);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormInformacion";
             this.Text = "FormInformacion";
             this.Load += new System.EventHandler(this.FormInformacion_Load);
