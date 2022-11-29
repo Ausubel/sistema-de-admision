@@ -30,7 +30,6 @@ C:\Users\intel\Desktop\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPoo
 C:\Users\intel\Desktop\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.csproj.CoreCompileInputs.cache
 C:\Users\intel\Desktop\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.exe
 C:\Users\intel\Desktop\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.pdb
-<<<<<<< HEAD
 D:\UNICA\V CICLO\PROGRAMACIÓN ORIENTADA A OBJETOS II\PROYECTO_TESTEANDO\Sistema-de-admision-master\ProyectoPooBKND\bin\Debug\ProyectoPooBKND.exe.config
 D:\UNICA\V CICLO\PROGRAMACIÓN ORIENTADA A OBJETOS II\PROYECTO_TESTEANDO\Sistema-de-admision-master\ProyectoPooBKND\bin\Debug\ProyectoPooBKND.exe
 D:\UNICA\V CICLO\PROGRAMACIÓN ORIENTADA A OBJETOS II\PROYECTO_TESTEANDO\Sistema-de-admision-master\ProyectoPooBKND\bin\Debug\ProyectoPooBKND.pdb
@@ -47,21 +46,3 @@ D:\UNICA\V CICLO\PROGRAMACIÓN ORIENTADA A OBJETOS II\PROYECTO_TESTEANDO\Sistema
 D:\UNICA\V CICLO\PROGRAMACIÓN ORIENTADA A OBJETOS II\PROYECTO_TESTEANDO\Sistema-de-admision-master\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.csproj.CoreCompileInputs.cache
 D:\UNICA\V CICLO\PROGRAMACIÓN ORIENTADA A OBJETOS II\PROYECTO_TESTEANDO\Sistema-de-admision-master\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.exe
 D:\UNICA\V CICLO\PROGRAMACIÓN ORIENTADA A OBJETOS II\PROYECTO_TESTEANDO\Sistema-de-admision-master\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.pdb
-=======
-C:\Users\johan\Desktop\Sistema-de-admision\ProyectoPooBKND\bin\Debug\ProyectoPooBKND.exe.config
-C:\Users\johan\Desktop\Sistema-de-admision\ProyectoPooBKND\bin\Debug\ProyectoPooBKND.exe
-C:\Users\johan\Desktop\Sistema-de-admision\ProyectoPooBKND\bin\Debug\ProyectoPooBKND.pdb
-C:\Users\johan\Desktop\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.csproj.AssemblyReference.cache
-C:\Users\johan\Desktop\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.csproj.SuggestedBindingRedirects.cache
-C:\Users\johan\Desktop\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.Form1.resources
-C:\Users\johan\Desktop\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.FormCalificar.resources
-C:\Users\johan\Desktop\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.FormInformacion.resources
-C:\Users\johan\Desktop\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.FormPostulante.resources
-C:\Users\johan\Desktop\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.FormPresetancion.resources
-C:\Users\johan\Desktop\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.FormResultados.resources
-C:\Users\johan\Desktop\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.Properties.Resources.resources
-C:\Users\johan\Desktop\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.csproj.GenerateResource.cache
-C:\Users\johan\Desktop\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.csproj.CoreCompileInputs.cache
-C:\Users\johan\Desktop\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.exe
-C:\Users\johan\Desktop\Sistema-de-admision\ProyectoPooBKND\obj\Debug\ProyectoPooBKND.pdb
->>>>>>> 20943d35cd4df61e81adcb56c5c7ec34ca48313d
