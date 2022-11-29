@@ -32,10 +32,10 @@
             this.bttnIngenierias = new System.Windows.Forms.Button();
             this.bttnHumanidades = new System.Windows.Forms.Button();
             this.bttnSalud = new System.Windows.Forms.Button();
-            this.cbbSalud = new System.Windows.Forms.ComboBox();
             this.cbbHumanidades = new System.Windows.Forms.ComboBox();
             this.cbbIngenierias = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbbSalud = new System.Windows.Forms.ComboBox();
             this.panelnfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,26 +93,6 @@
             this.bttnSalud.UseVisualStyleBackColor = true;
             this.bttnSalud.Click += new System.EventHandler(this.bttnSalud_Click);
             // 
-            // cbbSalud
-            // 
-            this.cbbSalud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.cbbSalud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbbSalud.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.cbbSalud.Items.AddRange(new object[] {
-            "BIOLOGÍA",
-            "ENFERMERÍA",
-            "FARMACIA Y BIOQUÍMICA",
-            "MEDICINA VETERINARIA Y ZOOTECNIA",
-            "OBSTETRICIA",
-            "ODONTOLOGÍA",
-            "PSICOLOGÍA"});
-            this.cbbSalud.Location = new System.Drawing.Point(154, 69);
-            this.cbbSalud.Name = "cbbSalud";
-            this.cbbSalud.Size = new System.Drawing.Size(537, 24);
-            this.cbbSalud.TabIndex = 1;
-            this.cbbSalud.Visible = false;
-            this.cbbSalud.SelectedIndexChanged += new System.EventHandler(this.cbbSalud_SelectedIndexChanged);
-            // 
             // cbbHumanidades
             // 
             this.cbbHumanidades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -137,7 +117,7 @@
             "ECONOMÍA",
             "NEGOCIOS INTERNACIONALES",
             "TURISMO"});
-            this.cbbHumanidades.Location = new System.Drawing.Point(154, 224);
+            this.cbbHumanidades.Location = new System.Drawing.Point(154, 223);
             this.cbbHumanidades.Name = "cbbHumanidades";
             this.cbbHumanidades.Size = new System.Drawing.Size(537, 24);
             this.cbbHumanidades.TabIndex = 2;
@@ -165,7 +145,7 @@
             "INGENIERÍA PESQUERA",
             "INGENIERÍA QUÍMICA",
             "MATEMÁTICA E INFROMÁTICA"});
-            this.cbbIngenierias.Location = new System.Drawing.Point(154, 383);
+            this.cbbIngenierias.Location = new System.Drawing.Point(154, 371);
             this.cbbIngenierias.Name = "cbbIngenierias";
             this.cbbIngenierias.Size = new System.Drawing.Size(537, 24);
             this.cbbIngenierias.TabIndex = 3;
@@ -182,6 +162,26 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "label1";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // cbbSalud
+            // 
+            this.cbbSalud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.cbbSalud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbSalud.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.cbbSalud.Items.AddRange(new object[] {
+            "BIOLOGÍA",
+            "ENFERMERÍA",
+            "FARMACIA Y BIOQUÍMICA",
+            "MEDICINA VETERINARIA Y ZOOTECNIA",
+            "OBSTETRICIA",
+            "ODONTOLOGÍA",
+            "PSICOLOGÍA"});
+            this.cbbSalud.Location = new System.Drawing.Point(154, 69);
+            this.cbbSalud.Name = "cbbSalud";
+            this.cbbSalud.Size = new System.Drawing.Size(537, 24);
+            this.cbbSalud.TabIndex = 1;
+            this.cbbSalud.Visible = false;
+            this.cbbSalud.SelectedIndexChanged += new System.EventHandler(this.cbbSalud_SelectedIndexChanged);
             // 
             // FormInformacion
             // 
@@ -209,9 +209,9 @@
         private System.Windows.Forms.Button bttnIngenierias;
         private System.Windows.Forms.Button bttnHumanidades;
         private System.Windows.Forms.Button bttnSalud;
-        private System.Windows.Forms.ComboBox cbbSalud;
         private System.Windows.Forms.ComboBox cbbHumanidades;
         private System.Windows.Forms.ComboBox cbbIngenierias;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbbSalud;
     }
 }

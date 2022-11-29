@@ -18,7 +18,7 @@ namespace ProyectoPooBKND
             InitializeComponent();
 
         }
-        private static SqlConnection conn = new SqlConnection("SERVER = MAGALLANES; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
+        private static SqlConnection conn = new SqlConnection("SERVER = DESKTOP-UU53QVS; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
 
         private void FormResultados_Load(object sender, EventArgs e)
         {

@@ -44,7 +44,7 @@ namespace ProyectoPooBKND
         //RUTA DEL ARCHIVO .MD
         private static string RUTAEXPORTAR = @"";
 
-        private static SqlConnection conn = new SqlConnection("SERVER = MAGALLANES; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
+        private static SqlConnection conn = new SqlConnection("SERVER = DESKTOP-UU53QVS; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
 
 
         //CREO OBJETO 
@@ -107,7 +107,7 @@ namespace ProyectoPooBKND
             {
                 double notas = 0;
 
-                char[] chars = dicCodigo[codigoBus].ToCharArray();//ADDDDCDDBDDCDADDCAACDBCCCDCDCADCCDABB
+                char[] chars = dicCodigo[codigoBus].ToCharArray();
 
                 outputAExportar += $"\r\n# {textBoxCodigo.Text}: {textBoxNombre.Text} {textBoxPaterno.Text} {textBoxMaterno.Text}\r\n" +
                     "| CURSO           | NOTA  | CORRECTOS ✅ | INCORRECTOS ❌ | NULOS ⚪ |\r\n" +
@@ -233,7 +233,7 @@ namespace ProyectoPooBKND
 
                 outputAExportar += $"### PUNTAJE TOTAL: {notas}\r\n";
 
-                //ACTUALIZANDO TABLA 2
+                //ACTUALIZANDO TABLA 
                 string consulta = $"SELECT P.[id_postulante] , P.[nombre] , P.[apellido_paterno] , P.[apellido_materno] ,E.nombre_escuela , P.[nota]  FROM [Admission].[dbo].[Postulante] P INNER JOIN Escuela E ON P.id_escuela = E.id_escuela inner join Facultad F on F.id_facultad = E.id_facultad";
                     SqlDataAdapter adapter = new SqlDataAdapter(consulta, conn);
                     DataTable dt = new DataTable();
@@ -546,7 +546,7 @@ namespace ProyectoPooBKND
         {
             try
             {
-                string consulta = $"SELECT P.[id_postulante] , P.[nombre] , P.[apellido_paterno] , P.[apellido_materno] ,E.nombre_escuela , P.[nota]  FROM [Admission].[dbo].[Postulante] P INNER JOIN Escuela E ON P.id_escuela = E.id_escuela inner join Facultad F on F.id_facultad = E.id_facultad";
+                string consulta = $"SELECT P.[id_postulante] , P.[nombre] , P.[apellido_paterno] , P.[apellido_materno] ,E.nombre_escuela , P.[nota]  FROM Postulante P INNER JOIN Escuela E ON P.id_escuela = E.id_escuela inner join Facultad F on F.id_facultad = E.id_facultad where id_postulante={textBoxCodigo.Text}";
                 SqlDataAdapter adapter = new SqlDataAdapter(consulta, conn);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
