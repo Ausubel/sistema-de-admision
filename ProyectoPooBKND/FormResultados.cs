@@ -18,10 +18,7 @@ namespace ProyectoPooBKND
             InitializeComponent();
 
         }
-        //BRUNNER
-        //private static SqlConnection conn = new SqlConnection("SERVER = DESKTOP-UU53QVS; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
-        //ALDAHIR
-        private static SqlConnection conn = new SqlConnection("SERVER = LAPTOP-6KL9OJU4; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
+        private static SqlConnection conn = new SqlConnection($"SERVER = {Environment.MachineName}; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
 
         private void FormResultados_Load(object sender, EventArgs e)
         {

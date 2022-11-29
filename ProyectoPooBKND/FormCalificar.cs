@@ -53,12 +53,7 @@ namespace ProyectoPooBKND
         private static string RUTA = @"";
         //RUTA DEL ARCHIVO .MD
         private static string RUTAEXPORTAR = @"";
-
-        //BRUNNER
-        //private static SqlConnection conn = new SqlConnection("SERVER = DESKTOP-UU53QVS; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
-        //ALDAHIR
-        private static SqlConnection conn = new SqlConnection("SERVER = LAPTOP-6KL9OJU4; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
-
+        private static SqlConnection conn = new SqlConnection($"SERVER = {Environment.MachineName}; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
 
         //CREO OBJETO 
         private static Calificacion calificacion;

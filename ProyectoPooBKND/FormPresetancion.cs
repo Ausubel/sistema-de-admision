@@ -16,8 +16,8 @@ namespace ProyectoPooBKND
         public FormPresetancion()
         {
             InitializeComponent();
-            this.Opacity = 0;
-            this.CenterToScreen();
+            Opacity = 0;
+            CenterToScreen();
         }
 
         private void FormPresetancion_Load(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace ProyectoPooBKND
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (this.Opacity < 1) this.Opacity += 0.02;
+            if (Opacity < 1) Opacity += 0.02;
             progressBar1.Value += 2;
             if (progressBar1.Value == 100)
             {
@@ -41,11 +41,11 @@ namespace ProyectoPooBKND
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            this.Opacity -= 0.03;
-            if (this.Opacity == 0)
+            Opacity -= 0.03;
+            if (Opacity == 0)
             {
                 timer2.Stop();
-                this.Close();
+                Close();
             }
 
         }
@@ -63,9 +63,9 @@ namespace ProyectoPooBKND
 
         private void FormPresetancion_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Hide();
-            Form1 welcome = new Form1();
-            welcome.ShowDialog();
+            Hide();
+            Form1 bienvenido = new Form1();
+            bienvenido.ShowDialog();
         }
     }
 }

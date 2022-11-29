@@ -22,10 +22,7 @@ namespace ProyectoPooBKND
             cbbSalud.Visible = false;
         }
 
-        //BRUNNER
-        private static SqlConnection conn = new SqlConnection("SERVER = DESKTOP-UU53QVS; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
-        //ALDAHIR
-        //private static SqlConnection conn = new SqlConnection("SERVER = LAPTOP-6KL9OJU4; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
+        private static SqlConnection conn = new SqlConnection($"SERVER = {Environment.MachineName}; DATABASE = Admission ;INTEGRATED SECURITY = TRUE  ");
         private void bttnIngenierias_Click(object sender, EventArgs e)
         {
             cbbIngenierias.Visible = true;

@@ -13,42 +13,10 @@ namespace ProyectoPooBKND
 {
     public partial class Form1 : Form
     {
-        //ARREGLO PARA ALMACENAR LAS RESPUESTAS
-        private static string[] RESPUESTAS;
-        //PARA GUARDAR LAS CARTILLAS
-        private static string outputAExportar = "";
-        //RUTA DEL ARCHIVO .TXT
-        private static string RUTA = @"";
-        //RUTA DEL ARCHIVO .MD
-        private static string RUTAEXPORTAR = @"";
-        private void rutas(int aux)
-        {
-            if (aux == 0)
-            {
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    RESPUESTAS = File.ReadAllLines(openFileDialog.FileName).ToArray();
-                    //linkRuta.Text = openFileDialog.FileName;
-                    RUTA = @"" + openFileDialog.FileName + "";
-                }
-            }
-            else
-            {
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    RUTAEXPORTAR = @"" + openFileDialog.FileName + "";
-                }
-            }
-
-
-        }
         public Form1()
         {
             InitializeComponent();
             CenterToScreen();
-            //rutas(0);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -124,19 +92,15 @@ namespace ProyectoPooBKND
         {
 
             timerExit.Enabled = true;
-
-            
-
-
         }
 
         private void timerExit_Tick(object sender, EventArgs e)
         {
-            this.Opacity -= 0.03;
-            if (this.Opacity == 0)
+            Opacity -= 0.03;
+            if (Opacity == 0)
             {
                 timerExit.Stop();
-                this.Close();
+                Close();
             }
         }
 
