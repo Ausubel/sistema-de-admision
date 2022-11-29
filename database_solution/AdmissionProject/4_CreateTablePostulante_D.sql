@@ -12,6 +12,7 @@ BEGIN
 		edad INT NOT NULL,
 		nota FLOAT NULL,		
 		CONSTRAINT PK_postulante PRIMARY KEY (id_postulante),
+
 		CONSTRAINT FK_estudiante_escuela FOREIGN KEY (id_escuela) REFERENCES
 		Escuela (id_escuela) ON DELETE NO ACTION ON UPDATE NO ACTION,
 	);

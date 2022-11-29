@@ -12,8 +12,10 @@ BEGIN
 		competencias_profesionales VARCHAR(1500) NOT NULL,
 		datos_adicionales VARCHAR(1500) NOT NULL,
 		CONSTRAINT PK_escuela PRIMARY KEY (id_escuela),
+
 		CONSTRAINT FK_id_facultad FOREIGN KEY (id_facultad) 
 		REFERENCES Facultad(id_facultad) ON DELETE NO ACTION ON UPDATE NO ACTION,
+
 		CONSTRAINT FK_id_area FOREIGN KEY (id_area) 
 		REFERENCES Area(id_area) ON DELETE NO ACTION ON UPDATE NO ACTION
 	);
