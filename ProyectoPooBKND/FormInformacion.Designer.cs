@@ -49,7 +49,7 @@
             this.panelnfo.Location = new System.Drawing.Point(0, 0);
             this.panelnfo.Margin = new System.Windows.Forms.Padding(2);
             this.panelnfo.Name = "panelnfo";
-            this.panelnfo.Size = new System.Drawing.Size(114, 536);
+            this.panelnfo.Size = new System.Drawing.Size(114, 739);
             this.panelnfo.TabIndex = 0;
             // 
             // bttnIngenierias
@@ -163,10 +163,10 @@
             this.label1.AutoEllipsis = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label1.Location = new System.Drawing.Point(141, 99);
+            this.label1.Location = new System.Drawing.Point(141, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(500, 342);
+            this.label1.Size = new System.Drawing.Size(462, 691);
             this.label1.TabIndex = 4;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -196,7 +196,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(744, 536);
+            this.ClientSize = new System.Drawing.Size(744, 739);
             this.Controls.Add(this.panelnfo);
             this.Controls.Add(this.cbbIngenierias);
             this.Controls.Add(this.cbbHumanidades);
